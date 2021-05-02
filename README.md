@@ -4,4 +4,4 @@
 * Latest update date: 5/3/2021
 * Credits: davidTube / dave77
 
-## All information is present in the WRD thread.  https://wearedevs.net/forum/wrd_discussion
+## All information is present in the WRD thread.  https://wearedevs.net/forum/t/20529
