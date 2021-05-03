@@ -5,7 +5,7 @@ if(document.getElementsByClassName('forumcategory')[0]){ // Checks if you're on 
     var threads = document.querySelectorAll('tr td:nth-child(4) a')
 
     document.head.appendChild(document.createElement('style')).textContent =`.prefix{
-        font-size: 15px;border-radius: 3px;background-color: #5a5a5a;color: #ffffff;display: inline-block;argin-right: 5px;padding-left: 4px;padding-right: 4px;padding-top: 1px;padding-bottom: 1px;text-align: center;}`
+        font-size: 15px;border-radius: 3px;background-color: #5a5a5a;display: inline-block;argin-right: 5px;padding-left: 4px;padding-right: 4px;padding-top: 1px;padding-bottom: 1px;text-align: center;}`
     
     function prefix(thread, text){
         newprefix = document.createElement('span')

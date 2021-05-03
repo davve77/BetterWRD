@@ -30,6 +30,7 @@ function showDrafts(){
 
     refreshDrafts()
 }
+
 // Blacklisted characters for draft names
 function blacklistedChar() {draftnametb.value = draftnametb.value.replace(/'|"|\/|\\/g, '')}
 
@@ -43,11 +44,11 @@ function hideDrafts(){
 function refreshDrafts(){
     var drafts = JSON.parse(localStorage.getItem('bwrd_drafts'))
 
-    // Show the 'You don't have any drafts' text if the user doesn't have any draft
+    // Show the 'You don't have any drafts' text if the user doesn't have any drafts
     if(drafts.length == 0) {document.getElementById('draftsmenu').appendChild(document.createElement('a')).innerHTML = `<a id="nodrafts" style="position: absolute;top: 50%;transform: translate(-50%, -50%);font-size: 20px;opacity: .8;">¯\\_(ツ)_/¯<br>You don't have any drafts.<br>Click '+' to create one.</a>`}
     else if(document.getElementById('nodrafts')) {document.getElementById('nodrafts').remove()}
 
-    document.getElementById('draftsgrid').innerHTML = ''
+    document.getElementById('draftsgrid').innerHTML = '' // Clear the list
 
     drafts.forEach(function(draft){
         var draftelm = document.createElement('div')
@@ -56,8 +57,9 @@ function refreshDrafts(){
         draftelm.addEventListener('mouseup', function(e) {
             if(e.target.title == 'Delete Draft') return
             document.getElementById('editor_ifr').contentWindow.document.getElementById('tinymce').innerHTML = draft.content
+            document.querySelector('[role="application"]').style.height = `${draft.height}px`
             hideDrafts()
-            // I used .innerHTML instead of the tinymce setContent function because it saves the font size of empty lines which is important
+            // I used .innerHTML instead of tinymce's set/getContent functions because it saves the font size of empty lines which is important for long threads
         })
 
         document.getElementById('draftsgrid').appendChild(draftelm)
@@ -69,7 +71,12 @@ function addDraft(){
     var date = new Date()
     var drafts = JSON.parse(localStorage.getItem('bwrd_drafts'))
 
-    drafts.push({"name": draftnametb.value, "content": document.getElementById('editor_ifr').contentWindow.document.getElementById('tinymce').innerHTML, "date": `${date.getMonth()+1}/${date.getDate()}/${date.getFullYear()}`})
+    drafts.push({
+    'name': draftnametb.value, 
+    'content': document.getElementById('editor_ifr').contentWindow.document.getElementById('tinymce').innerHTML,
+    'date': `${date.getMonth()+1}/${date.getDate()}/${date.getFullYear()}`,
+    'height': document.querySelector('[role="application"]').offsetHeight})
+
     localStorage.setItem('bwrd_drafts', JSON.stringify(drafts))
 
     draftnametb.remove()
