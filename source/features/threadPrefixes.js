@@ -22,30 +22,30 @@ if(document.getElementsByClassName('forumcategory')[0]){ // Checks if you're on 
             case titles.startsWith('[REL]'):
                 prefix(threads[i], 'Release')
                 delfirstprefix(threads[i], '[REL]')
-                break
+                break;
             case titles.startsWith('[RELEASE]'):
                 prefix(threads[i], 'Release')
                 delfirstprefix(threads[i], '[RELEASE]')
-                break
+                break;
             case titles.startsWith('[REQ]'):
                 prefix(threads[i], 'Request')
                 delfirstprefix(threads[i], '[REQ]')
-                break
+                break;
             case titles.startsWith('[REQUEST]'):
                 prefix(threads[i], 'Request')
                 delfirstprefix(threads[i], '[REQUEST]')
-                break
+                break;
             case titles.startsWith('[CW]'):
                 prefix(threads[i], 'CW')
                 delfirstprefix(threads[i], '[CW]')
-                break
+                break;
     
             case titles.includes('POLL'):
                  prefix(threads[i], 'Poll')
-                break
+                break;
             case titles.includes('SCRIPT'):
                 prefix(threads[i], 'Script')
-                break
+                break;
             case titles.includes('GIVEAWAY'):
                 prefix(threads[i], 'Giveaway')
         }
