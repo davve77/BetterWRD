@@ -2,7 +2,7 @@
     "name":"BetterWRD",
     "description":"Adds tons of new features to WRD and fixes bugs. Made by davidTube.",
     "author": "davidTube",
-    "version":"1.0",
+    "version":"1.5",
     "manifest_version":2,
     "web_accessible_resources": ["features*", "fixes*", "settings*", "etc*"],
     "content_scripts":[

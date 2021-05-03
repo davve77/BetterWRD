@@ -14,8 +14,9 @@ nextBtnOnTop = document.getElementById('nextonTop')
 spellcheck = document.getElementById('spellcheckTextEd')
 pageInput = document.getElementById('pageInput')
 threadPrefixes = document.getElementById('threadPrefixes')
+readUnread = document.getElementById('readUnread')
 
-var settings = ['replaceText','removeCaps','darkCB','darkTextEd','transparentPfp','bigMention','postDrafts','brightNavbar','nextonTop','spellcheckTextEd','pageInput','threadPrefixes']
+var settings = ['readUnread','replaceText','removeCaps','darkCB','darkTextEd','transparentPfp','bigMention','postDrafts','brightNavbar','nextonTop','spellcheckTextEd','pageInput','threadPrefixes']
 
 // Load settings
 chrome.storage.local.get(settings, function(saved){
@@ -31,6 +32,7 @@ chrome.storage.local.get(settings, function(saved){
     spellcheck.checked = saved.spellcheckTextEd
     pageInput.checked = saved.pageInput
     threadPrefixes.checked = saved.threadPrefixes
+    readUnread.checked = saved.readUnread
 })
 
 // Save settings
@@ -47,6 +49,7 @@ function save(){
     chrome.storage.local.set({'spellcheckTextEd': spellcheck.checked})
     chrome.storage.local.set({'pageInput': pageInput.checked})
     chrome.storage.local.set({'threadPrefixes': threadPrefixes.checked})
+    chrome.storage.local.set({'readUnread': readUnread.checked})
 
     document.getElementById('toast').className = 'show'
     setTimeout(()=> {document.getElementById('toast').classList.remove('show')}, 2000)
