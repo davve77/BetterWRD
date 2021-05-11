@@ -24,7 +24,7 @@ chrome.storage.local.get(null, function(saved){
     if(saved.replaceText)          {run('features/replacetoLogo.js')}
     if(saved.brightNavbar)         {run('features/brightthemeNavbar.js')}
     if(saved.threadPrefixes)       {run('features/threadPrefixes.js')}
-    if(saved.readUnread)               {run('features/readUnread.js')}
+    if(saved.readUnread)           {run('features/readUnread.js')}
     if(saved.darkCB)               {run('features/darkcodeBlocks.js')}
     if(saved.removeCaps)           {run('features/lowercasePremium.js')}
 
