@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html style="color-scheme: dark;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>BetterWRD Themes</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="assets/css/Settings.css">
+    <link rel="stylesheet" href="assets/css/Toast.css">
+<link rel="icon" type="image/png" href="../etc/img/bwrd-settings-icon.png"/>
+<script src="javascript/settingsPages.js"></script>
+</head>
+
+<body class="unselectable" style="background-color: rgb(30,30,30);color: rgb(250,250,250);font-family: Roboto, sans-serif;text-align: center;"><div id="toast" class="toast" style="overflow-x: hidden; max-width: 50%;">Settings saved and applied.</div>
+    <div id="loading" style="background-color: rgb(30,30,30);position: fixed;width: 100%;height: 100%;top: 0px;left: 0px;z-index: 1;display: none;">
+        <h1 class="text-center" style="position: absolute;text-align: center;top: 50%;width: 100%;font-size: 40px;color: rgb(220,220,220);animation: outin 1.2s;"><strong><em>BetterWRD</em></strong></h1>
+        <h1 class="text-center" id="funnyfact" style="position: absolute;bottom: 3px;width: 100%;font-size: 17px;color: rgb(159,159,159);margin-top: 10px;"><br></h1>
+    </div>
+    <h1 class="text-center" style="font-size: 30px;color: rgb(220,220,220);margin-top: 25px;"><strong><em>BetterWRD Settings</em></strong></h1>
+    <h1 class="text-center" style="font-size: 20px;color: rgb(150,150,150);margin-top: -7px;"><em>Choose a Theme you like&nbsp;</em>— Don't forget to save/apply<br></h1>
+    <h1 class="text-center" style="font-size: 20px;color: rgb(150,150,150);margin-top: 45px;">Selected Theme:</h1>
+    <h1 class="text-center strongt" id="selectedtheme" style="position: relative;font-size: 20px;color: rgb(150,150,150);bottom: 6px;overflow-x: hidden;max-width: 80%;margin: auto;">None</h1>
+    <h1 class="section" style="width: 670px;margin: 0 auto;margin-top: 45px;"><span class="material-icons-outlined" style="vertical-align: middle;margin-right: 5px;">person</span>Custom Themes</h1>
+    <div id="customthemesdiv" style="width: 670px;margin: auto;">
+        <div class="themecard" style="display: none;">
+            <p style="position: relative;top: 10px;font-size: 19px;width: 92%;margin: 0 auto;overflow-x: hidden;">${theme.name}<br></p>
+            <p class="themedesc" style="width: 90%;overflow-x: hidden;">${theme.desc}<br></p>
+            <div style="position: absolute;bottom: 0;height: 35px;left: 50%;transform: translateX(-50%);"><span class="material-icons-outlined themebutton" title="This theme's mode is Dark." style="margin-right: 5px;">dark_mode</span><span class="material-icons-outlined themebutton" title="This is a custom theme.">edit</span><span class="material-icons-outlined themebutton"
+                    title="This is a custom theme.">delete</span></div>
+        </div>
+        <div id="create-custom-theme" class="themecard customthmcard" style="background: rgba(0,0,0,0);">
+            <p style="position: relative;text-align: center;top: 10px;font-size: 19px;width: 80%;margin: 0 auto;top: 50%;transform: translateY(-50%);">Create your own Theme</p>
+        </div>
+    </div>
+    <div id="themesdiv" style="width: 670px;margin: auto;">
+        <h1 class="section" style="margin-top: 45px;"><span class="material-icons-outlined" style="vertical-align: middle;margin-right: 5px;">nightlight</span>Dark</h1>
+        <div id="gh-smooth-dark" class="themecard">
+            <p style="position: relative;top: 10px;font-size: 19px;/*width: 80%;*/margin: 0 auto;"><em>GitHub: Smooth Dark</em></p>
+            <p class="themedesc" style="width: 90%;">a github-like nice, dark comfy theme</p>
+        </div>
+        <div id="gh-dark-green" class="themecard">
+            <p style="position: relative;top: 10px;font-size: 19px;/*width: 80%;*/margin: 0 auto;"><em>GitHub: Dark &amp; Green</em><br></p>
+            <p class="themedesc">the same as the one before me + some green borders</p>
+        </div>
+        <div id="dark-f-green" class="themecard">
+            <p style="position: relative;top: 10px;font-size: 19px;/*width: 80%;*/margin: 0 auto;"><em>Dark Mint Green</em><br></p>
+            <p class="themedesc">green and dark combined, looks pretty good I think</p>
+        </div>
+        <div id="midnight-gray" class="themecard">
+            <p style="position: relative;top: 10px;font-size: 19px;/*width: 80%;*/margin: 0 auto;"><em>Midnight Gray</em></p>
+            <p class="themedesc">use this if you like gray</p>
+        </div>
+        <div id="deep-night" class="themecard">
+            <p style="position: relative;top: 10px;font-size: 19px;/*width: 80%;*/margin: 0 auto;"><em>Deep Night</em></p>
+            <p class="themedesc">black bg, gray text, prepare your flashlights</p>
+        </div>
+        <h1 class="section"><span class="material-icons-outlined" style="vertical-align: middle;margin-right: 5px;">wb_sunny</span>Bright<br></h1>
+        <div id="gh-light" class="themecard">
+            <p style="position: relative;top: 10px;font-size: 19px;/*width: 80%;*/margin: 0 auto;"><em>GitHub: Light Mode</em></p>
+            <p class="themedesc">dark navbar and white everywhere else</p>
+        </div>
+    </div>
+    <div class="hide"></div><button class="btn btn-primary" type="button" id="applytheme" style="margin-top: 100px;border-style: none;box-shadow: none;">Save &amp; Apply Theme</button><button class="btn btn-primary" type="button" id="resettheme" style="margin-top: 100px;border-style: none;box-shadow: none;margin-left: 10px;">Reset current Theme</button>
+    <h1
+        class="text-center" style="font-size: 17px;color: rgb(150,150,150);margin-top: 10px;margin-bottom: 20px;"><em>refresh pages for your changes to take effect</em><br></h1><script src="javascript/themeManager.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
