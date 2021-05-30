@@ -1,1 +1,0 @@
-document.getElementById('okbtn').addEventListener('mouseup', ()=> {window.close()})
