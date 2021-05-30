@@ -3,7 +3,7 @@
 * Latest version: 2.0
 * Latest update date: 5/29/2021
 * Credits: dave77 (davidTube)
-  
+    
 ## Recently added Features
 * Themes
 * Custom Themes
