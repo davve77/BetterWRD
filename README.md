@@ -38,4 +38,4 @@
 * Page Not Found Error on refresh
 * V3rmillion social link redirects to your own V3rm profile
 
-## Find more information on the WRD thread.  https://wearedevs.net/forum/t/20543
+## Find more information on the WRD thread.  https://wearedevs.net/forum/t/20971
