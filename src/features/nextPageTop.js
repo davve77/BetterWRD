@@ -1,7 +1,7 @@
 // Name: Next and Prev thread page buttons on top
 // Desc: Puts the 'Next' and 'Prev' buttons on the top of the thread. By default, it's only under the thread page which is inconvenient
 
-var div = document.getElementsByTagName('main')[0].children[2]
+var div = document.getElementsByTagName('main')[0].children[4]
 var next = document.getElementsByTagName('a')
 var prev = document.getElementsByTagName('a')
 

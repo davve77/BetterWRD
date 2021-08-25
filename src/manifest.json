@@ -2,7 +2,7 @@
     "name":"BetterWRD",
     "description":"Adds tons of features and bug fixes to WRD!‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎‎‏‏by dave77",
     "author": "dave77 (davidTube)",
-    "version":"2.0",
+    "version":"2.1",
     "manifest_version":2,
     "web_accessible_resources": ["features*", "fixes*", "themes*", "settings*", "etc*"],
     "content_scripts":[
