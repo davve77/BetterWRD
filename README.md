@@ -2,7 +2,7 @@
 ### Adds tons of new features and bug fixes to WRD!
 * Latest version: 2.1
 * Latest update date: 8/25/2021
-* Credits: dave77 (davidTube)
+* Credits: david77 / davidTube, Google (icons)
 
 ## Recently added Features
 * Themes
