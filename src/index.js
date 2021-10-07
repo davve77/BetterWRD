@@ -1,6 +1,5 @@
-//     BetterWRD - Adds tons of features and bug fixes to weareskids.net!
-//     Made by davidT.
-//     Copyright 1889 - 1945.
+//     BetterWRD - Adds tons of features and bug fixes to wearedevs.net!
+//     Made by david77
 
 
 // Main
