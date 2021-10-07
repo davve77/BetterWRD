@@ -1,0 +1,10 @@
+.overlay {
+  position: fixed;
+  background-color: rgba(55,64,80,.8);
+  display: block;
+  height: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
