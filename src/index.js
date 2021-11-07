@@ -1,4 +1,4 @@
-//     BetterWRD - Adds tons of features and bug fixes to wearedevs.net!
+//     BetterWRD - Adds tons of features and bug fixes to weareskids.net!
 //     Made by david77
 
 
