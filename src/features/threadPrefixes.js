@@ -43,3 +43,17 @@ for(var i=0, l=threads.length; i<l; i++){
         setCustomPrefix(threads[i], prefixes[1])
     }
 }
+
+// Make it work with the old forum homepage
+setTimeout(()=> {
+    if(document.querySelectorAll('.forumcontainer')[0]){
+        const tablethreads = document.querySelectorAll('td:nth-child(4) > a')
+        for(var i=0, l=tablethreads.length; i<l; i++){
+            const tprefixes = tablethreads[i].textContent.match(/^\[(.*?)\]/)
+            
+            if(tprefixes != null && tprefixes[1].length <= 30){
+                setCustomPrefix(tablethreads[i], tprefixes[1], tablethreads[i].href)
+            }
+        }
+    }
+}, 200)
