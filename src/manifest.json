@@ -2,7 +2,7 @@
     "name":"BetterWRD",
     "description":"Adds tons of features and bug fixes to WRD!‏‏‎ ‎‏‏‎‎‏‏by dave77",
     "author": "dave77 (davidTube)",
-    "version":"2.3",
+    "version":"2.4",
     "manifest_version":2,
     "web_accessible_resources": ["features*", "fixes*", "themes*", "settings*", "etc*"],
     "content_scripts":[
@@ -17,6 +17,7 @@
                 "fixes/pageNotFound.js",
                 "fixes/v3rmLink.js",
 
+		"etc/oldui.js",
                 "etc/autoSaveSettings.js",
                 "etc/extensionPopups.js",
                 "etc/etc.js",

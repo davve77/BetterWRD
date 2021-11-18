@@ -3,6 +3,7 @@
 // Create variables for every checkbox & the save button
 var applybtn = document.getElementById('applybtn')
 toast = document.getElementById('toast')
+oldUI = document.getElementById('oldUI')
 replaceText = document.getElementById('replaceText')
 removeCaps = document.getElementById('removeCaps')
 darkCodeBl = document.getElementById('darkCB')
@@ -20,11 +21,12 @@ autoRefreshWRD = document.getElementById('autoRefreshWRD')
 stickyNavbar = document.getElementById('stickyNavbar')
 embedStrawpoll = document.getElementById('embedStrawpoll')
 
-var settings = ['embedStrawpoll','stickyNavbar','readUnread','replaceText','removeCaps','darkCB','darkTextEd','transparentPfp','bigMention','postDrafts','brightNavbar','nextonTop','spellcheckTextEd','pageInput','threadPrefixes','autoRefreshWRD']
+var settings = ['oldUI','embedStrawpoll','stickyNavbar','readUnread','replaceText','removeCaps','darkCB','darkTextEd','transparentPfp','bigMention','postDrafts','brightNavbar','nextonTop','spellcheckTextEd','pageInput','threadPrefixes','autoRefreshWRD']
 
 // Load settings
 function load(){
     chrome.storage.local.get(settings, saved => {
+	oldUI.checked = saved.oldUI
         replaceText.checked = saved.replaceText
         removeCaps.checked = saved.removeCaps
         darkCodeBl.checked = saved.darkCB
@@ -48,6 +50,7 @@ setTimeout(load, 800)
 // Save settings
 function save(showtoast){
     chrome.storage.local.set({
+	'oldUI': oldUI.checked,
         'replaceText': replaceText.checked,
         'removeCaps': removeCaps.checked,
         'removeCaps': removeCaps.checked,
