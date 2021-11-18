@@ -26,7 +26,7 @@ chrome.storage.local.get(null, saved => {
     if(saved.removeCaps)           {run('features/lowercasePremium.js')}
     if(saved.stickyNavbar)         {run('features/stickyNavbar.js')}
 
-    if(document.getElementsByClassName('forumcategory')[0]){ // Checks if you're on the main forum page
+    if(document.querySelectorAll('.categorycontainer h2')[0]){ // Checks if you're on the main forum page
         if(saved.threadPrefixes)   {run('features/threadPrefixes.js')}
         if(saved.readUnread)       {run('features/readUnread.js')}
     }

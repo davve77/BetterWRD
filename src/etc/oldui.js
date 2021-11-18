@@ -26,6 +26,7 @@ chrome.storage.local.get('oldUI', saved => {
     `
 
     // Vars
+    var buttonsdiv = document.querySelector('.buttons').outerHTML
     var onlineusers = document.querySelector('main').lastElementChild.outerHTML
     var categorydivs = document.querySelectorAll('.forum')
     
@@ -45,11 +46,7 @@ chrome.storage.local.get('oldUI', saved => {
     // Main
     document.querySelector('main').outerHTML = `
     <main style="padding: 12px;">
-    <div class="buttons">
-    <a href="/forum/all" class="btn theme1 round border1"><p>All Threads</p></a>
-    <a href="/profile/search" class="btn theme1 round border1"><p>User Search</p></a>
-    <a href="/guidelines" class="btn theme1 round border1"><p>Rules</p></a>
-    </div>
+    ${buttonsdiv}
     <div class="theme1 forumcontainer forumcategory round border1">
     <h2>WeAreDevs</h2>
     <table>
