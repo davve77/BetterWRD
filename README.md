@@ -1,20 +1,20 @@
 # BetterWRD
 ### Adds tons of new features and bug fixes to WRD!
-* Latest version: 2.2
-* Latest update date: 10/7/2021
-* Credits: david77 / davidTube, Google Fonts
+* Latest version: 2.4
+* Latest update date: 11/18/2021
+* Credits: david77 (davidTube), Google Fonts
 
 ## Recently added Features
+* Use Old Forum Home page Layout
 * Themes
 * Custom Themes
 * Sticky navigation bar
 * Auto Refresh WRD on Setting Change
 * Embed Strawpoll links in posts
-* More Settings for Background Image
-* Gray out threads that you've already read
 
 ## Full Feature list
 * Themes
+* Use Old Forum Home page Layout
 * Custom Themes
 * Post Drafts
 * Dark Theme Text editor
