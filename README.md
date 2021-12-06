@@ -1,7 +1,7 @@
 # BetterWRD
 ### Adds tons of new features and bug fixes to WRD!
-* Latest version: 2.4
-* Latest update date: 11/18/2021
+* Latest version: 2.5
+* Latest update date: 12/6/2021
 * Credits: david77 (davidTube), Google Fonts
 
 ## Recently added Features
