@@ -1,3 +1,6 @@
+// Name: Old Layout
+// Desc: Brings back the old forum home page layout.
+
 chrome.storage.local.get('oldUI', saved => {
     if(!document.querySelectorAll('.categorycontainer h2')[0] || !saved.oldUI) return
 
@@ -9,6 +12,9 @@ chrome.storage.local.get('oldUI', saved => {
     td, th {
         min-width: 120px;
         padding: 5px 12px 5px 0;
+    }
+    th {
+        font-weight: 400;
     }
     .forumcontainer table {
         padding: 20px;
@@ -33,10 +39,10 @@ chrome.storage.local.get('oldUI', saved => {
 
     // Funcs
     function getSubCatPosts(categoryelm){
-        return `<td>${categoryelm.children[0].lastElementChild.textContent.split(' Posts')[0]}</td>`
+        return `<td>${categoryelm.children[0].children[0].lastElementChild.textContent.split('(')[1].split(' Posts')[0]}</td>`
     }
     function getSubCatReplies(categoryelm){
-        return `<td>${categoryelm.children[0].lastElementChild.textContent.split(', ').pop().split(' Replies')[0]}</td>`
+        return `<td>${categoryelm.children[0].children[0].lastElementChild.textContent.split(', ').pop().split(' Replies')[0]}</td>`
     }
     function getLatestThread(categoryelm){
         return categoryelm.lastElementChild.children[0].children[0].outerHTML
@@ -76,19 +82,19 @@ chrome.storage.local.get('oldUI', saved => {
     </td>
     </tr>
     <tr>
-    <td><a href="https://wearedevs.net/forum/wrdeapi">WRD Exploit API</a></td>
-    ${getSubCatPosts(categorydivs[8])}
-    ${getSubCatReplies(categorydivs[8])}
-    <td>
-    ${getLatestThread(categorydivs[8])}
-    </td>
-    </tr>
-    <tr>
     <td><a href="https://wearedevs.net/forum/wrd_discussion">Discussion</a></td>
     ${getSubCatPosts(categorydivs[2])}
     ${getSubCatReplies(categorydivs[2])}
     <td>
     ${getLatestThread(categorydivs[2])}
+    </td>
+    </tr>
+    <tr>
+    <td><a href="https://wearedevs.net/forum/wrdeapi">WRD Exploit API</a></td>
+    ${getSubCatPosts(categorydivs[8])}
+    ${getSubCatReplies(categorydivs[8])}
+    <td>
+    ${getLatestThread(categorydivs[8])}
     </td>
     </tr>
     <tr>
