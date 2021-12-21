@@ -1,0 +1,37 @@
+{
+    "name": "BetterWRD",
+    "short_name": "BWRD",
+    "description": "Adds tons of features to WRD! by david77.",
+    "author": "dave77 (davidTube)",
+    "version": "3.0",
+    "manifest_version":2,
+    "web_accessible_resources": ["*"],
+    "content_scripts":[
+        {
+            "js": [
+                "index.js",
+
+                "features/setTheme.js",
+                "features/replaceToLogo.js",
+                "features/setWallpaper.js",
+                "features/betterDropmenus.js",
+
+                "fixes/pageNotFound.js",
+                "fixes/v3rmLink.js",
+
+                "features/oldLayout.js",
+                "etc/autoSaveSettings.js",
+                "etc/afterInstallOverlay.js",
+                "etc/etc.js"
+            ],
+            "css": ["etc/hideall.css"],
+            "matches":["*://wearedevs.net/*"],
+            "exclude_matches":["*://*/*login*", "*://*/*register*", "*://*/*recovery*"]
+        }
+    ],
+    "icons": {"16":"etc/img/current/bwrdlogo.png", "48":"etc/img/current/bwrdlogo.png", "128":"etc/img/current/bwrdlogo-text.png"},
+    "options_ui":{"page":"settings/index.html", "open_in_tab":true},
+    "permissions":["storage","tabs","*://wearedevs.net/*","*://flameplus.vercel.app/*"],
+    "browser_action":{"default_popup":"settings/opensettings.html"},
+    "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com https://unpkg.com; object-src 'self'"
+}

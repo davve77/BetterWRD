@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html style="color-scheme: dark;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>BetterWRD Settings</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo:400,600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="assets/css/scrollbar.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/toast.css">
+    <link rel="stylesheet" href="assets/css/tooltips.css">
+<link rel="icon" type="image/png" href="../etc/img/current/bwrd-settings.png"/>
+<script src="javascript/settingsPages.js"></script>
+<script src="javascript/toast.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<style>
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)){
+.backdropdiv{background: rgba(6, 6, 6, 0.97)!important}
+#topbarthemes{background: rgb(45, 45, 45)!important}
+}
+</style><style>
+#navbar-settings {
+  background: #323232;
+}
+#navbar-settings > .navspan {
+  background: linear-gradient(to right, rgb(83 172 255 / 68%) 30%, rgba(255,29,205,0.88) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
+</head>
+
+<body class="unselectable"><script src="javascript/loadingScreen.js"></script>
+    <div id="sidenav" class="sidenav"><a id="sidenavtop" style="position: absolute;display: flex;align-items: center;justify-content: center;top: 0;background: #323232;height: 90px;width: 100%;border-radius: 0;cursor: pointer;padding: 0;" href="index.html"><img id="sidenavtopimg" draggable="false" src="assets/img/bwrdlogo-text.png" width="100"></a>
+        <p
+            class="navdesc" style="margin-top: 105px;">BetterWRD</p><a id="navbar-settings" href="index.html"><span class="material-icons-outlined navspan">tune</span>Settings</a><a id="navbar-themes" href="themes.html"><span class="material-icons-outlined navspan">palette<br></span>Themes</a><a id="navbar-wallpaper"
+                href="wallpaper.html"><span class="material-icons-outlined navspan">wallpaper</span>Wallpaper</a>
+            <p class="navdesc">Extension</p><a id="navbar-github" href="https://github.com/davidTube7/BetterWRD" target="_blank"><span class="material-icons-outlined navspan">code</span>GitHub</a>
+            <p class="navdesc">Other</p><a id="navbar-upcoming" href="upcoming.html"><span class="material-icons-outlined navspan">science<br></span>Upcoming</a><a id="navbar-discord" href="https://discord.gg/ceU5SRTf4J" target="_blank"><span class="material-icons-outlined navspan">group<br></span>Discord</a>
+            <a
+                id="navbar-about" href="about.html"><span class="material-icons-outlined navspan">info</span>About</a>
+    </div>
+    <div id="toastdiv" class="toastdiv"><div id="toast"></span>Settings saved and applied.</div></div>
+    <div id="loading" style="background-color: rgb(30,30,30);position: fixed;width: 100%;height: 100%;top: 0px;left: 0px;transition: all .3s;z-index: 10000;display: none;">
+        <h1 class="text-center" style="position: absolute;text-align: center;top: 50%;width: 100%;font-size: 38px;/*color: rgb(220,220,220);*/animation: outin 1.3s;font-weight: 600;background: linear-gradient(to right, rgb(83 172 255 / 68%) 30%, rgba(255,29,205,0.88) 100%;-webkit-background-clip: text;-webkit-text-fill-color: transparent;">BetterWRD</h1>
+        <h1 class="text-center" id="funfuntext" style="position: absolute;bottom: 3px;width: 100%;font-size: 17px;color: rgb(159,159,159);margin-top: 10px;"><br></h1>
+    </div>
+    <div id="changelogdiv" class="backdropdiv" style="position: fixed;bottom: 0;left: 0;right: 0;top: 0;z-index: 101;transition: .15s all;display: none;">
+        <div id="changelogoverlay">
+            <div id="clcontent" style="transition: .44s all cubic-bezier(1,0,.28,.97);height: 100%;overflow: auto;scrollbar-width: thin;/*transform: translateX(-850px);*/">
+                <div class="cltop">
+                    <h1><strong>Changelogs</strong></h1>
+                    <p id="closechangelog" class="material-icons-outlined cltopbtn">close</p>
+                </div>
+                <div class="changelog-panel">
+                    <h1 class="changelog-panel-title">Version 3.0&nbsp;— 12/21/2021</h1>
+                    <div class="changelog-panel-body" style="display: flex;">
+                        <p id="whatsnewbtn" class="changelog-panel-text">See what's new.</p>
+                    </div>
+                </div>
+                <div class="changelog-panel">
+                    <h1 class="changelog-panel-title">Version 2.5 — 12/6/2021</h1>
+                    <div class="changelog-panel-body"></div>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Old Forum home page layout.</p>
+                </div>
+                <div class="changelog-panel">
+                    <h1 class="changelog-panel-title">Version 2.4 — 11/18/2021</h1>
+                    <div class="changelog-panel-body">
+                        <p class="changelog-panel-text"><span class="changelog-prefix cladded">Added</span>The option to use the old Forum home page layout.</p>
+                    </div>
+                </div>
+                <div class="changelog-panel">
+                    <h1 class="changelog-panel-title">Version 2.3 — 11/6/2021</h1>
+                    <div class="changelog-panel-body">
+                        <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Incorrect placement of thread top buttons after the removal of ads on the Forum.&nbsp;</p>
+                    </div>
+                </div>
+                <div class="changelog-panel">
+                    <h1 class="changelog-panel-title">Version 2.2 — 10/7/2021</h1>
+                    <div class="changelog-panel-body">
+                        <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Some small bugs.</p>
+                    </div>
+                </div>
+                <div class="changelog-panel">
+                    <h1 class="changelog-panel-title">Version 2.1 — 8/25/2021</h1>
+                    <div class="changelog-panel-body">
+                        <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Incorrect placement of thread top buttons.</p>
+                    </div>
+                </div>
+                <div class="changelog-panel">
+                    <h1 class="changelog-panel-title">Version 2.0 — 5/30/2021</h1>
+                    <div class="changelog-panel-body">
+                        <p class="changelog-panel-text"><span class="changelog-prefix cladded">Added</span>Themes.</p>
+                        <p class="changelog-panel-text"><span class="changelog-prefix cladded">Added</span>Custom themes.</p>
+                        <p class="changelog-panel-text"><span class="changelog-prefix clchange">Change</span>All your BWRD Settings will save when reinstalling.</p>
+                        <p class="changelog-panel-text"><span class="changelog-prefix cladded">Added</span>Sticky Navigation Bar setting.</p>
+                        <p class="changelog-panel-text"><span class="changelog-prefix cladded">Added</span>Refresh WRD when you change a setting.</p>
+                        <p class="changelog-panel-text"><span class="changelog-prefix cladded">Added</span>Embed strawpoll links in posts setting.</p>
+                        <p class="changelog-panel-text"><span class="changelog-prefix cladded">Added</span>3 more settings in the manage wallpaper page.</p>
+                        <p class="changelog-panel-text"><span class="changelog-prefix cladded">Added</span>A quick loading screen for the Settings page.</p>
+                        <p class="changelog-panel-text"><span class="changelog-prefix clchange">Change</span>Better Custom Prefixes.</p>
+                        <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Bugs.</p>
+                    </div>
+                </div>
+                <div class="changelog-panel">
+                    <h1 class="changelog-panel-title">Version 1.5 — 5/4/2021</h1>
+                    <div class="changelog-panel-body">
+                        <p class="changelog-panel-text"><span class="changelog-prefix cladded">Added</span>Gray out threads that you already read.</p>
+                    </div>
+                </div>
+                <div class="changelog-panel">
+                    <h1 class="changelog-panel-title">Version 1.0 — 5/3/2021</h1>
+                    <div class="changelog-panel-body">
+                        <p class="changelog-panel-text">BetterWRD released.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="clcurrent" style="position: absolute;top: 0;width: 100%;transition: .44s all cubic-bezier(1,0,.28,.97);height: 100%;overflow: auto;scrollbar-width: thin;transform: translateX(850px);">
+                <div class="cltop">
+                    <h1 style="display: flex;flex-direction: column;align-items: flex-start;"><strong>What's New</strong><span style="display: none;font-family: 'Roboto';font-weight: normal;font-size: 17px;color: #c1c1c1;">Released on 10/25/2021</span></h1>
+                    <p id="clprevious" class="material-icons-outlined cltopbtn">arrow_back</p>
+                </div>
+                <div style="width: 93%;margin: auto;">
+                    <h1 class="section clcursection" style="margin-top: 0;">Added<br></h1>
+                    <div class="detailedcldiv">
+                        <h1>WeAreFemboys Theme 💖</h1>
+                        <p>This&nbsp;exceedingly sexy &amp; hot theme made by Shade_0122 has been finally added to BWRD.&nbsp;<a href="viewtheme.html?theme=WeAreFemboys" target="_blank">Use it now!</a></p><img src="https://cdn.discordapp.com/attachments/843145657463472138/858694031071248454/unknown.png"
+                            loading="eager" width="700"></div>
+                    <div class="detailedcldiv">
+                        <h1>A page for every default theme</h1>
+                        <p>Contains 2 screenshots and more info about the theme.<br></p><img src="https://cdn.discordapp.com/attachments/843145657463472138/896783979091460157/unknown.png" loading="eager" width="700"></div>
+                    <div class="detailedcldiv">
+                        <h1>Side Navigation Bar</h1>
+                        <p>Navigate through the pages with ease.</p><img src="https://cdn.discordapp.com/attachments/843145657463472138/896849752220655676/unknown.png" loading="eager"></div>
+                    <div class="detailedcldiv">
+                        <h1>New Theme Editor</h1>
+                        <p>It now has tabs instead of 2 individual elements, separating JS from CSS. The editor on the Edit Theme page also has a Refresh WRD button on the top bar now, allowing you to quickly see the changes you've made.</p><img src="https://cdn.discordapp.com/attachments/843145657463472138/898904644426797116/unknown.png"
+                            loading="eager" width="700"></div>
+                    <div class="detailedcldiv">
+                        <h1>Exporting &amp; Importing Themes Feature</h1>
+                        <p>This was a requested feature that I thought was useful enough to add.</p><img src="https://cdn.discordapp.com/attachments/800294579856605204/913075364660662292/unknown.png" loading="eager" width="400"><img src="https://cdn.discordapp.com/attachments/800294579856605204/913075521796063252/unknown.png"
+                            loading="eager" width="400"></div>
+                    <div class="detailedcldiv">
+                        <h1>Upload image to Imgur</h1>
+                        <p>On the Wallpaper page, you can now choose an image to upload to imgur.com and set it as your WRD wallpaper.</p><img loading="eager" width="200" src="https://cdn.discordapp.com/attachments/843145657463472138/898905342082166824/unknown.png"></div>
+                    <div
+                        class="detailedcldiv">
+                        <h1>Discord Dark &amp; Light Theme</h1>
+                        <p>Theme was made by&nbsp;Shade_0122.</p><img src="https://cdn.discordapp.com/attachments/843145657463472138/897141631302660167/unknown.png" loading="eager" width="700"></div>
+                <div class="detailedcldiv">
+                    <h1>Better Dropmenus.</h1><img src="https://cdn.discordapp.com/attachments/843145657463472138/896840965002776607/unknown.png" loading="eager" width="400"><img src="https://cdn.discordapp.com/attachments/843145657463472138/896841474904305734/unknown.png"
+                        loading="eager" width="400"><img src="https://cdn.discordapp.com/attachments/843145657463472138/896842358233124954/unknown.png" loading="eager" width="400"></div>
+                <div class="detailedcldiv">
+                    <h1>BetterWRD User</h1>
+                    <p>This will show on posts below the stats if the post creator used BetterWRD when creating the post.</p><img src="https://cdn.discordapp.com/attachments/843145657463472138/904829844024598598/unknown.png" loading="eager" width="250"></div>
+                <div
+                    class="detailedcldiv">
+                    <h1>Move Online Users to bottom Setting</h1>
+                    <p>You can now move the online users list back to the bottom of the page.</p><img src="https://cdn.discordapp.com/attachments/800294579856605204/920661017992757248/unknown.png" loading="eager" width="400"></div>
+            <div class="detailedcldiv">
+                <h1>Upcoming Features/Changes Page</h1>
+                <p>You can navigate to it from the navbar.</p><img src="https://cdn.discordapp.com/attachments/843145657463472138/896856748843991071/unknown.png" loading="eager" width="700"></div>
+            <div class="detailedcldiv">
+                <h1>Changelogs Menu.</h1><img src="https://cdn.discordapp.com/attachments/843145657463472138/911614716667904010/unknown.png" loading="eager" width="700"></div>
+            <div class="detailedcldiv">
+                <h1>Themes Search Bar</h1>
+                <p>Might be useful if you have a lot of themes.</p><img src="https://cdn.discordapp.com/attachments/843145657463472138/898916773057953842/unknown.png" loading="eager" width="400"></div>
+            <div class="detailedcldiv">
+                <h1>Themes List View</h1>
+                <p>Because why not.</p><img src="https://cdn.discordapp.com/attachments/843145657463472138/898917200264568832/unknown.png" loading="eager"><img src="https://cdn.discordapp.com/attachments/843145657463472138/911615037070798858/unknown.png"
+                    loading="eager" width="700"></div>
+            <div class="detailedcldiv">
+                <h1>Put skip to end on top of threads Setting.</h1><img src="https://cdn.discordapp.com/attachments/843145657463472138/896847531764506654/unknown.png" loading="eager" width="400"></div>
+            <div class="detailedcldiv">
+                <h1>Choose WRD Logo in the navbar.</h1><img src="https://cdn.discordapp.com/attachments/800294579856605204/922132165465092166/unknown.png" loading="eager" width="700"></div>
+            <div class="detailedcldiv">
+                <h1>About BetterWRD Page</h1>
+                <p>You can navigate to it from the navbar.</p><img src="https://cdn.discordapp.com/attachments/843145657463472138/899732174369062992/unknown.png" loading="eager" width="400"></div>
+            <h1 class="section clcursection">Changes<br></h1>
+            <div class="detailedcldiv">
+                <h1>Many design changes throughout the Settings pages.</h1>
+            </div>
+            <div class="detailedcldiv">
+                <h1>Custom Theme Code now auto-saves when editing.</h1>
+            </div>
+            <div class="detailedcldiv">
+                <h1>BWRD Settings will now be kept/saved after reinstalling the extension on Firefox browsers as well.</h1>
+            </div>
+            <div class="detailedcldiv">
+                <h1>WRD no longer auto-refreshes on setting change if it's on a create thread/reply page.</h1>
+            </div>
+            <div class="detailedcldiv">
+                <h1>Theme Code on Create Theme page now auto-saves and resets to default code when the Theme is created.</h1>
+            </div>
+            <div class="detailedcldiv">
+                <h1>Dark Text Editor &amp; Drafts Menu now work on the account manager page too (good for saving your siggies).</h1>
+            </div>
+            <div class="detailedcldiv">
+                <h1>Drafts Menu now adapts to the current theme colors.</h1>
+            </div>
+            <div class="detailedcldiv">
+                <h1>Dark Code Blocks &amp; Text Editor now work only if Night Theme is on.</h1>
+            </div>
+            <div class="detailedcldiv">
+                <h1>Clicking on a Custom Thread Prefix now redirects you to the prefix's thread.</h1>
+            </div>
+            <div class="detailedcldiv">
+                <h1>Custom Thread Prefixes now show up on category pages as well.</h1>
+            </div>
+            <div class="detailedcldiv">
+                <h1>Drafts Menu feature is now enabled by default and can't be turned off.</h1>
+            </div>
+            <div class="detailedcldiv">
+                <h1>Monaco Editor Fullscreen now fills out the page, not your entire screen, allowing you to switch tabs.</h1>
+            </div>
+            <div class="detailedcldiv">
+                <h1>Redesigned Update Popup.</h1><img src="https://cdn.discordapp.com/attachments/843145657463472138/896864972448096306/unknown.png" loading="eager" width="600"></div>
+            <h1 class="section clcursection">Fixes<br></h1>
+            <div class="detailedcldiv">
+                <h1>Fixed flashing of unstyled content (FOUC)</h1>
+                <p style="margin-bottom: 0;">There used to be a .5 second flash on page load when BetterWRD loaded a bit later than WRD, most noticeable when using themes. Fixed by giving BWRD 0.2 seconds to fully load while the page is hidden and then show the updated page. This
+                    sadly doesn't work on Firefox for now.</p>
+            </div>
+            <div class="detailedcldiv">
+                <h1>Corrected/Changed design in some themes.</h1>
+            </div>
+            <div class="detailedcldiv">
+                <h1>Fixed old layout setting not working after forum update.</h1>
+            </div>
+            <div class="detailedcldiv">
+                <h1>Fixed a bug that caused the Dark Theme Editor on thread create page to randomly error.</h1>
+            </div>
+            <div class="detailedcldiv">
+                <h1>Fixed a bug that caused the Drafts Menu to sometimes not show up.</h1>
+            </div>
+            <h1 class="section clcursection">Removed<br></h1>
+            <div class="detailedcldiv">
+                <h1>Increase Mention Button Size on threads Setting.</h1>
+            </div>
+            <div class="detailedcldiv">
+                <h1>Bright Theme Navbar&nbsp;Gradient Setting</h1>
+                <p style="margin-bottom: 0;">WRD's Bright Theme no longer has the colorful navbar gradient, but you can still bring it back with custom themes!</p>
+            </div>
+            <div class="detailedcldiv">
+                <h1>Deep Night Theme.</h1>
+            </div>
+            <h1 class="section clcursection">Known Issues<br></h1>
+            <div class="detailedcldiv">
+                <h1>Some features or code might not always load correctly if the tab is not active. Refresh for quick fix &amp; make sure the tab is focused.</h1>
+            </div>
+            <h1 class="section clcursection">News/Other<br></h1>
+            <div class="detailedcldiv" style="margin-bottom: 0;">
+                <h1>BetterWRD now has a New Discord Server! Join now to stay up to date with news, updates &amp; more!</h1><a href="https://discord.gg/ceU5SRTf4J" style="display: inline-block;margin-top: 5px;" target="_blank">https://discord.gg/ceU5SRTf4J</a></div>
+        </div><button class="btn btn-primary" id="clcbackbtn" type="button" style="margin-top: 62px;"><span class="material-icons-outlined" style="margin-right: 5px;font-size: 20px;color: rgb(224,224,224);vertical-align: text-bottom;">arrow_back</span>Go back</button>
+        <div
+            id="clcbottomdiv" style="position: sticky;width: 100%;background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.27) 100%);display: flex;bottom: 0;padding: 10px;pointer-events: none;transition: .15s all;opacity: 0;"><button class="btn btn-primary material-icons-outlined" id="scrolltotop" type="button">expand_less</button></div>
+    </div>
+    </div>
+    </div>
+    <div id="updatediv" class="backdropdiv" style="position: fixed;bottom: 0;left: 0;right: 0;top: 0;z-index: 100;transition: .15s all;display: none;">
+        <div id="updatebwrddiv">
+            <div class="center">
+                <h1 class="text-center material-icons-outlined" style="font-size: 100px;color: rgb(255,255,255);">update<br></h1>
+                <h1 class="text-center" style="font-size: 21px;color: rgb(224,224,224);"><em>there's a new version available</em><br><em>please download it asap</em><br></h1>
+            </div>
+            <div style="display: flex;flex-direction: row-reverse;position: absolute;bottom: 0;right: 0;width: 100%;padding: 15px;/*background: rgb(30,30,30);*//*border-top: 1px solid rgb(54,54,54);*/"><button class="btn btn-primary" id="downloadbtn" style="border-style: none;outline: none;border: none;margin-left: 17px;margin-bottom: 0;" type="button">Download<span class="material-icons-outlined settingtextspan" style="margin-left: 2px;vertical-align: text-top;font-size: 20px;">file_download<br></span></button>
+                <p
+                    id="hidebtn">Not now</p>
+            </div>
+        </div>
+    </div>
+    <div id="topbuttons" style="display: flex;position: fixed;justify-content: flex-end;position: absolute;top: 0;right: 0;width: 25%;"><button class="btn btn-primary topbutton material-icons-outlined" id="changelogbtn" type="button" title="Changelogs">article</button></div>
+    <h1 class="text-center" style="font-size: 30px;color: rgb(220,220,220);font-weight: 400;margin-top: 25px;" href="/index.html"><strong><em>BetterWRD Settings</em></strong></h1>
+    <h1 class="text-center" style="font-size: 20px;color: rgb(150,150,150);margin-top: -7px;"><em>here, you can tweak BetterWRD's settings to your liking.</em></h1>
+    <div id="settingsdiv" style="position: relative;width: 670px;margin: auto;">
+        <div id="updatebanner" style="position: relative;height: 100px;width: 100%;background: #2d2d2d;margin-top: 45px;border-radius: 8px;border: 1px solid #404040;display: none;"><img style="position: absolute;left: 0;width: 100px;height: 100%;margin-left: 15px;" src="assets/img/bwrdlogo-text.png" draggable="false">
+            <div style="margin-left: 130px;height: 100%;padding: 10px;padding-left: 15px;background: rgb(40,40,40);border-radius: 0 8px 8px 0;">
+                <p style="font-size: 20px;color: rgb(207,207,207);display: table;margin-bottom: 10px;">A new BetterWRD version is Out! Check what's new.<br></p><a class="btn btn-primary" role="button" id="carddl" style="display: table;border-style: none;box-shadow: none;transition: .3s all;" href="https://github.com/davve77/BetterWRD/releases/latest"
+                    target="_blank">Download now<span class="material-icons-outlined settingtextspan" style="margin-left: 2px;vertical-align: text-top;font-size: 20px;">file_download<br></span></a>
+                <p style="font-size: 19px;color: rgba(207,207,207,0.6);display: none;">BetterWRD V4.0 is out! Go check it out.<br></p>
+            </div>
+        </div>
+        <h1 class="section" style="position: relative;margin-top: 45px;"><span class="material-icons-outlined sectionicon" style="margin-right: 7px;">auto_awesome</span>Appearance<br></h1>
+        <div class="settingsdiv">
+            <div class="form-check ttelm"><input class="form-check-input" type="checkbox" id="replaceText"><label class="form-check-label text-left" for="replaceText" style="color: white!important;">Replace WeAreDevs text with WRD logo in the navigation bar<span class="settingtextspan material-icons-outlined" style="margin-left: 3px;vertical-align: middle;">navigate_next</span><span class="selectLogoContainer"><span id="selectLogo"><img src="https://i.imgur.com/60mVQky.png"><img style="margin-left: 10px;" src="https://i.imgur.com/frqpbRZ.png"></span></span></label></div>
+            <div
+                class="form-check"><input class="form-check-input" type="checkbox" id="darkTextEd"><label class="form-check-label text-left" for="darkTextEd">Dark Theme Text editor<span class="material-icons-outlined settingtextspan tooltipbwrd">nightlight<br><span class="tooltiptext" style="top: 25px;left: 0;">This only works with Night Theme</span></span><br></label></div>
+        <div
+            class="form-check"><input class="form-check-input" type="checkbox" id="darkCB"><label class="form-check-label text-left" for="darkCB">Dark Theme Code Blocks<span class="material-icons-outlined settingtextspan tooltipbwrd">nightlight<br><span class="tooltiptext" style="top: 25px;left: 0;">This only works with Night Theme</span></span><br></label></div>
+    <div
+        class="form-check"><input class="form-check-input" type="checkbox" id="oldUI"><label class="form-check-label text-left" for="oldUI">Use old Forum Home page layout<span class="newtag">NEW</span><br></label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="betterDropmenus"><label class="form-check-label text-left" for="betterDropmenus">Better Profile &amp; Notifications dropmenus<span class="newtag">NEW</span></label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="onlineUsersBottom"><label class="form-check-label text-left" for="onlineUsersBottom">Move Online Users to bottom<span class="newtag">NEW</span></label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="stickyNavbar"><label class="form-check-label text-left" for="stickyNavbar">Stick navigation bar to the top of the page</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="removeCaps"><label class="form-check-label text-left" for="removeCaps">Remove all caps usernames for users with Premium<br></label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="transparentPfp"><label class="form-check-label text-left" for="transparentPfp">Transparent Profile picture backgrounds on posts</label></div>
+        </div>
+        <div id="buttonsdiv" style="display: inline-block;margin-top: 15px;"><a class="btn btn-primary tooltipelm" role="button" href="wallpaper.html" tooltip=""><span class="material-icons-outlined settingtextspan" style="margin-left: 0px;margin-right: 5px;vertical-align: text-top;">wallpaper<br></span>Manage Wallpaper</a>
+            <a
+                class="btn btn-primary" role="button" id="changethemebtn" style="margin-left: 10px;" href="themes.html"><span class="material-icons-outlined settingtextspan" style="margin-left: 0px;margin-right: 5px;vertical-align: text-top;">palette<br></span>Manage Themes</a>
+        </div>
+        <h1 class="section" title="Quality of Life"><span class="material-icons-outlined sectionicon" style="margin-right: 7px;">mood</span>QOL<br></h1>
+        <div class="settingsdiv">
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="nextonTop"><label class="form-check-label text-left" for="nextonTop">Put 'Next' &amp; 'Prev' buttons on top of threads</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="lastPageOnTop"><label class="form-check-label text-left" for="lastPageOnTop">Put skip to end button on top of threads<span class="newtag">NEW</span></label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="pageInput"><label class="form-check-label text-left" for="pageInput">Add a number textbox on threads to navigate to specific pages</label></div>
+        </div>
+        <h1 class="section"><span class="material-icons-outlined sectionicon" style="margin-right: 7px;">more_horiz</span>ETC<br></h1>
+        <div class="settingsdiv">
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="spellcheckTextEd"><label class="form-check-label text-left" for="spellcheckTextEd">Enable Spellcheck for the Text editor</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="readUnread"><label class="form-check-label text-left" for="readUnread">Gray out threads that you've clicked</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="embedStrawpoll"><label class="form-check-label text-left" for="embedStrawpoll">Embed Strawpoll links in posts</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="threadPrefixes"><label class="form-check-label text-left" for="threadPrefixes">Add custom prefixes such as REL, REQ, Script, etc to threads</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="autoRefreshWRD"><label class="form-check-label text-left" for="autoRefreshWRD">Automatically refresh WRD when you change a setting</label></div>
+        </div>
+        </div>
+        <div class="hide"></div><button class="btn btn-primary" id="applybtn" style="margin-top: 75px;border-style: none;box-shadow: none;" type="button">Save &amp; Apply Settings</button>
+        <h1 class="text-center" style="font-size: 17px;color: rgb(150,150,150);margin-top: 10px;"><em>refresh pages for your changes to take effect</em><br></h1><script src="javascript/settingsManager.js"></script>
+<script src="javascript/changelog.js"></script>
+<script src="javascript/updateCheck.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
