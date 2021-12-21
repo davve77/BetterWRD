@@ -1,41 +1,32 @@
-# BetterWRD
-### Adds tons of new features and bug fixes to WRD!
-* Latest version: 2.5
-* Latest update date: 12/6/2021
-* Credits: david77 (davidTube), Google Fonts
+🏞 BetterWRD - A useful browser extension for WRD!
+===
 
-## Recently added Features
-* Use Old Forum Home page Layout
-* Themes
-* Custom Themes
-* Sticky navigation bar
-* Auto Refresh WRD on Setting Change
-* Embed Strawpoll links in posts
+This extension adds tons of useful features to WeAreDevs.net & improves the user experience by a long shot.
 
-## Full Feature list
-* Themes
-* Use Old Forum Home page Layout
-* Custom Themes
-* Post Drafts
-* Dark Theme Text editor
-* Dark Theme Code blocks
-* Custom thread prefixes
-* Complete Night Theme with Dark scrollbars, textboxes, dropdowns and more
-* Use bright theme navbar gradient while using night theme
-* Sticky navigation bar
-* Auto Refresh WRD on Setting Change
-* Embed Strawpoll links in posts
-* Transparent profile picture backgrounds (default is gray)
-* Replace WeAreDevs text with WRD logo in navbar
-* Put 'Next' and 'Prev' on top of threads as well
-* Text Editor Spellcheck
-* Number textbox to navigate to a specific thread page with ease
-* Gray out threads that you've already read
-* Remove all caps usernames for users that have Premium
-* Bigger mention button on replies
+It gives you the possibility to `Create or Use Premade Themes`, `Switch through the old & new forum layouts`, Have `Dark Code blocks` & many more features that not only help improve your experience on WRD, but also improve the design of the website.
 
-## Bug Fix list
-* Page Not Found Error on refresh
-* V3rmillion social link redirects to your own V3rm profile
+Latest Version: **3.0**\
+Latest Ver. Release Date: **12/12/2021**
 
-## Find more information on the WRD thread.  https://wearedevs.net/forum/t/20976
+Made by david77#3909
+
+
+## 📥 How to Download
+
+- ### Chrome, Brave, MS Edge, Opera & other Chromium browsers:
+  1️⃣ First of all, go ahead and download BetterWRD.zip from [github.com/davve77/BetterWRD/releases/latest](https://github.com/davve77/BetterWRD/releases/latest).\
+  2️⃣ Extract BetterWRD.zip to a folder.\
+  3️⃣ Go to chrome://extensions & enable Developer mode. For most browsers the switch is located on a corner of the page.\
+  4️⃣ Drag & drop the folder to chrome://extensions. Good job! You have installed BetterWRD! 🎉
+
+- ### Firefox:
+  1️⃣ Go to [addons.mozilla.org/en-US/firefox/addon/betterwrd/](https://addons.mozilla.org/en-US/firefox/addon/betterwrd/).\
+  2️⃣ Click **Add to Firefox**.
+  
+  
+## 📃 Information
+BetterWRD is a free and open source browser extension that adds over 25 features to WRD.
+
+Some of these features are: Themes, Wallpapers, Use old layout, Better Navbar Dropmenus, Dark Code blocks, Custom Thread Prefixes, Next thread page button on page top, Spellcheck for Text Editor, Drafts Menu (can be used to save forum signatures), Replace WRD Text to logo, Stick navbar to top of the page and a lot More!
+
+If you remove the extension from your browser, the next time you install it all your settings, themes & everything will still be there.
