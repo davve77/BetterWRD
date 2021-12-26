@@ -17,9 +17,13 @@ document.head.appendChild(document.createElement('style')).innerHTML = `
 	color: #ffffffb3!important;
 }
 
-input,
-select {
+input, select {
 	border: 1px solid white;
+}
+
+.userinfobg {
+	filter: none!important;
+	background: #ee66db!important;
 }
 
 input::placeholder {
@@ -56,7 +60,10 @@ input::placeholder {
 
 .thread_replytime {
 	color: white;
-	opacity: .7;
+}
+
+.threadbtn{
+	filter: none!important;
 }
 
 #d_disp {
@@ -123,6 +130,10 @@ body {
 }
 
 .border1 {
+	border: 1px solid #ffffff;
+}
+
+.btnThreadControl{
 	border: 1px solid #ffffff;
 }
 
@@ -298,7 +309,7 @@ footer {
 
 // JS
 setTimeout(()=> {
-	document.querySelectorAll('.btn, .button, .btn_newrelpy, .pagetextbox, #links a, .btnThreadControl, .release-card-button, .btnmention, .forum_btnnewthread, .btnDownload').forEach(elm => {
+	document.querySelectorAll('.btn, .button, .btn_newrelpy, .pagetextbox, #links a, .btnThreadControl, .release-card-button, .btnmention, .forum_btnnewthread, .btnDownload, .btnThreadControl').forEach(elm => {
 		elm.classList.add('themebtn')
 		elm.style.removeProperty('background-color')
 	})

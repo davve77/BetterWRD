@@ -8,7 +8,7 @@ if(document.getElementById('navigationbar')) {document.head.appendChild(document
 document.body.style.backgroundColor = 'rgb(9, 12, 16)'
 document.querySelectorAll('.theme1, .theme2, .thread_replierdata, .signature').forEach(elm => {elm.style.backgroundColor = 'rgb(13, 17, 23)'; elm.style.border = '1px solid #30363d'})
 document.querySelectorAll('.forumcontainer h2, .forumcontainer h1').forEach(elm => elm.style.borderBottom = '1px solid #30363d')
-document.querySelectorAll('.prefix, input, select').forEach(elm => {elm.style.backgroundColor = '#161b22'; elm.style.color = 'white'; elm.style.border = '1px solid #30363d'})
+document.head.appendChild(document.createElement('style')).innerHTML = '.prefix, input, select{background: #161b22!important; color: white; border: 1px solid #30363d!important;}'
 document.head.appendChild(document.createElement('style')).innerHTML = `.latestthreads{background: rgb(17 20 26) !important;}`
 document.head.appendChild(document.createElement('style')).innerHTML = `.themebtn{
     border: 1px solid #30363d;

@@ -65,7 +65,9 @@ clcurrent.addEventListener('scroll', ()=> {
 // Show changelogs after update
 if(localStorage.getItem('lastChangelog') != chrome.runtime.getManifest().version){
     document.getElementById('changelogbtn').click()
-    setTimeout(showWhatsNew, 500)
+    setTimeout(()=> {
+        document.querySelectorAll('.changelog-panel')[0].style.animation = 'changelogAnim .3s ease-in'
+    }, 650)
 
     localStorage.setItem('lastChangelog', chrome.runtime.getManifest().version)
 }

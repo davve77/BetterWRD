@@ -97,18 +97,41 @@ chrome.storage.local.get('autoRefreshWRD', saved => {
 })
 
 
+// Make Edit/Delete post buttons bigger
+if(document.getElementsByClassName('replygroup')[0]){
+    document.querySelectorAll('.reply_menu').forEach(e => {
+        if(!e.firstElementChild) return
+
+        const editbtn = e.firstElementChild.firstElementChild
+        const delbtn = e.lastElementChild.firstElementChild
+
+        editbtn.className = 'themebtn btn theme1 round border1 threadbtn'
+        editbtn.style.padding = '5px 10px'
+        editbtn.style.filter = 'brightness(1.4)'
+        editbtn.style.cursor = 'pointer'
+
+        delbtn.className = 'themebtn btn theme1 round border1 threadbtn'
+        delbtn.style.padding = '5px 10px'
+        delbtn.style.filter = 'brightness(1.4)'
+        delbtn.style.cursor = 'pointer'
+
+        e.style.padding = '4px'
+    })
+}
+
+
 // New BWRD Version Notification
 if(typeof InstallTrigger == 'undefined'){ // Check if user is not using Firefox
     fetch('https://flameplus.vercel.app/bwrd/ver.json')
     .then(res => res.json())
     .then((out) => {
+        if(!document.querySelector('#navigationbar')) return
         if(out.version != chrome.runtime.getManifest().version){
             const notif = document.createElement('div')
-            notif.innerHTML = `<div class="theme1 border1" style="position: relative;margin: 25px auto;width: 100%;max-width: 1076px;margin-bottom: 10px;border-radius: 8px;user-select: none;"> <img style="position: absolute;width: 100px;height: 100px;margin-left: 15px;" src="https://i.gyazo.com/9e64301669cf394065e2a0195d7e18f4.png" draggable="false"> <div class="border1-left" style="margin-left: 130px;height: 100%;padding: 11px;padding-left: 20px;border-radius: 0 8px 8px 0;backdrop-filter: brightness(1.2);"> <p style="font-size: 22px;font-weight: 500;margin-bottom: 10px;opacity: .9;">A new version of BetterWRD is out. Download it!<br></p><a href="https://github.com/davve77/BetterWRD/releases/latest" class="btn btn-primary themebtn" id="carddl" target="_blank" style="padding: 10px 15px;font-size: 15px;font-weight: 500;display: table;border-style: none!important;border-radius: 10px;box-shadow: none;background: linear-gradient(to right, #8aaaff, rgba(237,98,206,0.88))!important;color: black;" type="button"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="#000000" height="20px" width="20px" style="vertical-align: middle;margin-right: 8px;"><g><rect fill="none" height="24" width="24"></rect></g><g><path d="M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M17,11l-1.41-1.41L13,12.17V4h-2v8.17L8.41,9.59L7,11l5,5 L17,11z"></path></g></svg>Download now</a>  </div> </div>`
+            notif.innerHTML = `<div class="theme1 border1" style="position: relative;margin: 25px auto;width: 100%;max-width: 1076px;margin-bottom: 10px;border-radius: 8px;user-select: none;padding: 15px;overflow: hidden;"> <h1 style=" padding-bottom: 10px; font-size: 20px; ">A new version of BetterWRD is out — Please update now.</h1> <div style=" display: flex; align-items: center; gap: 8px; "> <a href="${out.link}" class="btn btn-primary themebtn" id="carddl" target="_blank" style="position: relative;display: inline-flex;align-items: center;padding: 8px 20px;font-size: 14px;font-weight: 500!important;border-style: none!important;border-radius: 10px;box-shadow: none;background: linear-gradient(to right, #8aaaff, rgba(237,98,206,0.88))!important;color: black; transition: .16s all" type="button"> <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="#000000" height="20px" width="20px" style="vertical-align: middle;margin-right: 8px;"> <g> <rect fill="none" height="24" width="24"></rect> </g> <g> <path d="M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M17,11l-1.41-1.41L13,12.17V4h-2v8.17L8.41,9.59L7,11l5,5 L17,11z"></path> </g> </svg>Download Now</a> <p style="opacity: .8;font-size: 14px;">your settings, themes, drafts etc will not be deleted.</p> </div> <div style=" position: absolute; height: 100%; top: 0; right: 10px; display: flex; "> <img src="https://flameplus.vercel.app/bwrd/img/logo.png" style="padding: 10px;filter: brightness(1000%);"> <div style=" position: absolute; height: 100%; width: 650%; right: -10px; background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(167 61 147 / 56%) 100%); animation: updateanim .45s ease-out;"></div> </div> </div> <style>#carddl:hover { transform: scale(.94)!important; } @keyframes updateanim { from {transform: translateX(650%);} to {transform: translateX(0px);} }</style>`
             if(document.getElementsByTagName('main')[0]){
                 document.body.appendChild(notif)
                 document.body.insertBefore(notif, document.getElementsByTagName('main')[0])
-                notif.lastElementChild.lastElementChild.href = out.link
             }
         }
     })

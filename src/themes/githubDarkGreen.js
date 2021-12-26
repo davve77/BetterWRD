@@ -6,9 +6,9 @@ if(document.getElementById('navigationbar')) document.getElementById('navigation
 
 // Main
 document.body.style.backgroundColor = 'rgb(9, 12, 16)'
-document.querySelectorAll('.theme1, .theme2, .thread_replierdata, .signature').forEach(elm => {elm.style.backgroundColor = 'rgb(13, 17, 23)'; elm.style.border = '1px solid #30363d'})
+document.head.appendChild(document.createElement('style')).innerHTML = '.theme1, .theme2, .thread_replierdata, .signature{background: rgb(13, 17, 23)!important; border: 1px solid #238636!important;}'
 document.querySelectorAll('.forumcontainer h2, .forumcontainer h1').forEach(elm => elm.style.borderBottom = '1px solid #238636')
-document.querySelectorAll('.prefix, #links a').forEach(elm => {elm.style.backgroundColor = '#161b22'; elm.style.border = '1px solid #238636'; elm.style.color = 'white'})
+document.head.appendChild(document.createElement('style')).innerHTML = '.prefix, #links a{background: #161b22!important; color: white; border: 1px solid #238636!important;}'
 document.querySelectorAll('input, select').forEach(elm => {elm.style.backgroundColor = '#161b22'; elm.style.border = '1px solid #238636'; elm.style.color = 'white'; elm.style.setProperty('-moz-appearance', 'none')})
 document.querySelectorAll('.btn, .button, .btn_newrelpy, .pagetextbox, .btnThreadControl, .forum_btnnewthread').forEach(elm => {elm.style.border = '1px solid #238636'; elm.style.background = 'rgb(13, 17, 23)'})
 if(document.querySelector('#medias')) {document.querySelector('#medias').style.backgroundColor = 'rgb(13, 17, 23)'; document.querySelector('#medias').style.border = '1px solid #30363d'}

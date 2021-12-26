@@ -37,7 +37,7 @@
     <div id="sidenav" class="sidenav"><a id="sidenavtop" style="position: absolute;display: flex;align-items: center;justify-content: center;top: 0;background: #323232;height: 90px;width: 100%;border-radius: 0;cursor: pointer;padding: 0;" href="index.html"><img id="sidenavtopimg" draggable="false" src="assets/img/bwrdlogo-text.png" width="100"></a>
         <p
             class="navdesc" style="margin-top: 105px;">BetterWRD</p><a id="navbar-settings" href="index.html"><span class="material-icons-outlined navspan">tune</span>Settings</a><a id="navbar-themes" href="themes.html"><span class="material-icons-outlined navspan">palette<br></span>Themes</a><a id="navbar-wallpaper"
-                href="wallpaper.html"><span class="material-icons-outlined navspan">wallpaper</span>Wallpaper</a>
+                href="wallpaper.html"><span class="material-icons-outlined navspan">wallpaper</span>Wallpaper</a><a id="navbar-fonts" href="fonts.html"><span class="material-icons-outlined navspan">format_size</span>Fonts</a>
             <p class="navdesc">Extension</p><a id="navbar-github" href="https://github.com/davidTube7/BetterWRD" target="_blank"><span class="material-icons-outlined navspan">code</span>GitHub</a>
             <p class="navdesc">Other</p><a id="navbar-upcoming" href="upcoming.html"><span class="material-icons-outlined navspan">science<br></span>Upcoming</a><a id="navbar-discord" href="https://discord.gg/ceU5SRTf4J" target="_blank"><span class="material-icons-outlined navspan">group<br></span>Discord</a>
             <a
@@ -54,6 +54,20 @@
                 <div class="cltop">
                     <h1><strong>Changelogs</strong></h1>
                     <p id="closechangelog" class="material-icons-outlined cltopbtn">close</p>
+                </div>
+                <div class="changelog-panel" tabindex="1">
+                    <h1 class="changelog-panel-title">Version 3.1 — 12/26/2021</h1>
+                    <div class="changelog-panel-body"></div>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Quick Profile Viewer.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Quick Thread Viewer.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Fonts.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Multi-Mention people on posts feature.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>Better Profile Dropmenu now shows your Avatar and Reputation.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>Edit &amp; Delete Post buttons are now bigger and look like other buttons.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Threads becoming unclickable on some thread lists due to Custom Prefixes.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Default Themes not applying to Custom Prefixes.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Removed</span>Dark Mode Text Editor.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Removed</span>Gray out clicked Threads.</p>
                 </div>
                 <div class="changelog-panel">
                     <h1 class="changelog-panel-title">Version 3.0&nbsp;— 12/21/2021</h1>
@@ -120,7 +134,7 @@
             </div>
             <div id="clcurrent" style="position: absolute;top: 0;width: 100%;transition: .44s all cubic-bezier(1,0,.28,.97);height: 100%;overflow: auto;scrollbar-width: thin;transform: translateX(850px);">
                 <div class="cltop">
-                    <h1 style="display: flex;flex-direction: column;align-items: flex-start;"><strong>What's New</strong><span style="display: none;font-family: 'Roboto';font-weight: normal;font-size: 17px;color: #c1c1c1;">Released on 10/25/2021</span></h1>
+                    <h1 style="display: flex;flex-direction: column;align-items: flex-start;"><strong>What's New V3.0</strong><span style="display: none;font-family: 'Roboto';font-weight: normal;font-size: 17px;color: #c1c1c1;">Released on 10/25/2021</span></h1>
                     <p id="clprevious" class="material-icons-outlined cltopbtn">arrow_back</p>
                 </div>
                 <div style="width: 93%;margin: auto;">
@@ -287,31 +301,30 @@
         <div class="settingsdiv">
             <div class="form-check ttelm"><input class="form-check-input" type="checkbox" id="replaceText"><label class="form-check-label text-left" for="replaceText" style="color: white!important;">Replace WeAreDevs text with WRD logo in the navigation bar<span class="settingtextspan material-icons-outlined" style="margin-left: 3px;vertical-align: middle;">navigate_next</span><span class="selectLogoContainer"><span id="selectLogo"><img src="https://i.imgur.com/60mVQky.png"><img style="margin-left: 10px;" src="https://i.imgur.com/frqpbRZ.png"></span></span></label></div>
             <div
-                class="form-check"><input class="form-check-input" type="checkbox" id="darkTextEd"><label class="form-check-label text-left" for="darkTextEd">Dark Theme Text editor<span class="material-icons-outlined settingtextspan tooltipbwrd">nightlight<br><span class="tooltiptext" style="top: 25px;left: 0;">This only works with Night Theme</span></span><br></label></div>
+                class="form-check"><input class="form-check-input" type="checkbox" id="darkCB"><label class="form-check-label text-left" for="darkCB">Dark Theme Code Blocks<span class="material-icons-outlined settingtextspan tooltipbwrd">nightlight<br><span class="tooltiptext" style="top: 25px;left: 0;">This only works with Night Theme</span></span><br></label></div>
         <div
-            class="form-check"><input class="form-check-input" type="checkbox" id="darkCB"><label class="form-check-label text-left" for="darkCB">Dark Theme Code Blocks<span class="material-icons-outlined settingtextspan tooltipbwrd">nightlight<br><span class="tooltiptext" style="top: 25px;left: 0;">This only works with Night Theme</span></span><br></label></div>
-    <div
-        class="form-check"><input class="form-check-input" type="checkbox" id="oldUI"><label class="form-check-label text-left" for="oldUI">Use old Forum Home page layout<span class="newtag">NEW</span><br></label></div>
-        <div class="form-check"><input class="form-check-input" type="checkbox" id="betterDropmenus"><label class="form-check-label text-left" for="betterDropmenus">Better Profile &amp; Notifications dropmenus<span class="newtag">NEW</span></label></div>
-        <div class="form-check"><input class="form-check-input" type="checkbox" id="onlineUsersBottom"><label class="form-check-label text-left" for="onlineUsersBottom">Move Online Users to bottom<span class="newtag">NEW</span></label></div>
-        <div class="form-check"><input class="form-check-input" type="checkbox" id="stickyNavbar"><label class="form-check-label text-left" for="stickyNavbar">Stick navigation bar to the top of the page</label></div>
-        <div class="form-check"><input class="form-check-input" type="checkbox" id="removeCaps"><label class="form-check-label text-left" for="removeCaps">Remove all caps usernames for users with Premium<br></label></div>
-        <div class="form-check"><input class="form-check-input" type="checkbox" id="transparentPfp"><label class="form-check-label text-left" for="transparentPfp">Transparent Profile picture backgrounds on posts</label></div>
-        </div>
-        <div id="buttonsdiv" style="display: inline-block;margin-top: 15px;"><a class="btn btn-primary tooltipelm" role="button" href="wallpaper.html" tooltip=""><span class="material-icons-outlined settingtextspan" style="margin-left: 0px;margin-right: 5px;vertical-align: text-top;">wallpaper<br></span>Manage Wallpaper</a>
-            <a
-                class="btn btn-primary" role="button" id="changethemebtn" style="margin-left: 10px;" href="themes.html"><span class="material-icons-outlined settingtextspan" style="margin-left: 0px;margin-right: 5px;vertical-align: text-top;">palette<br></span>Manage Themes</a>
-        </div>
-        <h1 class="section" title="Quality of Life"><span class="material-icons-outlined sectionicon" style="margin-right: 7px;">mood</span>QOL<br></h1>
+            class="form-check"><input class="form-check-input" type="checkbox" id="oldUI"><label class="form-check-label text-left" for="oldUI">Use old Forum Home page layout<br></label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" id="betterDropmenus"><label class="form-check-label text-left" for="betterDropmenus">Better Profile &amp; Notifications dropmenus</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" id="onlineUsersBottom"><label class="form-check-label text-left" for="onlineUsersBottom">Move Online Users to bottom</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" id="stickyNavbar"><label class="form-check-label text-left" for="stickyNavbar">Stick navigation bar to the top of the page</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" id="removeCaps"><label class="form-check-label text-left" for="removeCaps">Remove all caps usernames for users with Premium<br></label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" id="transparentPfp"><label class="form-check-label text-left" for="transparentPfp">Transparent Profile picture backgrounds on posts</label></div>
+    </div>
+    <div id="buttonsdiv" style="display: inline-flex;flex-direction: row;align-items: center;justify-content: center;flex-wrap: wrap;margin-top: 15px;/*max-width: 500px;*/gap: 7px;"><a class="btn btn-primary tooltipelm" role="button" href="wallpaper.html" tooltip=""><span class="material-icons-outlined settingtextspan" style="margin-left: 0px;margin-right: 5px;vertical-align: text-top;">wallpaper<br></span>Manage Wallpaper</a>
+        <a
+            class="btn btn-primary" role="button" id="changethemebtn" href="themes.html"><span class="material-icons-outlined settingtextspan" style="margin-left: 0px;margin-right: 5px;vertical-align: text-top;">palette<br></span>Manage Themes</a><a class="btn btn-primary" role="button" id="changefontsbtn" href="fonts.html"><span class="material-icons-outlined settingtextspan" style="margin-left: 0px;margin-right: 5px;vertical-align: text-top;">format_size<br></span>Manage Fonts</a></div>
+    <h1
+        class="section" title="Quality of Life"><span class="material-icons-outlined sectionicon" style="margin-right: 7px;">mood</span>QOL<br></h1>
         <div class="settingsdiv">
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="quickProfile"><label class="form-check-label text-left" for="quickProfile">Quick Profile View when hovering over a user's name<span class="newtag">NEW</span></label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="quickThread"><label class="form-check-label text-left" for="quickThread">Quick Thread View when hovering over a Thread<span class="newtag">NEW</span></label></div>
             <div class="form-check"><input class="form-check-input" type="checkbox" id="nextonTop"><label class="form-check-label text-left" for="nextonTop">Put 'Next' &amp; 'Prev' buttons on top of threads</label></div>
-            <div class="form-check"><input class="form-check-input" type="checkbox" id="lastPageOnTop"><label class="form-check-label text-left" for="lastPageOnTop">Put skip to end button on top of threads<span class="newtag">NEW</span></label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="lastPageOnTop"><label class="form-check-label text-left" for="lastPageOnTop">Put skip to end button on top of threads</label></div>
             <div class="form-check"><input class="form-check-input" type="checkbox" id="pageInput"><label class="form-check-label text-left" for="pageInput">Add a number textbox on threads to navigate to specific pages</label></div>
         </div>
         <h1 class="section"><span class="material-icons-outlined sectionicon" style="margin-right: 7px;">more_horiz</span>ETC<br></h1>
         <div class="settingsdiv">
             <div class="form-check"><input class="form-check-input" type="checkbox" id="spellcheckTextEd"><label class="form-check-label text-left" for="spellcheckTextEd">Enable Spellcheck for the Text editor</label></div>
-            <div class="form-check"><input class="form-check-input" type="checkbox" id="readUnread"><label class="form-check-label text-left" for="readUnread">Gray out threads that you've clicked</label></div>
             <div class="form-check"><input class="form-check-input" type="checkbox" id="embedStrawpoll"><label class="form-check-label text-left" for="embedStrawpoll">Embed Strawpoll links in posts</label></div>
             <div class="form-check"><input class="form-check-input" type="checkbox" id="threadPrefixes"><label class="form-check-label text-left" for="threadPrefixes">Add custom prefixes such as REL, REQ, Script, etc to threads</label></div>
             <div class="form-check"><input class="form-check-input" type="checkbox" id="autoRefreshWRD"><label class="form-check-label text-left" for="autoRefreshWRD">Automatically refresh WRD when you change a setting</label></div>

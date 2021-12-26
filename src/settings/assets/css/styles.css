@@ -208,6 +208,7 @@ section:after {
   background: rgb(52, 52, 52);
   color: #ffffff;
   font-size: 13.5px;
+  border: 1px solid transparent;
 }
 
 .btn:hover {
@@ -1496,5 +1497,221 @@ img {
 .form-check.ttelm:hover #selectLogo, #selectLogo:hover {
   opacity: 1!important;
   transform: none!important;
+}
+
+#selectLogo > img:active {
+  opacity: .5;
+}
+
+.selectLogoContainer:hover ~ .form-check-label.text-left {
+  background: red;
+}
+
+#selectLogo {
+  width: 200px;
+  height: 70px;
+  background: rgb(38,38,38);
+  border: 1px solid rgb(44,44,44);
+  border-top: 1px solid rgb(52,52,52);
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 14%);
+  border-radius: 8px;
+  padding: 8px;
+  transition: .12s all ease;
+  opacity: 0;
+  transform: translateX(-10px);
+  pointer-events: none!important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -10px;
+  cursor: default!important;
+}
+
+#selectLogo > img:hover {
+  background: rgb(52,52,52);
+  border: 1px solid rgb(50,50,50);
+}
+
+#selectLogo > img {
+  width: 55px;
+  height: 55px;
+  background: rgb(45,45,45);
+  border: 1px solid rgb(50,50,50);
+  border-radius: 6px;
+  padding: 8px;
+  pointer-events: all;
+  cursor: pointer;
+  transition: .12s all;
+}
+
+.selectLogoContainer:active {
+  pointer-events: none!important;
+}
+
+.selectLogoContainer {
+  position: absolute;
+  top: -40px;
+  right: -230px;
+  padding: 20px;
+  cursor: default;
+  display: flex;
+}
+
+@keyframes changelogAnim {
+  0% {
+    background: rgb(50,50,50);
+  }
+  100% {
+    background: 0;
+  }
+}
+
+.dropdown-menu {
+  background: rgb(45,45,45);
+  border-radius: 9px;
+  padding: 4px;
+}
+
+.dropdown-item {
+  color: rgba(255,255,255,0.8);
+  font-size: 15px;
+}
+
+.dropdown-item:hover {
+  background: rgb(54,54,54);
+  color: white;
+}
+
+.dropdown-item {
+  padding: 5px 10px;
+}
+
+.dropdown-item:active, .dropdown-item:focus {
+  background: initial;
+  color: white;
+}
+
+.fontdiv {
+  position: relative;
+  background: rgb(42,42,42);
+  border: 1px solid rgb(45,45,45);
+  border-radius: 7px;
+  width: 250px;
+  height: 150px;
+  text-align: left;
+  padding: 10px;
+  transition: .12s all;
+  overflow: hidden;
+}
+
+.fontdiv > h1 {
+  font-size: 25px;
+  margin: 0;
+  opacity: .95;
+}
+
+.text1 {
+  font-size: 18px;
+  opacity: .8;
+}
+
+.fontdiv > p {
+  margin: 0;
+}
+
+.text2 {
+  font-size: 16px;
+  opacity: .6;
+}
+
+.text3 {
+  font-size: 14px;
+  opacity: .5;
+}
+
+.text4 {
+  font-size: 13px;
+  opacity: .3;
+}
+
+.fontdiv:hover {
+  background: rgb(38,38,38);
+  transition: .01s all;
+}
+
+.fontsdiv {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 0fr) );
+  justify-content: center;
+}
+
+.round {
+  border-radius: 6px;
+}
+
+@keyframes fadeSlideLeft2 {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: inherit;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeSlideLeft {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.fonttext {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: .22s all;
+}
+
+.selectedfont {
+  border: 1px solid rgb(88,88,88);
+}
+
+@keyframes animSlideRight {
+  0% {
+    transform: translateX(15PX);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.fontContainer {
+  padding: 10px;
+  background: rgb(37,37,37);
+  border: 1px solid rgb(41,41,41);
+  border-radius: 7px;
+  text-align: left;
+}
+
+.fontdiv:active {
+  opacity: .6;
 }
 

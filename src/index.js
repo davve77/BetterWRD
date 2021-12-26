@@ -24,9 +24,10 @@ chrome.storage.local.get(null, saved => {
     if(saved.removeCaps)           {run('features/lowercasePremium.js')}
     if(saved.stickyNavbar)         {run('features/stickyNavbar.js')}
     if(saved.threadPrefixes)       {run('features/threadPrefixes.js')}
+    if(saved.quickProfile)         {run('features/quickProfileViewer.js')}
+    if(saved.quickThread)          {run('features/quickThreadViewer.js')}
 
     if(document.querySelectorAll('.buttons')[0] || document.querySelectorAll('.forumcontainer')[0]){ // Checks if you're on the main forum page
-        if(saved.readUnread)       {run('features/grayedReadThreads.js')}
         if(saved.onlineUsersBottom){run('features/onlineUsersBottom.js')}
     }
 
@@ -39,10 +40,10 @@ chrome.storage.local.get(null, saved => {
     }
     
     if(document.getElementsByClassName('g-recaptcha')[0] || document.getElementById('saveinfo')){ // Checks if you're on create post or profile manager page
-        if(saved.darkTextEd)       {run('features/darkTextEditor.js')}
         if(saved.spellcheckTextEd) {run('features/textEditorSpellcheck.js')}
                                    {run('features/drafts.js')}
     }
+                                   {run('features/multiMention.js')}
                                    {run('etc/bwrdUser.js')}
 })
 

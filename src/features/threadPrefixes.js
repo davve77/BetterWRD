@@ -6,6 +6,8 @@ document.head.appendChild(document.createElement('style')).innerHTML =`.prefixni
 document.head.appendChild(document.createElement('style')).innerHTML =`.prefixbright{background-color: #e8e8e8;color: black!important;}`
 
 function setCustomPrefix(thread, text, link){
+    if(location.href.includes('profile')) return
+
     // Vars
     var prefixtext = text.toLowerCase().trim()
     const newprefix = document.createElement('a')

@@ -9,7 +9,7 @@ document.body.style.backgroundColor = 'rgb(37, 47, 55)'
 document.querySelectorAll('.theme1, .theme2, .thread_replierdata, .signature').forEach(elm => {elm.style.backgroundColor = 'rgb(37, 51, 61)'})
 document.querySelectorAll('.signature').forEach(elm => elm.style.borderTop = '1px solid #cccccc4a')
 document.querySelectorAll('.forumcontainer h2, .forumcontainer h1').forEach(elm => elm.style.borderBottom = '1px solid rgb(37, 47, 55)')
-document.querySelectorAll('input, ::placeholder, .prefix, select').forEach(elm => {elm.style.backgroundColor = 'rgb(35, 140, 99)'; elm.style.color = 'white'})
+document.head.appendChild(document.createElement('style')).innerHTML = 'input, ::placeholder, .prefix, select{background: rgb(35, 140, 99)!important; color: white!important;}'
 document.head.appendChild(document.createElement('style')).innerHTML = `.themebtn{
     background-color: rgb(45, 150, 109);
     transition: .27s all;`

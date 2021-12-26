@@ -6,7 +6,6 @@ const applybtn = document.getElementById('applybtn')
 replaceText = document.getElementById('replaceText')
 removeCaps = document.getElementById('removeCaps')
 darkCodeBl = document.getElementById('darkCB')
-darkTextEd = document.getElementById('darkTextEd')
 oldUI = document.getElementById('oldUI')
 transparentPfpBg = document.getElementById('transparentPfp')
 lastPageOnTop = document.getElementById('lastPageOnTop')
@@ -14,16 +13,17 @@ nextBtnOnTop = document.getElementById('nextonTop')
 spellcheck = document.getElementById('spellcheckTextEd')
 pageInput = document.getElementById('pageInput')
 threadPrefixes = document.getElementById('threadPrefixes')
-readUnread = document.getElementById('readUnread')
 autoRefreshWRD = document.getElementById('autoRefreshWRD')
 stickyNavbar = document.getElementById('stickyNavbar')
 embedStrawpoll = document.getElementById('embedStrawpoll')
 betterDropmenus = document.getElementById('betterDropmenus')
 selectLogo = document.getElementById('selectLogo')
+quickProfile = document.getElementById('quickProfile')
+quickThread = document.getElementById('quickThread')
 
 
 // All Settings
-const settings = ['oldUI','onlineUsersBottom','betterDropmenus','embedStrawpoll','stickyNavbar','readUnread','replaceText','removeCaps','darkCB','darkTextEd','transparentPfp','lastPageOnTop','nextonTop','spellcheckTextEd','pageInput','threadPrefixes','autoRefreshWRD']
+const settings = ['oldUI','quickProfile','quickThread','onlineUsersBottom','betterDropmenus','embedStrawpoll','stickyNavbar','replaceText','removeCaps','darkCB','transparentPfp','lastPageOnTop','nextonTop','spellcheckTextEd','pageInput','threadPrefixes','autoRefreshWRD']
 
 
 // Load Settings
@@ -32,7 +32,6 @@ function load(){
         replaceText.checked = saved.replaceText
         removeCaps.checked = saved.removeCaps
         darkCodeBl.checked = saved.darkCB
-        darkTextEd.checked = saved.darkTextEd
         oldUI.checked = saved.oldUI
         transparentPfpBg.checked = saved.transparentPfp
         lastPageOnTop.checked = saved.lastPageOnTop
@@ -40,12 +39,13 @@ function load(){
         spellcheck.checked = saved.spellcheckTextEd
         pageInput.checked = saved.pageInput
         threadPrefixes.checked = saved.threadPrefixes
-        readUnread.checked = saved.readUnread
         autoRefreshWRD.checked = saved.autoRefreshWRD
         stickyNavbar.checked = saved.stickyNavbar
         embedStrawpoll.checked = saved.embedStrawpoll
         betterDropmenus.checked = saved.betterDropmenus
         onlineUsersBottom.checked = saved.onlineUsersBottom
+        quickProfile.checked = saved.quickProfile
+        quickThread.checked = saved.quickThread
     })
 }
 load()
@@ -58,7 +58,6 @@ function save(showtoast){
         'removeCaps': removeCaps.checked,
         'removeCaps': removeCaps.checked,
         'darkCB': darkCodeBl.checked,
-        'darkTextEd': darkTextEd.checked,
         'oldUI': oldUI.checked,
         'transparentPfp': transparentPfpBg.checked,
         'lastPageOnTop': lastPageOnTop.checked,
@@ -67,12 +66,13 @@ function save(showtoast){
         'pageInput': pageInput.checked,
         'threadPrefixes': threadPrefixes.checked,
         'threadPrefixes': threadPrefixes.checked,
-        'readUnread': readUnread.checked,
         'autoRefreshWRD': autoRefreshWRD.checked,
         'stickyNavbar': stickyNavbar.checked,
         'embedStrawpoll': embedStrawpoll.checked,
         'betterDropmenus': betterDropmenus.checked,
-        'onlineUsersBottom': onlineUsersBottom.checked
+        'onlineUsersBottom': onlineUsersBottom.checked,
+        'quickProfile': quickProfile.checked,
+        'quickThread': quickThread.checked
     })
     if(showtoast){
         showToast('Settings saved and applied.')
