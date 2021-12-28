@@ -10,6 +10,8 @@ chrome.storage.local.get(['replaceText','WRDLogo'], saved => {
     const wrdlogo = document.createElement('img')
     wrdlogo.src = 'https://i.imgur.com/60mVQky.png' // Default = light logo
     wrdlogo.style.display = 'block'
+    wrdlogo.style.height = '45px'
+    wrdlogo.style.width = '45px'
     elm.appendChild(wrdlogo)
     elm.firstChild.remove()
     elm.style.alignItems = 'center'

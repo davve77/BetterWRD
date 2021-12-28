@@ -3,7 +3,7 @@
     "short_name": "BWRD",
     "description": "Adds tons of features to WRD! by david77.",
     "author": "dave77 (davidTube)",
-    "version": "3.1",
+    "version": "3.2",
     "manifest_version":2,
     "web_accessible_resources": ["*"],
     "content_scripts":[

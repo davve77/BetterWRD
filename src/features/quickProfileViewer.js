@@ -71,10 +71,10 @@ document.body.addEventListener('mousemove', (e)=> {
             const P_ALIAS = doc.querySelector('.alias').textContent.replace('(','').replace(')','')
             const P_REP = doc.querySelector('.alias').nextElementSibling.firstElementChild.firstElementChild.textContent
             const P_JOINED = doc.querySelector('.alias').nextElementSibling.nextElementSibling.textContent.split(': ')[1]
-            const P_BIO = doc.querySelector('.biography').textContent
+            const P_BIO = (doc.querySelector('.biography')) ? doc.querySelector('.biography').textContent : ''
             const P_BADGES = getBadges()
             const P_BADGES_COUNT = doc.querySelectorAll('[alt="badge"]').length
-            const P_REP_COLOR = P_REP.includes('-') ? '#f44545' : "#4de84d"
+            const P_REP_COLOR = P_REP.includes('-') ? '#f44545' : "green"
 
             newdiv = document.createElement('div')
             document.body.appendChild(newdiv)
@@ -85,23 +85,23 @@ document.body.addEventListener('mousemove', (e)=> {
                 <div style=" width: 100%; padding: 6px; display: flex; padding-left: 15px; align-items: center; gap: 20px; ">
                     <div style=" display: inline-flex; flex-direction: column; ">
                         <p style=" font-size: 15px; opacity: .7; ">Joined</p>
-                        <h1 style=" font-size: 18px; ">${P_JOINED}</h1>
+                        <h1 style="text-align: left; font-size: 18px; ">${P_JOINED}</h1>
                     </div>
                     <div style=" display: inline-flex; flex-direction: column; ">
                         <p style=" font-size: 15px; opacity: .7; ">Badges</p>
-                        <h1 style=" font-size: 18px; ">${P_BADGES_COUNT}</h1>
+                        <h1 style="text-align: left; font-size: 18px; ">${P_BADGES_COUNT}</h1>
                     </div>
                     <div style=" display: inline-flex; flex-direction: column; ">
                         <p style=" font-size: 15px; opacity: .7; ">Reputation</p>
-                        <h1 style=" color: ${P_REP_COLOR}; font-size: 18px; ">${P_REP}</h1>
+                        <h1 style="text-align: left; color: ${P_REP_COLOR}; font-size: 18px; ">${P_REP}</h1>
                     </div>
                 </div>
             </div>
-            <h1 style="text-transform: none; font-size: 20px; color: ${checkRank('Noticed', '#528eb6')}; color: ${checkRank('Content', '#2980b9')}; color: ${checkRank('VIP', 'green')}; color: ${checkRank('Premium', '#b905b9')}; color: ${checkRank('Mod', 'red')}; ${checkRank('Admin', 'color: #000; text-transform: uppercase; background: linear-gradient(rgb(255,96,22) 0%,red 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;')}">${P_NAME}</h1> 
+            <h1 style="text-transform: none; font-size: 20px; text-align: left; color: ${checkRank('Noticed', '#528eb6')}; color: ${checkRank('Content', '#2980b9')}; color: ${checkRank('VIP', 'green')}; color: ${checkRank('Premium', '#b905b9')}; color: ${checkRank('Mod', 'red')}; ${checkRank('Admin', 'color: #000; text-transform: uppercase; background: linear-gradient(rgb(255,96,22) 0%,red 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;')}">${P_NAME}</h1> 
             <p style=" opacity: .6; font-size: 14px; margin-bottom: 15px; ">${P_ALIAS}</p>
             <p style=" font-size: 15px; margin-bottom: 15px; ">${P_BIO}</p>
             <div style=" padding-bottom: 15px; display: inline-flex; gap: 5px; overflow: hidden;">${P_BADGES}</div>
-            <div style=" color: #3498DB; display: flex; flex-direction: row; gap: 15px; "><a blacklistViewer href="${profileLink}">View Profile</a>  <a href="https://wearedevs.net/profile/threads?uid=${P_ID}">Threads List</a>  <a href="https://wearedevs.net/profile/alts?uid=${P_ID}">Possible Alts</a><a href="https://wearedevs.net/profile/reputation?uid=${P_ID}">Reputation</a>
+            <div style=" color: #3498DB; display: flex; flex-direction: row; gap: 15px; "><a blacklistViewer href="${profileLink}">View Profile</a>  <a href="https://wearedevs.net/profile/threads?uid=${P_ID}">Threads</a>  <a href="https://wearedevs.net/profile/alts?uid=${P_ID}">Possible Alts</a><a href="https://wearedevs.net/profile/reputation?uid=${P_ID}">Reputation</a><a href="https://wearedevs.net/messages/${P_ID}">Message</a>
             </div>
             </div>
             `

@@ -24,6 +24,9 @@ if(!document.getElementById('CreditCard') && !document.getElementById('cf-wrappe
     align-items: center;
     justify-content: center;
   }
+  .bwcentertext{
+    text-align: left!important;
+  }
   .bwrdbtn:hover{
     background: #3d3d3d;
   }

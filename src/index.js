@@ -39,7 +39,7 @@ chrome.storage.local.get(null, saved => {
         if(saved.embedStrawpoll)   {run('features/strawpollEmbeds.js')}
     }
     
-    if(document.getElementsByClassName('g-recaptcha')[0] || document.getElementById('saveinfo')){ // Checks if you're on create post or profile manager page
+    if(!location.pathname.includes('messages') && document.getElementsByClassName('g-recaptcha')[0] || document.getElementById('saveinfo')){ // Checks if you're on create post or profile manager page
         if(saved.spellcheckTextEd) {run('features/textEditorSpellcheck.js')}
                                    {run('features/drafts.js')}
     }

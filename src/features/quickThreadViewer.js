@@ -165,9 +165,8 @@ document.body.addEventListener('mousemove', (e)=> {
              display: flex;
              flex-direction: column;
              width: calc(100% - 140px);
-             padding: 15px;
          ">
-         <div class="scrollableContent" onscroll="scrollViewer(this)" style="overflow: auto;height: calc(100% - 40px); word-break: break-word; overflow-x: hidden;">
+         <div class="scrollableContent" onscroll="scrollViewer(this)" style="overflow: auto;height: calc(100% - 50px); word-break: break-word; overflow-x: hidden; padding: 15px;">
                   <p style="
              font-size: 14px;
              opacity: .7;
