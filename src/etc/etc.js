@@ -147,6 +147,12 @@ if(location.pathname.includes('messages')){
         display: initial;
         margin: initial!important;
     }
+    .rows img {
+        width: 65px !important;
+        height: 65px !important;
+        display: inline-block !important;
+        margin: 0 var(--padding) 0 0 !important;
+    }
     `
 }
 
