@@ -5,8 +5,8 @@ This extension adds tons of useful features to WeAreDevs.net & improves the user
 
 It gives you the possibility to `Create or Use Premade Themes`, `Switch through the old & new forum layouts`, Have `Dark Code blocks` & many more features that not only help improve your experience on WRD, but also improve the design of the website.
 
-Latest Version: **3.1**\
-Latest Ver. Release Date: **12/26/2021**
+Latest Version: **3.2**\
+Latest Ver. Release Date: **12/28/2021**
 
 Made by david77#3909
 
