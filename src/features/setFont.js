@@ -44,5 +44,6 @@ chrome.storage.local.get(['font','fontImport'], saved => {
     const footerdiv = document.querySelector('footer').lastElementChild
     if(footerdiv){
         footerdiv.innerHTML += `<a style="display: block; padding-top: 10px;" target="_blank" href="${chrome.runtime.getURL('settings/fonts.html')}">Font: ${saved.font + openIcon}</a>`
+        footerdiv.style.flexDirection = 'column'
     }
 })

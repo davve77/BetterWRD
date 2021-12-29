@@ -44,7 +44,7 @@ document.body.addEventListener('mousemove', (e)=> {
 
         fetch(profileLink).then((response)=>{return response.text()}).then((html) => {
             var doc = new DOMParser().parseFromString(html, 'text/html')
-            if(!doc.querySelector('#profile_mainprofilepicture')) return
+            if(doc.body.innerHTML.match(`Account doesn't exist`)) return
     
             function getBadges(){
                 var e = ''

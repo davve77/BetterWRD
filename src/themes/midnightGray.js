@@ -106,7 +106,7 @@ document.head.appendChild(midnightgray)
 
 // JS
 setTimeout(()=> {
-    document.querySelectorAll('.btn, .button, .btn_newrelpy, .btnDownload, .pagetextbox, #links a, .btnThreadControl, .release-card-button, .btnmention, .forum_btnnewthread').forEach(elm => {
+    document.querySelectorAll('.btn, .button:not(li), .btn_newrelpy, .btnDownload, .pagetextbox, #links a, .btnThreadControl, .release-card-button, .btnmention, .forum_btnnewthread').forEach(elm => {
         elm.classList.add('themebtn')
     })
 }, 200)

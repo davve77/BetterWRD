@@ -28,9 +28,9 @@ function setLight(){
 
 function loadTheme(themepath, themename){
     document.head.appendChild(document.createElement('script')).src = chrome.runtime.getURL(`themes/${themepath}.js`)
-    
-    if(document.querySelector('.switch')){
-        themeswitch = document.querySelector('.switch')
+
+    themeswitch = document.querySelector('#themer').parentNode
+    if(themeswitch){
         themeswitch.parentNode.innerHTML = `<a target="_blank" href="${chrome.runtime.getURL('settings/themes.html')}">Theme: ${themename + openicon}</a>`
         themeswitch.remove()
     }
@@ -86,7 +86,7 @@ function runThemes(){
             document.head.appendChild(document.createElement('style')).innerHTML = customthemes[saved.customtheme].css
 
             // Replace theme switch with custom theme name
-            themeswitch = document.querySelector('.switch')
+            themeswitch = document.querySelector('#themer').parentNode
             if(themeswitch){
                 themeswitch.parentNode.innerHTML = `<a target="_blank" href="${chrome.runtime.getURL('settings/themes.html')}">Theme: ${customthemes[saved.customtheme].name + openicon}</a>`
                 themeswitch.remove()
