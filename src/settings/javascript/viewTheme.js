@@ -2,8 +2,7 @@
 
 // Vars
 var urlname = location.search.split('theme=')[1]
-var theme
-var color1, color2, thname, thdesc, thdev, lastupdate, modeindicator, modetooltip, img1, img2
+var theme, color1, color2, thname, thdesc, thdev, lastupdate, modeindicator, modetooltip, img1, img2
 
 
 // Set variables
@@ -154,7 +153,7 @@ document.getElementById('thdev').textContent = thdev
 document.getElementById('lastupdate').textContent = lastupdate
 
 // Mode indicator
-document.getElementById('modeindicator').children[0] = document.createTextNode(modeindicator)
+document.getElementById('modeindicator').childNodes[1].textContent = modeindicator
 document.getElementById('indicatortooltip').textContent = modetooltip
 
 // Screenhots

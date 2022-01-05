@@ -2,8 +2,8 @@
 // Desc: Creates custom prefixes for every thread title that has a prefix one
 
 document.head.appendChild(document.createElement('style')).innerHTML =`.prefix{font-size: 15px; white-space: nowrap; text-transform: capitalize; margin-right: 5px; border-radius: 5px; display: inline-block; padding: 2px 3.5px 2px 3.5px; text-align: center; max-width: 300px;}`
-document.head.appendChild(document.createElement('style')).innerHTML =`.prefixnight{background-color: #3C3C46;color: white!important;}`
-document.head.appendChild(document.createElement('style')).innerHTML =`.prefixbright{background-color: #e8e8e8;color: black!important;}`
+document.head.appendChild(document.createElement('style')).innerHTML =`.prefixnight{background-color: rgb(52 53 53); color: white!important;}`
+document.head.appendChild(document.createElement('style')).innerHTML =`.prefixbright{background-color: #e8e8e8; color: black!important;}`
 
 function setCustomPrefix(thread, text, link){
     if(location.href.includes('profile')) return

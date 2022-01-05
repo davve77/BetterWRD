@@ -79,9 +79,9 @@ document.body.addEventListener('mousemove', (e)=> {
             newdiv = document.createElement('div')
             document.body.appendChild(newdiv)
             newdiv.outerHTML = `
-            <div id="quickProfileView" class="theme1 border1 round" style="animation: fadein .14s; position: absolute; left: ${x}px; top: ${y}px; box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px; width: 492px; padding: 15px; ">
+            <div id="quickProfileView" class="theme1 border1 round" style="animation: fadein .14s; position: absolute; left: ${x}px; top: ${y}px; box-shadow: 0 30px 90px -20px rgb(0 0 0 / 30%), 0 0 1px 1px rgb(0 0 0 / 5%); width: 492px; padding: 15px; ">
             <div style=" display: flex; flex-direction: row; padding-bottom: 10px; ">
-                <img class="round" src="${P_AVATAR}" style=" border-radius: 50%; width: 70px; ">
+                <img class="round" src="${P_AVATAR}" style=" border-radius: 50%; width: 70px; height: 70px;">
                 <div style=" width: 100%; padding: 6px; display: flex; padding-left: 15px; align-items: center; gap: 20px; ">
                     <div style=" display: inline-flex; flex-direction: column; ">
                         <p style=" font-size: 15px; opacity: .7; ">Joined</p>

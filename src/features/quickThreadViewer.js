@@ -84,7 +84,7 @@ document.body.addEventListener('mousemove', (e)=> {
             document.body.appendChild(newdiv)
 
             newdiv.outerHTML = `
-            <div id="quickThreadView" class="theme1 border1 round" style="animation: fadein .14s;position: absolute; left: ${x}px; top: ${y}px; box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;width: 500px;min-height: 200px;max-height: 400px;overflow: hidden;display: flex;">
+            <div id="quickThreadView" class="theme1 border1 round" style="animation: fadein .14s;position: absolute; left: ${x}px; top: ${y}px; box-shadow: 0 30px 90px -20px rgb(0 0 0 / 30%), 0 0 1px 1px rgb(0 0 0 / 5%); width: 500px;min-height: 200px;max-height: 400px;overflow: hidden;display: flex;">
             <div class="userinfobg theme1" style="
              position: absolute;
              top: 0;

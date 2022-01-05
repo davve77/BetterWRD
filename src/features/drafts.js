@@ -1,11 +1,8 @@
 // Name: Drafts Menu
 // Desc: Save posts as drafts and post/continue them later
 
-
 // Show the 'Your Drafts' button in the better profile dropmenu
-if(document.getElementById('yourdraftsbtn')){
-    document.getElementById('yourdraftsbtn').style.display = 'block'
-}
+document.head.appendChild(document.createElement('style')).innerHTML = '#yourdraftsbtn{display: block!important;}'
 
 // Add draft button in regular profile dropmenu
 if(document.getElementsByClassName('menu')[1].children[1].tagName == 'A'){

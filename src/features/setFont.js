@@ -43,7 +43,8 @@ chrome.storage.local.get(['font','fontImport'], saved => {
     // Show Font at page bottom
     const footerdiv = document.querySelector('footer').lastElementChild
     if(footerdiv){
-        footerdiv.innerHTML += `<a style="display: block; padding-top: 10px;" target="_blank" href="${chrome.runtime.getURL('settings/fonts.html')}">Font: ${saved.font + openIcon}</a>`
-        footerdiv.style.flexDirection = 'column'
+        footerdiv.appendChild(document.createElement('a')).outerHTML = `<a style="display: block; padding-top: 10px; flex-basis: 100%;" target="_blank" href="${chrome.runtime.getURL('settings/fonts.html')}">Font: ${saved.font + openIcon}</a>`
+        footerdiv.style.flexFlow = 'row wrap'
+        footerdiv.style.justifyContent = 'center'
     }
 })

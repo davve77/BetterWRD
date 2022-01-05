@@ -19,13 +19,13 @@ function run(file){
 }
 chrome.storage.local.get(null, saved => {
     if(document.getElementById('CreditCard') || document.getElementById('cf-wrapper')) return // Stops here if you're on a Cloudflare page
-
     if(saved.darkCB)               {run('features/darkCodeBlocks.js')}
     if(saved.removeCaps)           {run('features/lowercasePremium.js')}
     if(saved.stickyNavbar)         {run('features/stickyNavbar.js')}
     if(saved.threadPrefixes)       {run('features/threadPrefixes.js')}
     if(saved.quickProfile)         {run('features/quickProfileViewer.js')}
     if(saved.quickThread)          {run('features/quickThreadViewer.js')}
+                                   {run('features/multiMention.js')}
 
     if(document.querySelectorAll('.buttons')[0] || document.querySelectorAll('.forumcontainer')[0]){ // Checks if you're on the main forum page
         if(saved.onlineUsersBottom){run('features/onlineUsersBottom.js')}
@@ -39,11 +39,10 @@ chrome.storage.local.get(null, saved => {
         if(saved.embedStrawpoll)   {run('features/strawpollEmbeds.js')}
     }
     
-    if(document.getElementsByClassName('tox-editor-container')[0]){ // Checks if you're on create post or profile manager page
+    if(document.querySelector('#replyform, #editor, .manager_descriptor')){ // Checks if you're on create post or profile manager page
         if(saved.spellcheckTextEd) {run('features/textEditorSpellcheck.js')}
                                    {run('features/drafts.js')}
     }
-                                   {run('features/multiMention.js')}
 })
 
 
