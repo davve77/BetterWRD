@@ -114,26 +114,34 @@ if(document.getElementsByClassName('replygroup')[0]){
         const likediv = e.firstElementChild
         const editdiv = e.childNodes[3]
         const deldiv = e.childNodes[5]
+        const moderatordeldiv = e.children[1]
 
         // Like button
-        if(likediv.firstElementChild && e.firstElementChild.firstElementChild.classList.contains('btnLikeReply')){
+        if(likediv && likediv.firstElementChild && likediv.firstElementChild.classList.contains('btnLikeReply')){
             likebtn = likediv.firstElementChild
             likebtn.style.gap = '2px'
             button(likebtn, 'themebtn btn theme1 round border1 btnLikeReply verticalCenter threadbtn')
         }
 
         // Edit post button
-        if(editdiv && editdiv.firstElementChild.textContent == 'Edit'){
+        if(editdiv && editdiv.firstElementChild && editdiv.firstElementChild.textContent == 'Edit'){
             editbtn = editdiv.firstElementChild
             editbtn.innerHTML = `<svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style=" "><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M14.06 9.02l.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z"></path></svg>`
             button(editbtn, 'themebtn btn theme1 round border1 threadbtn')
         }
  
         // Delete post button
-        if(deldiv && deldiv.innerHTML.includes('btn_deletereply')){
+        if(deldiv && deldiv.firstElementChild && deldiv.innerHTML.includes('btn_deletereply')){
             delbtn = deldiv.firstElementChild
             delbtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"></path></svg>`
-            button(delbtn, 'themebtn btn theme1 round border1 threadbtn')
+            button(delbtn, 'themebtn btn theme1 round border1 btn_deletereply threadbtn')
+        }
+
+        // Moderator delete post button
+        if(moderatordeldiv && moderatordeldiv.firstElementChild && moderatordeldiv.innerHTML.includes('btn_deletereply')){
+            moddeletebtn = moderatordeldiv.firstElementChild
+            moddeletebtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"></path></svg>`
+            button(moddeletebtn, 'themebtn btn theme1 round border1 btn_deletereply threadbtn')
         }
 
         e.style.padding = '5px 10px'
