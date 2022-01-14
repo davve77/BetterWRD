@@ -1,4 +1,4 @@
-🏞 BetterWRD - A useful browser extension for WRD!
+🏞 BetterWRD - Useful browser extension for WRD!
 ===
 
 This extension adds tons of useful features to WeAreDevs.net & improves the user experience by a long shot.
