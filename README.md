@@ -3,10 +3,10 @@
 
 This extension adds tons of useful features to WeAreDevs.net & improves the user experience by a long shot.
 
-It gives you the possibility to `Create or Use Premade Themes`, `Switch through the old & new forum layouts`, Have `Quick Profile/Thread Viewers` & many more features that not only help improve your experience on WRD, but also improve the design of the website.
+It gives you the possibility to `Create or Use Premade Themes`, `Use Emotes`, `Switch through the old & new forum layouts`, Have `Quick Profile/Thread Viewers` & many more features that not only help improve your experience on WRD, but also improve the design of the website.
 
-Latest Version: **3.5**\
-Latest Ver. Release Date: **1/5/2022**
+Latest Version: **3.6**\
+Latest Ver. Release Date: **1/18/2022**
 
 Made by david77#3909
 
