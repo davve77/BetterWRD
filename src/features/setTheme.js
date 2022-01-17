@@ -4,8 +4,8 @@
 const openicon = `<svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px" style=" margin-left: 5px; vertical-align: text-top; " fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg>`
 
 function setMode(){
-    if(document.cookie.includes('night') || !document.cookie.includes('wrdtheme')) {localStorage.setItem('bwrd_thememode', 'night')}
-    else {localStorage.setItem('bwrd_thememode', 'bright')}
+    let mode = document.cookie.includes('night') || !document.cookie.includes('wrdtheme') ? 'night' : 'bright'
+    localStorage.setItem('bwrd_thememode', mode)
 }
 
 function setDark(){
@@ -29,9 +29,9 @@ function setLight(){
 function loadTheme(themepath, themename){
     document.head.appendChild(document.createElement('script')).src = chrome.runtime.getURL(`themes/${themepath}.js`)
 
-    themeswitch = document.querySelector('#themer').parentNode
+    themeswitch = document.querySelector('#themer') ? document.querySelector('#themer').parentNode : null
     if(themeswitch){
-        themeswitch.parentNode.innerHTML = `<a target="_blank" href="${chrome.runtime.getURL('settings/themes.html')}">Theme: ${themename + openicon}</a>`
+        themeswitch.parentNode.innerHTML = `<a id="themedisplayer" target="_blank" href="${chrome.runtime.getURL('settings/themes.html')}">Theme: ${themename + openicon}</a>`
         themeswitch.remove()
     }
 }
@@ -44,6 +44,10 @@ function runThemes(){
     
         // Load Default Theme
         switch(saved.theme){
+            case 'Bloom':
+                loadTheme('bloom', 'Bloom')
+                setDark()
+                break;
             case 'GitHub: Smooth Dark':
                 loadTheme('githubDark', 'GitHub Smooth Dark')
                 setDark()
@@ -82,13 +86,22 @@ function runThemes(){
             const customthemes = JSON.parse(saved.customthemes)
 
             // Load Custom Theme
-            document.head.appendChild(document.createElement('script')).innerHTML = customthemes[saved.customtheme].js
-            document.head.appendChild(document.createElement('style')).innerHTML = customthemes[saved.customtheme].css
+            themestyle = document.createElement('style')
+            themescript = document.createElement('script')
+
+            themestyle.id = 'bwthemecss'
+            themescript.id = 'bwthemejs'
+
+            themestyle.innerHTML = customthemes[saved.customtheme].css
+            themescript.innerHTML = customthemes[saved.customtheme].js
+
+            document.head.appendChild(themestyle)
+            document.head.appendChild(themescript)
 
             // Replace theme switch with custom theme name
             themeswitch = document.querySelector('#themer').parentNode
             if(themeswitch){
-                themeswitch.parentNode.innerHTML = `<a target="_blank" href="${chrome.runtime.getURL('settings/themes.html')}">Theme: ${customthemes[saved.customtheme].name + openicon}</a>`
+                themeswitch.parentNode.innerHTML = `<a id="themedisplayer" target="_blank" href="${chrome.runtime.getURL('settings/themes.html')}">Theme: ${customthemes[saved.customtheme].name + openicon}</a>`
                 themeswitch.remove()
             }
 
@@ -111,8 +124,5 @@ runThemes()
 // Theme Mode
 setMode()
 if(document.getElementById('themer')){
-    document.getElementById('themer').addEventListener('click', ()=> {
-        if(document.cookie.includes('night') || !document.cookie.includes('wrdtheme')) {localStorage.setItem('bwrd_thememode', 'night')}
-        else {localStorage.setItem('bwrd_thememode', 'bright')}
-    })
+    document.getElementById('themer').addEventListener('click', setMode)
 }

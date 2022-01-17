@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="color-scheme: dark;">
+<html style="color-scheme: dark;position: absolute;width: 100%;height: 100%;">
 
 <head>
     <meta charset="utf-8">
@@ -44,28 +44,32 @@
                 id="navbar-about" href="about.html"><span class="material-icons-outlined navspan">info</span>About</a>
     </div>
     <div id="toastdiv" class="toastdiv"><div id="toast"></span>Settings saved and applied.</div></div>
-    <h1 class="text-center" style="font-size: 30px;color: rgb(220,220,220);margin-top: 25px;"><strong><em>BetterWRD Settings</em></strong></h1>
-    <h1 class="text-center" style="font-size: 20px;color: rgb(150,150,150);margin-top: -7px;"><em>manage your wallpaper&nbsp;— don't forget to save!</em><br></h1>
-    <div style="margin-top: 30px;"><input type="url" id="wallpaperURL" class="textbox" style="width: 450px;height: 35px;border-radius: 5px;" placeholder="Image URL"><button class="btn btn-primary" id="uploadbtn" type="button" title="Upload an image to imgur"><span class="material-icons-outlined">file_upload</span></button></div>
-    <input
-        type="file" id="imguploadsrc" class="btn btn-primary" style="display: none;" accept=".png,.jpg,.jpeg,.gif">
-        <div class="settingsdiv" style="margin-top: 20px;flex-wrap: wrap;">
-            <div class="form-check ttelm"><input class="form-check-input" type="checkbox" id="repeatBg"><label class="form-check-label text-left" for="repeatBg">Repeat Wallpaper if it's too small to fit the whole page</label></div>
-            <div class="form-check ttelm"><input class="form-check-input" type="checkbox" id="transpStuff"><label class="form-check-label text-left" for="transpStuff">Decrease UI opacity to make Wallpaper more visible<span class="material-icons-outlined settingtextspan" title="This might not work with some themes.">info<br></span></label></div>
+    <div class="maindiv" style="height: 100%;display: flex;flex-direction: column;justify-content: space-evenly;">
+        <h1 class="text-center" style="font-size: 30px;color: rgb(220,220,220);margin-top: 25px;"><strong><em>BetterWRD Settings</em></strong></h1>
+        <h1 class="text-center" style="font-size: 20px;color: rgb(150,150,150);margin-top: -7px;"><em>manage your wallpaper&nbsp;— don't forget to save!</em><br></h1>
+        <div style="margin-top: 30px;">
+            <div><input type="url" id="wallpaperURL" class="textbox" style="width: 450px;height: 35px;border-radius: 5px;" placeholder="Image URL"><button class="btn btn-primary" id="uploadbtn" type="button" title="Upload an image to imgur"><span class="material-icons-outlined">file_upload</span></button></div>
             <div
-                class="form-check ttelm"><input class="form-check-input" type="checkbox" id="fixbgImg"><label class="form-check-label text-left" for="fixbgImg">Fix Wallpaper on the page, so when you scroll the image will stay fixed</label></div>
+                class="settingsdiv" style="margin-top: 20px;flex-wrap: wrap;">
+                <div class="form-check ttelm"><input class="form-check-input" type="checkbox" id="repeatBg"><label class="form-check-label text-left" for="repeatBg">Repeat Wallpaper if it's too small to fit the whole page</label></div>
+                <div class="form-check ttelm"><input class="form-check-input" type="checkbox" id="transpStuff"><label class="form-check-label text-left" for="transpStuff">Decrease UI opacity to make Wallpaper more visible<span class="material-icons-outlined settingtextspan" title="This might not work with some themes.">info<br></span></label></div>
+                <div
+                    class="form-check ttelm"><input class="form-check-input" type="checkbox" id="fixbgImg"><label class="form-check-label text-left" for="fixbgImg">Fix Wallpaper on the page, so when you scroll the image will stay fixed</label></div>
         <div class="form-check ttelm"><input class="form-check-input" type="checkbox" id="blurBgImg"><label class="form-check-label text-left" for="blurBgImg">Blurry Wallpaper effect</label></div>
-        </div>
-        <div id="previewdiv" style="display: flex;flex-flow: row nowrap;margin: auto;margin-top: 50px;width: 750px;height: 450px;overflow: hidden;border: 1px solid #2f3133!important;box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;border-radius: 8px;"><img class="border rounded-0" id="preview" style="position: relative;box-sizing: border-box;width: 100%;border: none!important;transition: .16s all ease;" draggable="false" src="https://media.discordapp.net/attachments/800294579856605204/833375088631873536/none.png">
-            <img
-                id="coolgraphic" class="coolgraphic" style="transition: .2s all ease;position: relative;width: 600px;height: 300px;flex: none;margin-left: -100%;top: 50%;left: 50%;transform: translateX(-50%) translateY(-50%);outline: none;border: none;opacity: 0;"
-                draggable="false" src="https://cdn.discordapp.com/attachments/800294579856605204/913018324877733948/wrdvector-new.png"></div>
-        <div></div>
-        <div class="btn-group" role="group" style="margin-top: 55px;"><button class="btn btn-primary" id="setbgimg" style="position: sticky;border-style: none;box-shadow: none;height: 36px;display: ruby;border-radius: 5px;" type="button">Set new Wallpaper</button><button class="btn btn-primary" id="resetbgimg" style="position: sticky;border-style: none;box-shadow: none;margin-left: 10px;height: 36px;display: ruby;border-radius: 5px;"
+    </div>
+    </div>
+    <div id="previewdiv" style="display: flex;flex-flow: row nowrap;margin: auto;margin-top: 50px;width: 750px;height: 450px;overflow: hidden;border: 1px solid #2f3133!important;box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;border-radius: 8px;"><img class="border rounded-0" id="preview" style="position: relative;box-sizing: border-box;width: 100%;border: none!important;transition: .16s all ease;" draggable="false" src="https://media.discordapp.net/attachments/800294579856605204/833375088631873536/none.png">
+        <img
+            id="coolgraphic" class="coolgraphic" style="transition: .2s all ease;position: relative;width: 600px;height: 300px;flex: none;margin-left: -100%;top: 50%;left: 50%;transform: translateX(-50%) translateY(-50%);outline: none;border: none;opacity: 0;"
+            draggable="false" src="https://cdn.discordapp.com/attachments/800294579856605204/913018324877733948/wrdvector-new.png"></div>
+    <div style="margin-top: 55px;">
+        <div class="btn-group" role="group"><button class="btn btn-primary" id="setbgimg" style="position: sticky;border-style: none;box-shadow: none;height: 36px;display: ruby;border-radius: 5px;" type="button">Set new Wallpaper</button><button class="btn btn-primary" id="resetbgimg" style="position: sticky;border-style: none;box-shadow: none;margin-left: 10px;height: 36px;display: ruby;border-radius: 5px;"
                 type="button">Reset Wallpaper</button></div>
-        <h1 class="text-center" style="font-size: 17px;color: rgb(150,150,150);margin-top: 10px;"><em>refresh pages for your changes to take effect</em><br></h1><script src="javascript/wallpaperManager.js"></script>
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <h1 class="text-center" style="font-size: 17px;color: rgb(150,150,150);margin-top: 10px;"><em>refresh pages for your changes to take effect</em><br></h1>
+    </div>
+    </div><input type="file" id="imguploadsrc" class="btn btn-primary" style="display: none;" accept=".png,.jpg,.jpeg,.gif"><script src="javascript/wallpaperManager.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>

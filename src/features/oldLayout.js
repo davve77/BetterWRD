@@ -59,11 +59,10 @@ chrome.storage.local.get('oldUI', saved => {
     }
 
     // Main
-    async function oldLayout(){
-        const layout = await fetch('https://flameplus.vercel.app/bwrd/layout.txt').then(e => e.text())
+    (async() =>{
+        const layout = await fetch('https://betterwrd.vercel.app/bwrd/layout.txt').then(e => e.text())
         localStorage['bwrd_layoutcache'] = layout
         var layoutcache = localStorage['bwrd_layoutcache'] || layout
         document.querySelector('main').outerHTML = eval('`'+layoutcache+'`')
-    }
-    oldLayout()
+    })()
 })

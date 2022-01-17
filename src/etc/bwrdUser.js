@@ -1,7 +1,7 @@
 // BetterWRD User
 // Shows other BWRD users that a post creator used BetterWRD when making that post
 
-var textelm = `<p><a target="bwrdUser ver:${chrome.runtime.getManifest().version}bver"> </a></p>`
+const textelm = `<p><a target="bwrdUser ver:${chrome.runtime.getManifest().version}bver"> </a></p>`
 const isOnMessagePage = location.pathname.includes('message')
 const isOnThreadPage = document.getElementsByClassName('replygroup')[0]
 const isOnCreatePostPage = document.getElementsByClassName('g-recaptcha')[0] || document.getElementById('saveinfo')
@@ -35,10 +35,43 @@ if(!isOnMessagePage && isOnCreatePostPage || isOnThreadPage){
         if(tinymcetext.innerHTML.includes('target="bwrdUser')) return
         tinymcetext.innerHTML += textelm
     }
-    if(document.getElementsByClassName('g-recaptcha')[0]){
-        setTimeout(()=> {
-            try {bwrduser()}
-            catch {setTimeout(bwrduser, 2500)}
-        }, 1500)
-    }
+    window.addEventListener('load', ()=> {
+        if(document.getElementsByClassName('g-recaptcha')[0]){
+            setTimeout(()=> {
+                try {bwrduser()}
+                catch {setTimeout(bwrduser, 2500)}
+            }, 1500)
+        }
+    })
+}
+
+// Show BetterWRD User badge on profile page
+if(document.querySelector('#profile_sidecards')){
+
+    // Vars
+    var hasUsedBWRD = false
+    var postsMade = 0
+
+    // Values
+    document.querySelectorAll('.activitycard').forEach(elm => {
+        if(elm.innerHTML.includes('<a target="bwrdUser')){
+            hasUsedBWRD = true
+            postsMade += 1
+        }
+    })
+
+    if(hasUsedBWRD){
+        var infodiv = document.querySelector('#info').parentElement
+
+        // Style
+        infodiv.style.position = 'relative'
+
+        // Add badge
+            const badge = document.createElement('div')
+            infodiv.appendChild(badge)
+            badge.outerHTML = `<div id="bwrdbadge" style="display: flex; user-select: none; height: 35px;gap: 8px;position: absolute;bottom: 0;right: 0;margin-right: 9px;margin-bottom: 5px;"><img src="https://i.imgur.com/CSDfsvi.png" draggable="false" style=" transform: scale(1.3); "> <span style="line-height: 35px;font-size: 16px;font-style: italic;">User</span></div>`
+
+            // Add tooltip
+            document.querySelector('#bwrdbadge').title = `This user has made ${postsMade}+ posts using BetterWRD.`
+        }
 }

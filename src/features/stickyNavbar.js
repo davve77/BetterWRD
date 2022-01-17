@@ -3,7 +3,9 @@
 
 const wrdnavbar = document.getElementById('navigationbar')
 if(wrdnavbar){
-    wrdnavbar.style.position = 'sticky'
-    wrdnavbar.style.top = '0'
-    wrdnavbar.style.zIndex = '1'
+    Object.assign(wrdnavbar.style, {
+        position: 'sticky',
+        top: '0',
+        zIndex: '1'
+    })
 }

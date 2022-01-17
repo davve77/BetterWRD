@@ -7,6 +7,22 @@ var theme, color1, color2, thname, thdesc, thdev, lastupdate, modeindicator, mod
 
 // Set variables
 switch(urlname){
+    case 'bloom':
+        theme = 'Bloom'
+
+        color1 = '#1c2543'
+        color2 = '#27304a'
+        thname = 'Bloom'
+        thdesc = 'Adds Windows 11-like transparency effects'
+        thdev = 'Fluent Svelte, Windows 11'
+        lastupdate = '1/17/2022'
+        modeindicator = 'dark_mode'
+        modetooltip = 'This is a Dark Theme'
+        img1 = 'https://cdn.discordapp.com/attachments/843145657463472138/932362870249881640/unknown.png'
+        img2 = 'https://cdn.discordapp.com/attachments/843145657463472138/932362976118325258/unknown.png'
+
+        break;
+
     case 'githubDark':
         theme = 'GitHub: Smooth Dark'
 
@@ -15,7 +31,7 @@ switch(urlname){
         thname = 'GitHub: Smooth Dark'
         thdesc = 'a nice github-like dark comfy theme'
         thdev = 'BetterWRD'
-        lastupdate = 'Unknown'
+        lastupdate = '1/17/2022'
         modeindicator = 'dark_mode'
         modetooltip = 'This is a Dark Theme'
         img1 = 'https://cdn.discordapp.com/attachments/843145657463472138/858684298487136276/unknown.png'
@@ -31,7 +47,7 @@ switch(urlname){
         thname = 'GitHub: Dark & Green'
         thdesc = 'a nice github-like dark comfy theme with some green borders'
         thdev = 'BetterWRD'
-        lastupdate = 'Unknown'
+        lastupdate = '1/17/2022'
         modeindicator = 'dark_mode'
         modetooltip = 'This is a Dark Theme'
         img1 = 'https://cdn.discordapp.com/attachments/800294579856605204/858066004831764520/unknown.png'
@@ -47,7 +63,7 @@ switch(urlname){
         thname = 'Dark Mint Green'
         thdesc = 'green and dark combined, looks pretty good I think'
         thdev = 'BetterWRD'
-        lastupdate = 'Unknown'
+        lastupdate = '1/17/2022'
         modeindicator = 'dark_mode'
         modetooltip = 'This is a Dark Theme'
         img1 = 'https://cdn.discordapp.com/attachments/843145657463472138/858687869261971466/unknown.png'
@@ -63,7 +79,7 @@ switch(urlname){
         thname = 'Midnight Gray'
         thdesc = 'use this if you like gray'
         thdev = 'BetterWRD'
-        lastupdate = 'Unknown'
+        lastupdate = '1/17/2022'
         modeindicator = 'dark_mode'
         modetooltip = 'This is a Dark Theme'
         img1 = 'https://cdn.discordapp.com/attachments/843145657463472138/911596306798096444/unknown.png'
@@ -79,7 +95,7 @@ switch(urlname){
         thname = 'WeAreFemboys'
         thdesc = 'BEST WRD THEME'
         thdev = 'Shade_0122'
-        lastupdate = 'Unknown'
+        lastupdate = '1/17/2022'
         modeindicator = 'light_mode'
         modetooltip = 'This is a Light Theme'
         img1 = 'https://cdn.discordapp.com/attachments/843145657463472138/858694031071248454/unknown.png'
@@ -95,7 +111,7 @@ switch(urlname){
         thname = 'GitHub: Light Mode'
         thdesc = 'dark navbar and white everywhere else'
         thdev = 'BetterWRD'
-        lastupdate = 'Unknown'
+        lastupdate = '1/17/2022'
         modeindicator = 'light_mode'
         modetooltip = 'This is a Light Theme'
         img1 = 'https://cdn.discordapp.com/attachments/843145657463472138/858697296349888572/unknown.png'
@@ -111,7 +127,7 @@ switch(urlname){
         thname = 'Discord Dark'
         thdesc = 'a dark discord theme'
         thdev = 'Shade_0122'
-        lastupdate = 'Unknown'
+        lastupdate = '1/17/2022'
         modeindicator = 'dark_mode'
         modetooltip = 'This is a Dark Theme'
         img1 = 'https://cdn.discordapp.com/attachments/843145657463472138/884146899114942534/unknown.png'
@@ -127,7 +143,7 @@ switch(urlname){
         thname = 'Discord Light'
         thdesc = 'a light discord theme'
         thdev = 'Shade_0122'
-        lastupdate = 'Unknown'
+        lastupdate = '1/17/2022'
         modeindicator = 'light_mode'
         modetooltip = 'This is a Light Theme'
         img1 = 'https://cdn.discordapp.com/attachments/843145657463472138/884150575363678208/unknown.png'

@@ -52,6 +52,14 @@ setTimeout(()=> {
     }
 }, 150)
 
+// Add space between table rows if on category page
+if(document.querySelector('.forumMenu')){
+    document.head.appendChild(document.createElement('style')).innerHTML = `
+    td{
+        padding: 4px 0;
+    }`
+}
+
 // Change Prefix Theme on WRD Theme change
 if(document.getElementById('themer')){
     thm = document.getElementById('themer')

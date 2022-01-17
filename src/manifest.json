@@ -1,9 +1,9 @@
 {
     "name": "BetterWRD",
     "short_name": "BWRD",
-    "description": "Adds tons of features to WRD! by david77.",
+    "description": "Adds tons of new features to WRD! by david77.",
     "author": "dave77 (davidTube)",
-    "version": "3.5",
+    "version": "3.6",
     "manifest_version":2,
     "web_accessible_resources": ["*"],
     "content_scripts":[
@@ -21,6 +21,7 @@
                 "fixes/v3rmLink.js",
 
                 "features/oldLayout.js",
+                "etc/liveEditor.js",
                 "etc/bwrdUser.js",
                 "etc/autoSaveSettings.js",
                 "etc/afterInstallOverlay.js",

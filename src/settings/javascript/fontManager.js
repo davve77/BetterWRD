@@ -5,7 +5,7 @@ const resetBtn = document.getElementById('resetFont')
 const customFInput = document.getElementById('customFontTextbox')
 const fontsDiv = document.querySelector('.fontsdiv')
 
-fetch('https://flameplus.vercel.app/bwrd/fonts.json').then((response)=>{return response.json()}).then((fonts) => {
+fetch('https://betterwrd.vercel.app/bwrd/fonts.json').then((response)=>{return response.json()}).then((fonts) => {
     fonts.forEach(font => {
         fontName = font.name
         fontImport = font.import

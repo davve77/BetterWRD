@@ -10,7 +10,7 @@ var customthemenum
 // Scroll to top
 setTimeout(()=> {
     scrollTo(0, 0)
-}, 30)
+}, 40)
 
 // Create customthemes key if it doesn't exist
 chrome.storage.local.get('customthemes', saved => {if(!saved.customthemes) {chrome.storage.local.set({'customthemes':'[]'})}})
@@ -18,10 +18,10 @@ chrome.storage.local.get('customthemes', saved => {if(!saved.customthemes) {chro
 // Show Current Theme
 chrome.storage.local.get(['theme','customtheme','customthemes'], saved => {
     if(saved.theme != null){
-        currenttheme.textContent = saved.theme
+        currenttheme.textContent = 'Current: ' + saved.theme
     }
     if(saved.customtheme != null){
-        currenttheme.textContent = JSON.parse(saved.customthemes)[saved.customtheme].name
+        currenttheme.textContent = 'Current: ' + JSON.parse(saved.customthemes)[saved.customtheme].name
     }
 })
 
@@ -37,12 +37,11 @@ function showCustomThemes(){
             var customtheme = document.createElement('div')
             var themenum = customthemes.indexOf(theme)
 
-            if(theme.mode == 'dark') {themeMode = 'dark_mode'}
-            else{themeMode = 'light_mode'}
+            themeMode = (theme.mode == 'dark') ? 'dark_mode' : 'light_mode'
 
             // Add Theme Divs
             customtheme.className = 'themecard customthmcard searchablethm'
-            customtheme.innerHTML = `<p style="position: relative;top: 10px;font-style:italic; font-size: 19px;width: 92%;margin: 0 auto;overflow-x: hidden;"></p> <p class="themedesc" style="width: 90%;overflow-x: hidden;"></p>`
+            customtheme.innerHTML = `<p class="theme-title"></p> <p class="theme-desc"></p>`
             
             // Add Theme Info
             customtheme.children[0].appendChild(document.createTextNode(theme.name))
@@ -64,7 +63,7 @@ function showCustomThemes(){
                     chrome.storage.local.set({'theme': null})
 
                     showToast(`You are now using — ${theme.name}.`)
-                    currenttheme.textContent = theme.name
+                    currenttheme.textContent = 'Current: ' + theme.name
                 }
             })
             cthemesdiv.prepend(customtheme)
@@ -78,9 +77,9 @@ showCustomThemes()
 
 // Reset Theme
 resettheme.addEventListener('click', ()=> {
-    chrome.storage.local.set({'customtheme': null,'theme': null})
+    chrome.storage.local.set({'customtheme': null,'theme': null, 'isLiveEditing': false})
 
-    currenttheme.textContent = 'None'
+    currenttheme.textContent = 'Current: None'
     showToast('Theme has been reset.')
 })
 
@@ -122,9 +121,9 @@ searchinput.addEventListener('keyup', ()=> {
 
     for(i = 0; i < themes.length; i++){
         if(themes[i].children[0].firstChild.textContent.toLowerCase().indexOf(searchtext.toLowerCase()) > -1){
-            themes[i].style.display = 'inline-flex'
+            themes[i].style.setProperty('display', 'inline-flex', 'important')
         }else{
-            themes[i].style.display = 'none'
+            themes[i].style.setProperty('display', 'none', 'important')
         }
     }
 })

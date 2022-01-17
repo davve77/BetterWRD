@@ -59,7 +59,7 @@ input, select{
 .themebtn{
     background: rgb(34, 39, 46);
     border: 1px solid #444c56!important;
-    transition: .2s all cubic-bezier(.3,0,.5,1);
+    transition: .15s all cubic-bezier(.3,0,.5,1);
 }
 .themebtn:hover, .themebtn:focus{
     background: rgb(68, 76, 86);
@@ -106,7 +106,7 @@ document.head.appendChild(midnightgray)
 
 // JS
 setTimeout(()=> {
-    document.querySelectorAll('.btn, .button:not(li), .btn_newrelpy, .btnDownload, .pagetextbox, #links a, .btnThreadControl, .release-card-button, .btnmention, .forum_btnnewthread').forEach(elm => {
+    document.querySelectorAll('.btn, .button:not(li), #searchbar, #order, .btn_newrelpy, .btnDownload, .pagetextbox, #links a, .btnThreadControl, .release-card-button, .btnmention, .forum_btnnewthread').forEach(elm => {
         elm.classList.add('themebtn')
     })
 }, 200)

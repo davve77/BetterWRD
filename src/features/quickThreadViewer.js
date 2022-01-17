@@ -1,9 +1,9 @@
 // Name: Quick Thread Viewer
 // Desc: Hover over a thread title to display a small thread viewer
 
+
 // Styles
-document.head.appendChild(document.createElement('style')).innerHTML = '.thread_replycontent img, .thread_replycontent iframe { max-width: 100%; } @keyframes thread_fadein { 0% { opacity: 0; } 100% { opacity: 1; } } @keyframes thread_fadeout { 0% { opacity: 1; } 100% { opacity: 0; } }'
-document.body.style.overflowX = 'hidden'
+document.head.appendChild(document.createElement('style')).innerHTML = '.thread_replycontent *{ max-width: 100%; } @keyframes thread_fadein { 0% { opacity: 0; } 100% { opacity: 1; } } @keyframes thread_fadeout { 0% { opacity: 1; } 100% { opacity: 0; } }'
 
 let thread_timer = null
 let thread_timer2 = null
@@ -45,12 +45,21 @@ document.body.addEventListener('mousemove', (e)=> {
         if(threadview) {threadview.remove()}
 
         threadURL = e.target.href
+        let statusCode
 
         x = e.clientX
         y = e.clientY
 
-        fetch(threadURL, {cache: 'force-cache'}).then((response)=>{return response.text()}).then((html) => {
+        fetch(threadURL, {cache: 'force-cache'}).then((response)=>{if(response.status == '503') {statusCode = '503'} return response.text()}).then((html) => {
             var doc = new DOMParser().parseFromString(html, 'text/html')
+
+            if(statusCode == '503'){
+                errordiv = document.createElement('div')
+                document.body.appendChild(errordiv)
+                errordiv.outerHTML = `<div id="quickThreadView" class="theme1 border1 round" style="animation: fadein .14s;position: absolute; left: ${x}px; top: ${y}px; box-shadow: 0 30px 90px -20px rgb(0 0 0 / 30%), 0 0 1px 1px rgb(0 0 0 / 5%); width: 500px;min-height: 200px;max-height: 400px;overflow: hidden;display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px;"><h1>Failed to get thread info because of Cloudflare. Refresh the page.</h1>`
+                return
+            }
+
             if(!doc.querySelector('.thread_replycontent')) return
     
             function checkRank(rank, color){
@@ -113,6 +122,10 @@ document.body.addEventListener('mousemove', (e)=> {
          " src="${P_AVATAR}">
                <h1 style="
              font-size: 21px;
+             white-space: nowrap;
+             overflow: hidden;
+             width: 90%;
+             text-overflow: ellipsis;
              padding-top: 5px;
              word-break: break-word;
              text-align: center;

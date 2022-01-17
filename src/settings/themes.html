@@ -46,19 +46,22 @@
     </div>
     <div id="toastdiv" class="toastdiv"><div id="toast"></span>Settings saved and applied.</div></div>
     <h1 class="text-center" style="font-size: 30px;color: rgb(220,220,220);margin-top: 25px;"><strong><em>BetterWRD Settings</em></strong></h1>
-    <h1 class="text-center" style="font-size: 20px;color: rgb(150,150,150);margin-top: -7px;margin-bottom: 0;">pick, edit or create a theme<br></h1>
-    <div style="padding: 55px 0;margin: auto;overflow-x: hidden;max-width: 50%;">
-        <h1 class="text-center" style="font-size: 20px;color: rgb(150,150,150);margin-bottom: 0;">Current Theme:</h1>
-        <h1 class="text-center strongt" id="currenttheme" style="margin-bottom: 0;font-size: 20px;color: rgb(150,150,150);overflow-x: hidden;transition: .25s all;animation: fadeInUp .35s;">None</h1>
+    <h1 class="text-center" style="font-size: 20px;color: rgb(150,150,150);margin-top: -7px;margin-bottom: 0;padding-bottom: 95px;">pick, edit or create a theme<br></h1>
+    <div id="topmenu" style="position: sticky;background: rgb(30,30,30);top: 0;padding: 10px 0;display: flex;justify-content: space-between;align-items: center;flex-wrap: wrap;width: 1000px;margin: auto;z-index: 1000;">
+        <div style="animation: fadeInLeft .25s;">
+            <h1 style="font-family: 'Archivo';margin: 0;text-align: left!important;font-size: 40px;display: flex;align-items: center;"><span class="material-icons-outlined" style="margin-right: 5px;font-size: 40px;background: linear-gradient(to right, rgb(83 172 255 / 68%) 30%, rgba(255,29,205,0.88) 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">palette</span>Themes</h1>
+            <h1
+                class="text-center" id="currenttheme" style="font-size: 19px;color: rgba(208,208,208,0.79);max-width: 400px;overflow: hidden;text-overflow: ellipsis;transition: .25s all;text-align: left!important;margin: 0;white-space: nowrap;">Current: None</h1>
+        </div>
+        <div style="display: grid;grid-auto-flow: column;grid-gap: 5px;animation: fadeInRight .25s;"><button class="btn btn-primary material-icons-outlined tooltipbwrd" id="resettheme" type="button" style="height: 40px;">delete<span class="tooltiptext" style="left: 0;top: 50px;">Reset Theme</span></button>
+            <div id="searchdiv" style="width: 400px;"><input type="text" id="searchinput" placeholder="Search among 0 themes">
+                <p class="material-icons-outlined" style="pointer-events: none;position: relative;top: 50%;transform: translate(-50%, -50%) scale(.8);right: -5px;color: rgb(181,181,181);">search</p>
+            </div><button class="btn btn-primary material-icons-outlined tooltipbwrd themeviewbtn" id="listviewbtn" type="button">format_list_bulleted<span class="tooltiptext" style="left: 0;top: 45px;">List View</span></button><button class="btn btn-primary material-icons-outlined tooltipbwrd themeviewbtn"
+                id="gridviewbtn" type="button" style="animation-play-state: running;">grid_view<span class="tooltiptext" style="left: 0;top: 45px;">Grid View</span></button></div>
     </div>
-    <div id="topmenu" style="position: relative;display: flex;justify-content: space-between;width: 670px;margin: auto;">
-        <div id="searchdiv"><input type="text" id="searchinput" placeholder="Search among 0 themes">
-            <p class="material-icons-outlined" style="pointer-events: none;position: relative;top: 50%;transform: translate(-50%, -50%);right: -5px;color: rgb(181,181,181);">search</p>
-        </div><button class="btn btn-primary material-icons-outlined themeviewbtn" id="listviewbtn" style="right: -102px;" type="button" title="List View">format_list_bulleted</button><button class="btn btn-primary material-icons-outlined themeviewbtn" id="gridviewbtn"
-            type="button" title="Grid View" style="animation-play-state: running;">grid_view</button></div>
-    <div id="maindiv" style="width: 670px;margin: auto;">
+    <div id="maindiv" style="width: 1000px;margin: auto;">
         <h1 class="section" style="position: relative;"><span class="material-icons-outlined sectionicon">person</span>Custom Themes</h1>
-        <div id="customthemesdiv" style="margin-bottom: -10px;">
+        <div id="customthemesdiv">
             <a class="themecard customthmcard" style="background: none;justify-content: initial;" href="createtheme.html">
                 <p style="position: relative;text-align: center;font-size: 19px;width: 80%;margin: 0 auto!important;top: 50%!important;transform: translateY(-50%);">Create your own Theme</p>
             </a>
@@ -66,40 +69,45 @@
         <div id="themesdiv">
             <h1 class="section" style="margin-top: 45px;"><span class="material-icons-outlined sectionicon">nightlight</span>Dark</h1>
             <a class="themecard searchablethm" href="viewtheme.html?theme=midnightGray">
-                <p style="position: relative;top: 10px;font-size: 19px;/*width: 80%;*/margin: 0 auto;"><em>Midnight Gray</em></p>
-                <p class="themedesc">use this if you like gray</p>
+                <p class="theme-title">Midnight Gray</p>
+                <p class="theme-desc">use this if you like gray</p>
             </a>
+            <a class="themecard searchablethm" href="viewtheme.html?theme=bloom">
+                <p class="theme-title">Bloom</p>
+                <p class="theme-desc">Adds Windows 11-like transparency effects</p><span class="newtheme">NEW</span></a>
             <a class="themecard searchablethm" href="viewtheme.html?theme=githubDark">
-                <p style="position: relative;top: 10px;font-size: 19px;/*width: 80%;*/margin: 0 auto;"><em>GitHub: Smooth Dark</em></p>
-                <p class="themedesc">a github-like nice, dark comfy theme</p>
+                <p class="theme-title">GitHub: Smooth Dark</p>
+                <p class="theme-desc">a github-like nice, dark comfy theme</p>
             </a>
             <a class="themecard searchablethm" href="viewtheme.html?theme=discordDark">
-                <p style="position: relative;top: 10px;font-size: 19px;/*width: 80%;*/margin: 0 auto;"><em>Discord Dark</em><br></p>
-                <p class="themedesc">a dark discord theme</p><span class="newtheme">NEW</span></a>
+                <p class="theme-title">Discord Dark<br></p>
+                <p class="theme-desc">a dark discord theme</p>
+            </a>
             <a class="themecard searchablethm" href="viewtheme.html?theme=githubDarkGreen">
-                <p style="position: relative;top: 10px;font-size: 19px;/*width: 80%;*/margin: 0 auto;"><em>GitHub: Dark &amp; Green</em><br></p>
-                <p class="themedesc">just like the other github theme but with some green borders</p>
+                <p class="theme-title">GitHub: Dark &amp; Green<br></p>
+                <p class="theme-desc">just like the other github theme but with some green borders</p>
             </a>
             <a class="themecard searchablethm" href="viewtheme.html?theme=darkMintGreen">
-                <p style="position: relative;top: 10px;font-size: 19px;/*width: 80%;*/margin: 0 auto;"><em>Dark Mint Green</em><br></p>
-                <p class="themedesc">green and dark combined, looks pretty good I think</p>
+                <p class="theme-title">Dark Mint Green<br></p>
+                <p class="theme-desc">green and dark combined, looks pretty good I think</p>
             </a>
             <h1 class="section"><span class="material-icons-outlined sectionicon">wb_sunny</span>Bright<br></h1>
             <a class="themecard searchablethm" href="viewtheme.html?theme=WeAreFemboys">
-                <p style="position: relative;top: 10px;font-size: 19px;/*width: 80%;*/margin: 0 auto;"><em>WeAreFemboys</em></p>
-                <p class="themedesc">BEST WRD THEME<br></p><span class="newtheme" style="background: linear-gradient(-45deg, rgb(179,72,197), rgb(204,45,231), rgb(156,83,167), rgb(179,72,197));border: 1px solid transparent;background-size: 400% 400%;animation: gradientanim 4s ease infinite;">HOT</span></a>
+                <p class="theme-title">WeAreFemboys</p>
+                <p class="theme-desc">BEST WRD THEME<br></p><span class="newtheme" style="background: linear-gradient(-45deg, rgb(179,72,197), rgb(204,45,231), rgb(156,83,167), rgb(179,72,197));border: 1px solid transparent;background-size: 400% 400%;animation: gradientanim 4s ease infinite;">HOT</span></a>
             <a
                 class="themecard searchablethm" href="viewtheme.html?theme=discordLight">
-                <p style="position: relative;top: 10px;font-size: 19px;/*width: 80%;*/margin: 0 auto;"><em>Discord Light</em></p>
-                <p class="themedesc">a light discord theme<br></p><span class="newtheme">NEW</span></a>
+                <p class="theme-title">Discord Light</p>
+                <p class="theme-desc">a light discord theme<br></p>
+                </a>
                 <a class="themecard searchablethm" href="viewtheme.html?theme=githubLight">
-                    <p style="position: relative;top: 10px;font-size: 19px;/*width: 80%;*/margin: 0 auto;"><em>GitHub: Light Mode</em></p>
-                    <p class="themedesc">dark navbar and white everywhere else</p>
+                    <p class="theme-title">GitHub: Light Mode</p>
+                    <p class="theme-desc">dark navbar and white everywhere else</p>
                 </a>
         </div>
     </div>
-    <div class="hide"></div><button class="btn btn-primary" id="resettheme" style="margin-top: 100px;border-style: none;box-shadow: none;margin-left: 10px;" type="button">Reset Theme</button>
-    <h1 class="text-center" style="font-size: 17px;color: rgb(150,150,150);margin-top: 10px;margin-bottom: 20px;"><em>refresh pages for your changes to take effect</em><br></h1><script src="javascript/themeManager.js"></script>
+    <div class="hide"></div>
+    <h1 class="text-center" style="font-size: 17px;color: rgb(150,150,150);margin-top: 50px;margin-bottom: 20px;"><em>refresh pages for your changes to take effect</em><br></h1><script src="javascript/themeManager.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>

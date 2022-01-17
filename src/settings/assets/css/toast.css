@@ -26,7 +26,9 @@
   margin-left: 10px;
   transition: .3s all;
   margin: auto;
-  max-width: 400px;
+  max-width: 700px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   overflow: hidden;
   z-index: 99999999;
   transform: translateY(60px);
@@ -37,7 +39,7 @@
   position: fixed;
   justify-content: flex-end;
   z-index: 99999999;
-  position: fixed;
+  white-space: nowrap;
   bottom: 15px;
   margin-left: 15px;
 }

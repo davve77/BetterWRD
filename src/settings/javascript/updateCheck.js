@@ -4,7 +4,7 @@
 const extensionver = chrome.runtime.getManifest().version
 
 if(typeof InstallTrigger == 'undefined'){ // Check if user is not using Firefox, update checks aren't needed for Firefox as it auto-updates
-    fetch('https://flameplus.vercel.app/bwrd/ver.json')
+    fetch('https://betterwrd.vercel.app/bwrd/ver.json')
     .then(res => res.json())
     .then((out) => {
         if(out.version != extensionver && !chrome.runtime.getManifest().name.includes('PRE')){

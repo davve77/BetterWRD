@@ -36,7 +36,7 @@ chrome.storage.local.get(['customthemes','customtheme'], saved => {
     // Delete theme
     deletebtn.addEventListener('click', ()=> {
         if(saved.customtheme == themenum){
-            chrome.storage.local.set({'customtheme': null,'theme': null})
+            chrome.storage.local.set({'customtheme': null,'theme': null, 'isLiveEditing': false})
         }
 
         allthemes.splice(themenum, 1)
