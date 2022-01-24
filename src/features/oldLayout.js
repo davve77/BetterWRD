@@ -5,7 +5,7 @@ chrome.storage.local.get('oldUI', saved => {
     if(!document.querySelectorAll('.buttons')[0] || !saved.oldUI) return
 
     // CSS
-    document.head.appendChild(document.createElement('style')).innerHTML = `
+    document.head.appendChild(document.createElement('style')).textContent = `
     td:nth-child(4), th:nth-child(4) {
         width: 100%;
     }

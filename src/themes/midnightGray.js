@@ -72,7 +72,6 @@ input, select{
 }
 
 #d_disp {
-    display: block;
     background-color: #00000000;
     border: 1px solid #3a3a3a;
     border-radius: 10px;
@@ -100,6 +99,32 @@ footer{
 }
 .navbtn:hover, .notification:hover{
     background: rgb(68, 76, 86)!important;
+}
+
+
+/* Forum Editor CSS */
+
+.tox-toolbar__primary{
+    background: 0!important;
+}
+.tox-toolbar-overlord{
+    background: 0!important;
+}
+.tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type) {
+    border-right: 1px solid #ffffff29!important;
+}
+.tox-statusbar{
+    background: 0!important;
+    border-top: 0!important;
+}
+.tox-sidebar-wrap{
+    width: 99%!important;
+    margin: auto!important;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#editor_ifr{
+    background: 0!important;
 }`
 document.head.appendChild(midnightgray)
 

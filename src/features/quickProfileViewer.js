@@ -3,7 +3,7 @@
 
 
 // Styles
-document.head.appendChild(document.createElement('style')).innerHTML = '@keyframes fadein { 0% { opacity: 0; } 100% { opacity: 1; } } @keyframes fadeout { 0% { opacity: 1; } 100% { opacity: 0; } }'
+document.head.appendChild(document.createElement('style')).textContent = '@keyframes fadein { 0% { opacity: 0; } 100% { opacity: 1; } } @keyframes fadeout { 0% { opacity: 1; } 100% { opacity: 0; } }'
 
 let timer = null
 let timer2 = null

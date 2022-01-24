@@ -3,7 +3,7 @@
 
 
 // Styles
-document.head.appendChild(document.createElement('style')).innerHTML = '.thread_replycontent *{ max-width: 100%; } @keyframes thread_fadein { 0% { opacity: 0; } 100% { opacity: 1; } } @keyframes thread_fadeout { 0% { opacity: 1; } 100% { opacity: 0; } }'
+document.head.appendChild(document.createElement('style')).textContent = '.thread_replycontent *{ max-width: 100%; } @keyframes thread_fadein { 0% { opacity: 0; } 100% { opacity: 1; } } @keyframes thread_fadeout { 0% { opacity: 1; } 100% { opacity: 0; } }'
 
 let thread_timer = null
 let thread_timer2 = null

@@ -1,9 +1,9 @@
 // Name: Custom Thread Prefixes
 // Desc: Creates custom prefixes for every thread title that has a prefix one
 
-document.head.appendChild(document.createElement('style')).innerHTML =`.prefix{font-size: 15px; white-space: nowrap; text-transform: capitalize; margin-right: 5px; border-radius: 5px; display: inline-block; padding: 2px 3.5px 2px 3.5px; text-align: center; max-width: 300px;}`
-document.head.appendChild(document.createElement('style')).innerHTML =`.prefixnight{background-color: rgb(52 53 53); color: white!important;}`
-document.head.appendChild(document.createElement('style')).innerHTML =`.prefixbright{background-color: #e8e8e8; color: black!important;}`
+document.head.appendChild(document.createElement('style')).textContent =`.prefix{font-size: 15px; white-space: nowrap; text-transform: capitalize; margin-right: 5px; border-radius: 5px; display: inline-block; padding: 2px 3.5px 2px 3.5px; text-align: center; max-width: 300px;}`
+document.head.appendChild(document.createElement('style')).textContent =`.prefixnight{background-color: rgb(52 53 53); color: white!important;}`
+document.head.appendChild(document.createElement('style')).textContent =`.prefixbright{background-color: #e8e8e8; color: black!important;}`
 
 function setCustomPrefix(thread, text, link){
     if(location.href.includes('profile')) return
@@ -38,6 +38,12 @@ function setCustomPrefix(thread, text, link){
     newprefix.textContent = prefixtext
     newprefix.href = link
     thread.prepend(newprefix)
+
+    // BWRD Prefix
+    if(thread.textContent.match(/BetterWRD|BWRD/g) && thread.parentElement.tagName != 'TD' && thread.nextElementSibling.firstElementChild.textContent == 'davidTube'){
+        newprefix.textContent = 'BWRD'
+        newprefix.setAttribute('style', 'background: linear-gradient(to right, #035caf, #930874)!important; color: white!important; font-weight: 500; padding: 3px 6px;')
+    }
 }
 
 // Set Custom Prefixes for every prefix
@@ -52,9 +58,9 @@ setTimeout(()=> {
     }
 }, 150)
 
-// Add space between table rows if on category page
+// Add space between table columns if on category page
 if(document.querySelector('.forumMenu')){
-    document.head.appendChild(document.createElement('style')).innerHTML = `
+    document.head.appendChild(document.createElement('style')).textContent = `
     td{
         padding: 4px 0;
     }`

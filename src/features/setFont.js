@@ -11,7 +11,7 @@ chrome.storage.local.get(['font','fontImport'], saved => {
 
     // Load Google Font
     if(!isCustom || isRoboto){
-        fontStyle.innerHTML = `
+        fontStyle.textContent = `
         ${saved.fontImport}
         *{
             font-weight: 400!important;
@@ -23,7 +23,7 @@ chrome.storage.local.get(['font','fontImport'], saved => {
 
     // Load Custom Font
     if(isCustom){
-        fontStyle.innerHTML = `
+        fontStyle.textContent = `
         @font-face {
             font-family: 'Custom Font';
             font-style: normal;

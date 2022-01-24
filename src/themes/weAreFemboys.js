@@ -3,7 +3,7 @@
 // By Shade_0122
 
 // CSS
-document.head.appendChild(document.createElement('style')).innerHTML = `
+document.head.appendChild(document.createElement('style')).textContent = `
 #navigationbar {
 	box-shadow: 0 0 5px 0 #ffffff;
 }
@@ -67,7 +67,6 @@ input::placeholder {
 }
 
 #d_disp {
-	display: flex;
 	background-color: #ff87e6;
 }
 
@@ -326,7 +325,7 @@ if(document.getElementById('foologo')){
 if(document.getElementById('CreditCard')){
     document.querySelector('img').src = 'https://media.discordapp.net/attachments/787629359074115604/848942195927285780/download_1.png'
 
-    document.head.appendChild(document.createElement('style')).innerHTML = `*{color: white;}`
+    document.head.appendChild(document.createElement('style')).textContent = `*{color: white;}`
 }
 if(document.getElementById('cf-content')){
     cfcontent = document.getElementById('cf-content')

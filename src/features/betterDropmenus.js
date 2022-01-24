@@ -6,10 +6,10 @@ chrome.storage.local.get(null, saved => {
     var profilename = document.getElementsByClassName('dropmenu-title')[1].textContent
 
     // CSS
-    document.head.appendChild(document.createElement('style')).innerHTML = `.navbtn:active, .notification:active{opacity: .5;}`
+    document.head.appendChild(document.createElement('style')).textContent = `.navbtn:active, .notification:active{opacity: .5;}`
 
     // Dark Mode Dropmenus CSS
-    document.head.appendChild(document.createElement('style')).innerHTML = `.menu{transform: scale(1)!important; display: none; z-index: 100; background: rgb(39 40 42); border: none!important; border-radius: 6px; text-align: left; user-select: none; width: 300px; box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;!important;} .navbtn{ position: relative; display: block; border-radius: 6px; margin: 0px 8px; padding: 0 5px; cursor: pointer; transition: .2s ease; } .navbtn:hover { background: rgb(45, 47, 49); } .navbtn > a{display: block; line-height: 29px; }`
+    document.head.appendChild(document.createElement('style')).textContent = `.menu{transform: scale(1)!important; display: none; z-index: 100; background: rgb(39 40 42); border: none!important; border-radius: 6px; text-align: left; user-select: none; width: 300px; box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;!important;} .navbtn{ position: relative; display: block; border-radius: 6px; margin: 0px 8px; padding: 0 5px; cursor: pointer; transition: .2s ease; } .navbtn:hover { background: rgb(45, 47, 49); } .navbtn > a{display: block; line-height: 29px; }`
 
     // Get User Profile Info
     fetch('https://wearedevs.net/profile').then((response)=>{return response.text()}).then((html) => {
@@ -40,7 +40,7 @@ chrome.storage.local.get(null, saved => {
             notif.style.padding = '10px'
             notif.style.borderRadius = '10px'
         })
-        document.head.appendChild(document.createElement('style')).innerHTML = '.notification:hover{background: rgb(45, 47, 49);}'
+        document.head.appendChild(document.createElement('style')).textContent = '.notification:hover{background: rgb(45, 47, 49);}'
     
         // Delete notification
         document.querySelectorAll('.notif-exit').forEach(delnotif => {

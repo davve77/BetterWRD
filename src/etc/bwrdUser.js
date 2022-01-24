@@ -4,7 +4,7 @@
 const textelm = `<p><a target="bwrdUser ver:${chrome.runtime.getManifest().version}bver"> </a></p>`
 const isOnMessagePage = location.pathname.includes('message')
 const isOnThreadPage = document.getElementsByClassName('replygroup')[0]
-const isOnCreatePostPage = document.getElementsByClassName('g-recaptcha')[0] || document.getElementById('saveinfo')
+const isOnCreatePostPage = document.querySelector('#editor')
 
 if(!isOnMessagePage && isOnCreatePostPage || isOnThreadPage){
 
@@ -12,7 +12,7 @@ if(!isOnMessagePage && isOnCreatePostPage || isOnThreadPage){
     if(document.getElementsByClassName('replygroup')[0]){
 
         // Styles
-        document.head.appendChild(document.createElement('style')).innerHTML = `#bwrduser{ display: inline-flex; align-items: center; font-size: 18px; font-style: italic; font-weight: 400; user-select: none; margin-top: -10px; } #bwrduserimg{ width: 55px; height: 55px; -webkit-user-drag: none; margin-right: 2px; }`
+        document.head.appendChild(document.createElement('style')).textContent = `#bwrduser{ display: inline-flex; align-items: center; font-size: 18px; font-style: italic; font-weight: 400; user-select: none; margin-top: -10px; } #bwrduserimg{ width: 55px; height: 55px; -webkit-user-drag: none; margin-right: 2px; }`
 
         // Check Version
         function checkVersion(elm){

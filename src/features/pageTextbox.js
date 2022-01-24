@@ -4,7 +4,7 @@
 var input = document.createElement('input')
 topdiv = document.querySelector('[style="text-align: right"]')
 
-document.head.appendChild(document.createElement('style')).innerHTML = '.pagetextbox{margin-right:3px;color:white;outline:0px;width:45px;margin-top:-10px;margin-bottom:-10px;text-align:center;}'
+document.head.appendChild(document.createElement('style')).textContent = '.pagetextbox{margin-right:3px;color:white;outline:0px;width:45px;margin-top:-10px;margin-bottom:-10px;text-align:center;}'
 
 input.id = 'pageinput'
 input.type = 'text'

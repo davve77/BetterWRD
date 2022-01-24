@@ -10,7 +10,7 @@ var version = chrome.runtime.getManifest().version
 if(!document.getElementById('CreditCard') && !document.getElementById('cf-wrapper') && !notfirstuse || !savedver || version != savedver){
 
   // Styles
-  document.head.appendChild(document.createElement('style')).innerHTML = `
+  document.head.appendChild(document.createElement('style')).textContent = `
   .bwrdbtn{
     position: relative;
     margin-left: auto;
@@ -35,7 +35,7 @@ if(!document.getElementById('CreditCard') && !document.getElementById('cf-wrappe
   `
 
   // For browsers that don't support backdrop-filter
-  document.head.appendChild(document.createElement('style')).innerHTML = `
+  document.head.appendChild(document.createElement('style')).textContent = `
   @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)){
     #bwrdoverlay{background: #2e2e2e!important};
   }

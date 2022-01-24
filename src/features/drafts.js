@@ -2,22 +2,15 @@
 // Desc: Save posts as drafts and post/continue them later
 
 // Show the 'Your Drafts' button in the better profile dropmenu
-document.head.appendChild(document.createElement('style')).innerHTML = '#yourdraftsbtn{display: block!important;}'
+document.head.appendChild(document.createElement('style')).textContent = '#yourdraftsbtn{display: block!important;}'
 
 // Add draft button in regular profile dropmenu
 if(document.getElementsByClassName('menu')[1].children[1].tagName == 'A'){
     document.getElementsByClassName('menu')[1].appendChild(document.createElement('p')).outerHTML = '<p class="dropMenu_option" onclick="showDrafts()">Your Drafts</p>'
 }
 
-if(localStorage.getItem('bwrd_draftsinfo') == null){
-    const draftsinfo = document.getElementsByClassName('g-recaptcha')[0].parentNode.appendChild(document.createElement('span'))
-
-    if(document.getElementById('replyform')) {draftsinfo.outerHTML = '<p style="text-align: right; padding-top: 15px;">Open the dropmenu in the navbar to manage drafts</p>'}
-    else {draftsinfo.outerHTML = '<p style="text-align: right;">Open the dropmenu in the navbar and click \'Your Drafts\' to manage drafts</p>'}
-}
-
 // Styles
-document.head.appendChild(document.createElement('style')).innerHTML = '.draftelement{position: relative; border: none!important; transition: all .2s ease-out; width: 600px; height: 50px; cursor: pointer; margin: 0 auto;} .draftelement:hover{transform: scale(1.01); opacity: .5;} .ebtns{transition: all .2s ease-out;} .ebtns:hover{opacity: .5;} @keyframes opacityanim{0%{opacity:0;} 100%{opacity:1;}} #drafts{animation: opacityanim .2s;}'
+document.head.appendChild(document.createElement('style')).textContent = '.draftelement{position: relative; border: none!important; transition: all .2s ease-out; width: 600px; height: 50px; cursor: pointer; margin: 0 auto;} .draftelement:hover{transform: scale(1.01); opacity: .5;} .ebtns{transition: all .2s ease-out;} .ebtns:hover{opacity: .5;} @keyframes opacityanim{0%{opacity:0;} 100%{opacity:1;}} #drafts{animation: opacityanim .2s;}'
 
 // Fix tinymce top menu showing over dropmenus
 if(document.querySelector('[data-alloy-vertical-dir="toptobottom"]')){

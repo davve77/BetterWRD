@@ -3,7 +3,7 @@
 
 setTimeout(()=> {
     if(localStorage.getItem('bwrd_thememode') == 'night'){
-        document.head.appendChild(document.createElement('style')).innerHTML = `
+        document.head.appendChild(document.createElement('style')).textContent = `
         pre[class*=language-]{
             background: rgb(40 40 40);
             border-radius: 10px;

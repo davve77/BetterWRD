@@ -23,7 +23,7 @@ fetch('https://betterwrd.vercel.app/bwrd/fonts.json').then((response)=>{return r
         </div>
         `
 
-        document.head.appendChild(document.createElement('style')).innerHTML = fontImport
+        document.head.appendChild(document.createElement('style')).textContent = fontImport
     })
 }).catch()
 

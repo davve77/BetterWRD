@@ -14,16 +14,16 @@ chrome.storage.local.get('autoRefreshWRD', saved => {
     setTimeout(()=> {
         if(localStorage.getItem('bwrd_thememode') == 'night'){
             document.documentElement.style.colorScheme = 'dark'
-            document.head.appendChild(document.createElement('style')).innerHTML = '*::placeholder{color: rgb(185, 185, 185); opacity: 1;}'
+            document.head.appendChild(document.createElement('style')).textContent = '*::placeholder{color: rgb(185, 185, 185); opacity: 1;}'
         }
         else{
-            document.head.appendChild(document.createElement('style')).innerHTML = '*::placeholder{color: rgb(70, 70, 70); opacity: 1;}'
+            document.head.appendChild(document.createElement('style')).textContent = '*::placeholder{color: rgb(70, 70, 70); opacity: 1;}'
         }
     }, 200)
 
 
     // Remove navbar bottom border
-    document.head.appendChild(document.createElement('style')).innerHTML = '#navigationbar{border-bottom: none!important;}'
+    document.head.appendChild(document.createElement('style')).textContent = '#navigationbar{border-bottom: none!important;}'
 
 
     // Change scrollbar colors on theme change
@@ -70,7 +70,7 @@ chrome.storage.local.get('autoRefreshWRD', saved => {
 
 
     // Don't turn input color all white on autofill
-    document.head.appendChild(document.createElement('style')).innerHTML = 'input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active { transition: background-color 999999999s ease-in-out 0s; }'
+    document.head.appendChild(document.createElement('style')).textContent = 'input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active { transition: background-color 999999999s ease-in-out 0s; }'
     document.querySelectorAll('input, select').forEach(elm => {elm.style.outline = 'none'})
 
 
@@ -146,10 +146,10 @@ if(document.getElementsByClassName('replygroup')[0]){
 
         e.style.padding = '5px 10px'
     })
-    document.head.appendChild(document.createElement('style')).innerHTML = '.reply_menu li>*{margin-left: 4px!important; height: 31px!important;}'
+    document.head.appendChild(document.createElement('style')).textContent = '.reply_menu li>*{margin-left: 4px!important; height: 31px!important;}'
     setTimeout(()=> {
         if(localStorage.getItem('bwrd_thememode') == 'bright'){
-            document.head.appendChild(document.createElement('style')).innerHTML = '.threadbtn{filter: brightness(.95)!important;}'
+            document.head.appendChild(document.createElement('style')).textContent = '.threadbtn{filter: brightness(.95)!important;}'
         }
     }, 200)
 }
@@ -172,7 +172,7 @@ if(document.getElementsByClassName('replygroup')[0]){
                     // Turn BetterWRD logo black if using Bright Theme
                     setTimeout(()=> {
                         if(localStorage.getItem('bwrd_thememode') == 'bright'){
-                            document.head.appendChild(document.createElement('style')).innerHTML = '.updatebwlogo{filter: brightness(0)!important;}'
+                            document.head.appendChild(document.createElement('style')).textContent = '.updatebwlogo{filter: brightness(0)!important;}'
                         }
                     }, 200)
                 }
@@ -184,7 +184,7 @@ if(document.getElementsByClassName('replygroup')[0]){
 
 // Fix Image SIzing on Conversation page
 if(location.pathname.includes('messages')){
-    document.head.appendChild(document.createElement('style')).innerHTML = `
+    document.head.appendChild(document.createElement('style')).textContent = `
     img {
         width: auto;
         height: auto;
@@ -206,9 +206,48 @@ if(location.pathname.includes('messages')){
 }
 
 
+// Change Like button background color when liked
+if(document.querySelector('.replygroup')){
+
+    // Create item
+    if(!localStorage.getItem('bwrd_likedposts')) localStorage.setItem('bwrd_likedposts', '[]')
+
+    document.querySelectorAll('.btnLikeReply').forEach(likebtn => {
+        const threadID = likebtn.getAttribute('data-trid')
+
+        // Stop if user is logged out
+        if(document.querySelector('[href="/login"]')) return
+
+        likebtn.onclick = ()=> {
+            const likedPosts = JSON.parse(localStorage.getItem('bwrd_likedposts'))
+
+            // Add Like
+            if(!likedPosts.includes(threadID)){
+                likedPosts.push(threadID)
+                localStorage.setItem('bwrd_likedposts', JSON.stringify(likedPosts))
+
+                likebtn.style.setProperty('background', '#a5a5a566', 'important')
+            }
+
+            // Remove Like
+            else{
+                likedPosts.splice(likedPosts.indexOf(threadID), 1)
+                localStorage.setItem('bwrd_likedposts', JSON.stringify(likedPosts))
+
+                likebtn.style.removeProperty('background')
+            }
+        }
+
+        if(JSON.parse(localStorage.getItem('bwrd_likedposts')).includes(threadID)){
+            likebtn.style.setProperty('background', '#a5a5a566', 'important')
+        }
+    })
+}
+
+
 // Fix TinyMCE top bar displaying over navbar dropmenus
 if(document.querySelector('.tox-editor-header')){
-    document.head.appendChild(document.createElement('style')).innerHTML = '.tox-editor-header{z-index: 0!important;}'
+    document.head.appendChild(document.createElement('style')).textContent = '.tox-editor-header{z-index: 0!important;}'
 }
 
 

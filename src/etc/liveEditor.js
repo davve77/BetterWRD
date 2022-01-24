@@ -1,13 +1,13 @@
 // BetterWRD Live Theme Editing
 
 chrome.storage.local.get(null, saved => {
-    const themes = JSON.parse(saved.customthemes)
-
     if(!saved.customtheme || !saved.isLiveEditing) return
     if(!saved.theme && !saved.customtheme) return
 
+    const themes = JSON.parse(saved.customthemes)
+
     // Styles
-    document.head.appendChild(document.createElement('style')).innerHTML = `.activetabeditor { color: white!important; font-weight: 600!important; } .monacotopbuttons{transition: .11s all; cursor: default!important; padding: 3.5px; border-radius: 7px; z-index: 3;} .monacotopbuttons:hover{opacity: 1!important; background: rgb(80 80 80 / 39%);} .monacotopbuttons:active{opacity: .3!important;} #runjs:hover{color: lime;} #stoplivemonaco:hover{color: #ff5252;} #monaco *{ margin-bottom:0; float: none;} #monaco a{ color: white; } #monaco header *{margin: unset;} @font-face { font-family: 'Material Icons Outlined'; font-style: normal; font-weight: 400; src: url(https://fonts.gstatic.com/s/materialiconsoutlined/v56/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2) format('woff2'); } .material-icons-outlined { font-family: 'Material Icons Outlined'!important; font-weight: normal; font-style: normal; font-size: 24px; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr; -webkit-font-feature-settings: 'liga'; -webkit-font-smoothing: antialiased; } .monaco-editor .scroll-decoration{box-shadow: none!important;} .monaco-scrollable-element>.scrollbar>.slider{display: none!important;} .monaco-editor *{ font-family: monospace!important; }`
+    document.head.appendChild(document.createElement('style')).textContent = `.activetabeditor { color: white!important; font-weight: 600!important; } .monacotopbuttons{transition: .11s all; cursor: default!important; padding: 3.5px; border-radius: 7px; z-index: 3;} .monacotopbuttons:hover{opacity: 1!important; background: rgb(80 80 80 / 39%);} .monacotopbuttons:active{opacity: .3!important;} #runjs:hover{color: lime;} #stoplivemonaco:hover{color: #ff5252;} #monaco *{ margin-bottom:0; float: none;} #monaco a{ color: white; } #monaco header *{margin: unset;} @font-face { font-family: 'Material Icons Outlined'; font-style: normal; font-weight: 400; src: url(https://fonts.gstatic.com/s/materialiconsoutlined/v56/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2) format('woff2'); } .material-icons-outlined { font-family: 'Material Icons Outlined'!important; font-weight: normal; font-style: normal; font-size: 24px; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr; -webkit-font-feature-settings: 'liga'; -webkit-font-smoothing: antialiased; } .monaco-editor .scroll-decoration{box-shadow: none!important;} .monaco-scrollable-element>.scrollbar>.slider{display: none!important;} .monaco-editor *{ font-family: monospace!important; }`
 
     // Insert Monaco Div
     document.body.appendChild(document.createElement('div')).outerHTML = `<div id="monaco" style="user-select: none; display: flex; flex-direction: column; position: fixed; box-shadow: 0 30px 90px -20px rgb(0 0 0 / 30%), 0 0 1px 1px rgb(0 0 0 / 5%); width: 492px; width: 600px; height: 350px; ${getPosition()} z-index: 2147483647; backdrop-filter: blur(10px); background: rgba(43, 43, 43, 0.91); border: 1px solid rgb(47, 47, 47); border-radius: 8px;"> <header id="monacoheader" style="position: relative;display: flex;justify-content: space-between;align-items: center;height: 0;line-height: 32px;padding: 17px 15px; width:"> <div id="monacotitle" style=" position: absolute; top: 0; left: 0; width: 100%; height: 35px; display: flex; justify-content: center; "></div> <div style=" display: flex; align-items: center; gap: 5px;"> <h3 style="font-size: 15px;color: rgb(215,215,215);margin: 0px; max-width: 250px; text-overflow: ellipsis; overflow: hidden;">${themes[saved.customtheme].name}</h3> <a href="${chrome.runtime.getURL('settings/edittheme.html')}?theme=${saved.customtheme}" target="_blank" class="material-icons-outlined monacotopbuttons" style="font-size: 18px; opacity: .7;" title="Open Theme Page">open_in_new</a> </div> <div style="display: flex;margin-right: -10px;gap: 2px;"> <span id="runjs" class="material-icons-outlined monacotopbuttons" style="font-size: 18px; opacity: .7;" title="Run JS">play_arrow</span> <span style="font-size: 18px; opacity: .7;" id="stoplivemonaco" class="material-icons-outlined monacotopbuttons" title="Close">clear</span></div> </header> <div style="display: flex; margin: unset;"><span id="jstab" class="activetabeditor" style="color: gray;font-size: 16px;margin: 0px -4px;padding: 8px 4px;cursor: pointer;margin-left: 10px;">Javascript</span><span id="csstab" class="editortab" style="color: gray;font-size: 16px;margin: 0px -4px;padding: 8px 4px;cursor: pointer;margin-left: 15px;">CSS</span></div> <div style="position: relative;width: 100%;height: 100%;"> <div id="jsmonaco" style="position: absolute;text-align: left;width: 100%;height: 100%;z-index: 1;"> </div> <div id="cssmonaco" style="position: absolute;text-align: left;width: 100%;height: 100%; display: none;"> </div> </div> </div>`
@@ -128,13 +128,14 @@ chrome.storage.local.get(null, saved => {
 
     // Run Theme JS
     document.getElementById('runjs').addEventListener('click', ()=> {
-        eval(monaco.getAttribute('themejs'))
+        new Function(monaco.getAttribute('themejs'))()
     })
 
 
     // Stop Live Editing
     document.getElementById('stoplivemonaco').addEventListener('click', ()=> {
         chrome.storage.local.set({'isLiveEditing': false})
+        location.reload()
     })
 
 
