@@ -20,7 +20,8 @@ Made by david77#3909
   4️⃣ Drag & drop the folder to chrome://extensions. Good job! You have installed BetterWRD! 🎉
 
 - ### Firefox:
-  ⚠️ Currently unavailable. Waiting for Firefox to respond.
+  1️⃣ Go to [addons.mozilla.org/en-US/firefox/addon/betterwrd/](https://addons.mozilla.org/en-US/firefox/addon/betterwrd/).\
+  2️⃣ Click **Add to Firefox**.
   
   
 ## 📃 Information
