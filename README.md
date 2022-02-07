@@ -1,7 +1,7 @@
 🏞 BetterWRD - Useful browser extension for WRD!
 ===
 
-This extension adds tons of useful features to WeAreDevs.net & improves the user experience by a long shot.
+This extension adds tons of new features to WeAreDevs.net & improves the user experience by a long shot.
 
 It gives you the possibility to `Create or Use Premade Themes`, `Use Emotes`, `Switch through the old & new forum layouts`, Have `Quick Profile/Thread Viewers` & many more features that not only help improve your experience on WRD, but also improve the design of the website.
 
@@ -11,6 +11,8 @@ Latest Ver. Release Date: **1/23/2022**
 Made by david77#3909
 
 
+
+&nbsp;
 ## 📥 How to Download
 
 - ### Chrome, Brave, MS Edge, Opera & other Chromium browsers:
@@ -22,11 +24,27 @@ Made by david77#3909
 - ### Firefox:
   1️⃣ Go to [addons.mozilla.org/en-US/firefox/addon/betterwrd/](https://addons.mozilla.org/en-US/firefox/addon/betterwrd/).\
   2️⃣ Click **Add to Firefox**.
-  
-  
+
+
+
+&nbsp;
 ## 📃 Information
 BetterWRD is a free and open source browser extension that adds over 25 features to WRD.
 
 Some of these features are: Themes, Wallpapers, Use old layout, Better Navbar Dropmenus, Dark Code blocks, Custom Thread Prefixes, Next thread page button on page top, Spellcheck for Text Editor, Drafts Menu (can be used to save forum signatures), Replace WRD Text to logo, Stick navbar to top of the page and a lot More!
 
 If you remove the extension from your browser, the next time you install it all your settings, themes & everything will still be there.
+
+
+
+&nbsp;
+## 💬 Discord
+Join the BetterWRD discord server!\
+[https://discord.gg/ceU5SRTf4J](https://discord.gg/ceU5SRTf4J)
+
+
+
+&nbsp;
+## ✨ Contributors
+- **Shade_0122** - WeAreFemboys Theme Dev
+- **Moon** - Server Admin
