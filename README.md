@@ -3,48 +3,62 @@
 
 This extension adds tons of new features to WeAreDevs.net & improves the user experience by a long shot.
 
-It gives you the possibility to `Create or Use Premade Themes`, `Use Emotes`, `Switch through the old & new forum layouts`, Have `Quick Profile/Thread Viewers` & many more features that not only help improve your experience on WRD, but also improve the design of the website.
+Here's a brief summary of what features BetterWRD offers you: `Community Plugins`, `Themes`, `Emotes`, `Post Previewing`, `Old Forum Layout`, `Live CSS Editor` & many more features that not only help improve your experience on WRD, but also improve the design of the website.
 
-Latest Version: **3.7**\
-Latest Ver. Release Date: **1/23/2022**
+Latest Version: **4.0**\
+Latest Release date: **3/4/2022**
 
-Made by david77#3909
-
-
+Made by `david77#3909`
 
 &nbsp;
-## 📥 How to Download
+![Line](https://cdn.discordapp.com/attachments/800294579856605204/941721620119187526/thread_line.png)
+&nbsp;
 
+## 💬 Discord
+Join the BetterWRD discord server to keep up with updates, news & more!\
+[https://discord.gg/ceU5SRTf4J](https://discord.gg/ceU5SRTf4J)
+
+&nbsp;
+![Line](https://cdn.discordapp.com/attachments/800294579856605204/941721620119187526/thread_line.png)
+&nbsp;
+
+## 📥 How to Download
 - ### Chrome, Brave, MS Edge, Opera & other Chromium browsers:
   1️⃣ First of all, go ahead and download BetterWRD.zip from [github.com/davve77/BetterWRD/releases/latest](https://github.com/davve77/BetterWRD/releases/latest).\
   2️⃣ Extract BetterWRD.zip to a folder.\
-  3️⃣ Go to chrome://extensions & enable Developer mode. For most browsers the switch is located on a corner of the page.\
-  4️⃣ Drag & drop the folder to chrome://extensions. Good job! You have installed BetterWRD! 🎉
+  3️⃣ Go to chrome://extensions & enable Developer mode. For most browsers the switch is located in a corner of the page.\
+  4️⃣ Drag & drop the folder to chrome://extensions. Nice, you've installed BetterWRD! 🎉
 
 - ### Firefox:
   1️⃣ Go to [addons.mozilla.org/en-US/firefox/addon/betterwrd/](https://addons.mozilla.org/en-US/firefox/addon/betterwrd/).\
   2️⃣ Click **Add to Firefox**.
 
+&nbsp;
+![Line](https://cdn.discordapp.com/attachments/800294579856605204/941721620119187526/thread_line.png)
+&nbsp;
 
+## 🔌 Plugins
+Plugins are mostly community-made scripts that change or improve functionality of WRD.\
+To learn how to create, share or use plugins, a guide for that has been made [here](https://github.com/davve77/BetterWRD-Plugins/blob/main/README.md).
 
 &nbsp;
-## 📃 Information
-BetterWRD is a free and open source browser extension that adds over 25 features to WRD.
+![Line](https://cdn.discordapp.com/attachments/800294579856605204/941721620119187526/thread_line.png)
+&nbsp;
 
-Some of these features are: Themes, Wallpapers, Use old layout, Better Navbar Dropmenus, Dark Code blocks, Custom Thread Prefixes, Next thread page button on page top, Spellcheck for Text Editor, Drafts Menu (can be used to save forum signatures), Replace WRD Text to logo, Stick navbar to top of the page and a lot More!
+## 📃 Information
+BetterWRD is a free and open source browser extension that adds over 20 features to WRD.
+
+Some of these features are: Plugins, Themes, Emotes, Preview Posts, Custom Fonts, Wallpapers, Use old layout, Better Navbar Dropmenus, Custom Thread Prefixes, Next thread page button on page top, Spellcheck for Text Editor, Drafts Menu (can be used to save forum signatures), Replace WRD Text to logo, Stick navbar to top of the page and a lot More!
 
 If you remove the extension from your browser, the next time you install it all your settings, themes & everything will still be there.
 
-
-
 &nbsp;
-## 💬 Discord
-Join the BetterWRD discord server!\
-[https://discord.gg/ceU5SRTf4J](https://discord.gg/ceU5SRTf4J)
-
-
-
+![Line](https://cdn.discordapp.com/attachments/800294579856605204/941721620119187526/thread_line.png)
 &nbsp;
+
 ## ✨ Contributors
 - **Shade_0122** - WeAreFemboys Theme Dev
 - **Moon** - Server Admin
+
+&nbsp;
+![Line](https://cdn.discordapp.com/attachments/800294579856605204/941721620119187526/thread_line.png)
