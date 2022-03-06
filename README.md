@@ -58,7 +58,7 @@ If you remove the extension from your browser, the next time you install it all 
 
 ## ✨ Contributors
 - **Shade_0122** - WeAreFemboys Theme Dev
-- **Moon** - Server Admin
+- **Moon** - Server Admin & Custom Domain Holder
 
 &nbsp;
 ![Line](https://cdn.discordapp.com/attachments/800294579856605204/941721620119187526/thread_line.png)
