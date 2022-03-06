@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html style="color-scheme: dark;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>BetterWRD Backup</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo:400,600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="assets/css/scrollbar.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/switch.css">
+    <link rel="stylesheet" href="assets/css/toast.css">
+    <link rel="stylesheet" href="assets/css/tooltips.css">
+<link rel="icon" type="image/png" href="../etc/img/current/bwrd-settings.png"/>
+<script src="javascript/settingsPages.js"></script>
+<script src="javascript/toast.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<style>
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)){
+.backdropdiv{background: rgba(6, 6, 6, 0.97)!important}
+#topbarthemes{background: rgb(45, 45, 45)!important}
+}
+</style><style>
+#navbar-backup {
+  background: #323232;
+}
+#navbar-backup > .navspan {
+  background: linear-gradient(to right, rgb(83 172 255 / 68%) 30%, rgba(255,29,205,0.88) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
+</head>
+
+<body class="unselectable">
+    <div id="sidenav" class="sidenav"><a id="sidenavtop" style="position: absolute;display: flex;align-items: center;justify-content: center;top: 0;background: #323232;height: 90px;width: 100%;border-radius: 0;cursor: pointer;padding: 0;" href="index.html"><img id="sidenavtopimg" draggable="false" src="assets/img/bwrdlogo-text.png" width="100"></a>
+        <p
+            class="navdesc" style="margin-top: 105px;">BetterWRD</p><a id="navbar-settings" href="index.html"><span class="material-icons-outlined navspan">tune</span>Settings</a><a id="navbar-themes" href="themes.html"><span class="material-icons-outlined navspan">palette<br></span>Themes</a><a id="navbar-plugins"
+                href="plugins.html"><span class="material-icons-outlined navspan">extension<br></span><p style="position: relative;">Plugins</p></a><a id="navbar-wallpaper" href="wallpaper.html"><span class="material-icons-outlined navspan">wallpaper</span>Wallpaper</a>
+            <a
+                id="navbar-fonts" href="fonts.html"><span class="material-icons-outlined navspan">format_size</span>Fonts</a>
+                <p class="navdesc">Extension</p><a id="navbar-github" href="https://github.com/davidTube7/BetterWRD" target="_blank"><span class="material-icons-outlined navspan">code</span>GitHub</a><a id="navbar-backup" href="backup.html"><span class="material-icons-outlined navspan">settings_backup_restore</span>Backup</a>
+                <p
+                    class="navdesc">Other</p><a id="navbar-upcoming" href="upcoming.html"><span class="material-icons-outlined navspan">science<br></span>Upcoming</a><a id="navbar-discord" href="https://discord.gg/ceU5SRTf4J" target="_blank"><span class="material-icons-outlined navspan">group<br></span>Discord</a>
+                    <a
+                        id="navbar-about" href="about.html"><span class="material-icons-outlined navspan">info</span>About</a>
+    </div>
+    <div id="toastdiv" class="toastdiv"><div id="toast"></span>Settings saved and applied.</div></div>
+    <h1 class="text-center" style="font-size: 30px;color: rgb(220,220,220);margin-top: 25px;"><strong><em>BetterWRD Settings</em></strong></h1>
+    <h1 class="text-center" style="font-size: 20px;color: rgb(150,150,150);margin-top: -7px;margin-bottom: 0;padding-bottom: 60px;">save or load settings backup<br></h1>
+    <div class="mainPGDIV" style="width: 100%;max-width: 940px;padding: 0 20px;margin: auto;display: flex;flex-direction: column;">
+        <div id="topmenu" style="position: sticky;background: rgb(30,30,30);top: 0;display: flex;justify-content: space-between;align-items: center;flex-wrap: wrap;width: 100%;margin: auto;z-index: 1000;padding-bottom: 35px;padding-top: 35px;">
+            <div style="animation: fadeInLeft .25s;">
+                <h1 style="font-family: 'Archivo';margin: 0;text-align: left!important;font-size: 40px;display: flex;align-items: center;"><span class="material-icons-outlined" style="margin-right: 5px;font-size: 40px;background: linear-gradient(to right, rgb(83 172 255 / 68%) 30%, rgba(255,29,205,0.88) 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">restore</span>Backup</h1>
+            </div>
+        </div>
+        <div style="padding-top: 20px;display: flex;align-items: center;justify-content: center;">
+            <div style="animation: fadeInLeft .3s;position: relative;height: 400px;width: 300px;background: rgb(40,40,40);border: 1px solid rgba(255,255,255,0.04);box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;border-radius: 10px;overflow: hidden;display: flex;align-items: center;justify-content: flex-start;padding: 15px;"><span class="material-icons-outlined" style="position: absolute;right: -45%;top: 50%;transform: translateY(-50%);font-size: 350px;color: rgb(48,48,48);">arrow_downward</span>
+                <div style="z-index: 1;text-align: left;">
+                    <h1 style="font-family: 'Archivo';margin: 0;font-size: 40px;font-weight: 699;">Save backup</h1>
+                    <p style="opacity: 0.60;margin-top: 10px;">Download a backup of all your BetterWRD data: themes, plugins, wallpaper, settings and more.</p><button class="btn btn-primary" id="saveBackupBtn" type="button" style="margin-top: 10px;">Save Backup</button></div>
+            </div>
+            <div style="animation: fadeInRight .3s;position: relative;height: 400px;width: 300px;background: rgb(40,40,40);border: 1px solid rgba(255,255,255,0.04);box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;border-radius: 10px;overflow: hidden;display: flex;align-items: center;justify-content: flex-start;padding: 15px;margin-left: 25px;"><span class="material-icons-outlined" style="position: absolute;left: -45%;top: 50%;transform: translateY(-50%);font-size: 350px;color: rgb(48,48,48);">arrow_upward</span>
+                <div style="z-index: 1;text-align: left;">
+                    <h1 style="font-family: 'Archivo';margin: 0;font-size: 40px;font-weight: 699;">Load backup</h1>
+                    <p style="opacity: .6;margin-top: 10px;">Load a BetterWRD backup file to get all your stuff back.</p>
+                    <p style="font-size: 13px;opacity: .65;margin-top: 10px;display: flex;align-items: center;justify-content: center;white-space: pre;"><span class="material-icons-outlined" style="font-size: 17px;">error_outline</span>&nbsp;This will OVERWRITE your current settings.</p><button class="btn btn-primary" id="loadBackupBtn" type="button" style="margin-top: 10px;">Load Backup</button></div>
+            </div>
+        </div>
+    </div><input type="file" id="selectfile" style="display: none;" accept=".backup"><script src="javascript/backup.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
