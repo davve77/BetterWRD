@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>BetterWRD Settings</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo:400,600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="assets/css/scrollbar.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/switch.css">
+    <link rel="stylesheet" href="assets/css/toast.css">
+    <link rel="stylesheet" href="assets/css/tooltips.css">
+<link rel="icon" type="image/png" href="../etc/img/current/bwrd-settings.png"/>
+<script src="javascript/settingsPages.js"></script>
+<script src="javascript/toast.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<style>
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)){
+.backdropdiv{background: rgba(6, 6, 6, 0.97)!important}
+#topbarthemes{background: rgb(45, 45, 45)!important}
+}
+</style>
+</head>
+
+<body class="unselectable">
+    <div id="sidenav" class="sidenav"><a id="sidenavtop" style="position: absolute;display: flex;align-items: center;justify-content: center;top: 0;background: #323232;height: 90px;width: 100%;border-radius: 0;cursor: pointer;padding: 0;" href="index.html"><img id="sidenavtopimg" draggable="false" src="assets/img/bwrdlogo-text.png" width="100"></a>
+        <p
+            class="navdesc" style="margin-top: 105px;">BetterWRD</p><a id="navbar-settings" href="index.html"><span class="material-icons-outlined navspan">tune</span>Settings</a><a id="navbar-themes" href="themes.html"><span class="material-icons-outlined navspan">palette<br></span>Themes</a><a id="navbar-plugins"
+                href="plugins.html"><span class="material-icons-outlined navspan">extension<br></span><p style="position: relative;">Plugins</p></a><a id="navbar-wallpaper" href="wallpaper.html"><span class="material-icons-outlined navspan">wallpaper</span>Wallpaper</a>
+            <a
+                id="navbar-fonts" href="fonts.html"><span class="material-icons-outlined navspan">format_size</span>Fonts</a>
+                <p class="navdesc">Extension</p><a id="navbar-github" href="https://github.com/davidTube7/BetterWRD" target="_blank"><span class="material-icons-outlined navspan">code</span>GitHub</a><a id="navbar-backup" href="backup.html"><span class="material-icons-outlined navspan">settings_backup_restore</span>Backup</a>
+                <p
+                    class="navdesc">Other</p><a id="navbar-upcoming" href="upcoming.html"><span class="material-icons-outlined navspan">science<br></span>Upcoming</a><a id="navbar-discord" href="https://discord.gg/ceU5SRTf4J" target="_blank"><span class="material-icons-outlined navspan">group<br></span>Discord</a>
+                    <a
+                        id="navbar-about" href="about.html"><span class="material-icons-outlined navspan">info</span>About</a>
+    </div>
+    <div id="maindiv" style="width: 100%;height: 500px;">
+        <div id="maininner" style="margin: auto;width: 90%;height: 600px;padding: 50px 20px;text-align: left;">
+            <h1 style="font-size: 30px;font-weight: 600;font-family: Archivo, sans-serif;margin: 0;">Layouts</h1>
+            <p style="opacity: 0.70;margin-bottom: 55px;">Choose the layout you prefer.</p>
+            <div id="layoutsdiv">
+                <div class="layoutdiv">
+                    <div class="layoutpreview">
+                        <div style="position: relative;display: flex;flex-direction: row;justify-content: flex-end;">
+                            <div class="layoutpreviewbtn" style="margin-right: 10px;"></div>
+                            <div class="layoutpreviewbtn"></div>
+                        </div>
+                        <div style="position: absolute;top: 60px;left: 20px;right: 20px;bottom: 20px;background: rgb(50,50,50);border-radius: 7px;overflow: hidden;">
+                            <div style="height: 25px;border-bottom: 1px solid rgba(75,75,75,0.92);"></div>
+                        </div>
+                    </div>
+                    <div class="form-check" style="margin-top: 10px;width: 100%;position: relative;"><input class="form-check-input" type="radio" id="oldUICheck" name="layouts"><label class="form-check-label" for="oldUICheck" style="position: absolute;top: -215px;left: -5px;vertical-align: sub;width: 100%;height: 200px;line-height: 453px;text-indent: 27px;">Old layout</label></div>
+                </div>
+                <div class="layoutdiv">
+                    <div class="layoutpreview">
+                        <div style="position: relative;display: flex;flex-direction: row;justify-content: flex-end;">
+                            <div class="layoutpreviewbtn" style="margin-right: 10px;"></div>
+                            <div class="layoutpreviewbtn"></div>
+                        </div>
+                        <div style="position: absolute;top: 60px;left: 20px;right: 20px;bottom: 20px;background: rgb(50,50,50);border-radius: 7px;display: flex;flex-direction: column;justify-content: flex-end;overflow: hidden;">
+                            <div style="width: 100%;height: 30px;border-top: 1px solid rgba(75,75,75,0.57);"></div>
+                            <div style="width: 100%;height: 30px;border-top: 1px solid rgba(75,75,75,0.57);background: rgb(54,54,54);"></div>
+                            <div style="width: 100%;height: 30px;border-top: 1px solid rgba(75,75,75,0.57);"></div>
+                            <div style="width: 100%;height: 30px;border-top: 1px solid rgba(75,75,75,0.57);background: rgb(54,54,54);"></div>
+                        </div>
+                    </div>
+                    <div class="form-check" style="margin-top: 10px;width: 100%;position: relative;"><input class="form-check-input" type="radio" id="defaultCheck" name="layouts"><label class="form-check-label" for="defaultCheck" style="position: absolute;top: -215px;left: -5px;vertical-align: sub;width: 100%;height: 200px;line-height: 453px;text-indent: 27px;">Default layout</label></div>
+                </div>
+            </div><button class="btn btn-primary" id="applybtn-1" style="margin-top: 65px;" type="button">Save Layout</button>
+            <p style="opacity: 0.70;margin-top: 10px;">This page is not done therefore it is not usable in this version.</p>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

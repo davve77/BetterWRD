@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html style="color-scheme: dark;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>BetterWRD Settings</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo:400,600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="assets/css/scrollbar.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/switch.css">
+    <link rel="stylesheet" href="assets/css/toast.css">
+    <link rel="stylesheet" href="assets/css/tooltips.css">
+<link rel="icon" type="image/png" href="../etc/img/current/bwrd-settings.png"/>
+<script src="javascript/settingsPages.js"></script>
+<script src="javascript/toast.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<style>
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)){
+.backdropdiv{background: rgba(6, 6, 6, 0.97)!important}
+#topbarthemes{background: rgb(45, 45, 45)!important}
+}
+</style><style>
+#navbar-settings {
+  background: #323232;
+}
+#navbar-settings > .navspan {
+  background: linear-gradient(to right, rgb(83 172 255 / 68%) 30%, rgba(255,29,205,0.88) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
+</head>
+
+<body class="unselectable"><script src="javascript/loadingScreen.js"></script>
+    <div id="sidenav" class="sidenav"><a id="sidenavtop" style="position: absolute;display: flex;align-items: center;justify-content: center;top: 0;background: #323232;height: 90px;width: 100%;border-radius: 0;cursor: pointer;padding: 0;" href="index.html"><img id="sidenavtopimg" draggable="false" src="assets/img/bwrdlogo-text.png" width="100"></a>
+        <p
+            class="navdesc" style="margin-top: 105px;">BetterWRD</p><a id="navbar-settings" href="index.html"><span class="material-icons-outlined navspan">tune</span>Settings</a><a id="navbar-themes" href="themes.html"><span class="material-icons-outlined navspan">palette<br></span>Themes</a><a id="navbar-plugins"
+                href="plugins.html"><span class="material-icons-outlined navspan">extension<br></span><p style="position: relative;">Plugins</p></a><a id="navbar-wallpaper" href="wallpaper.html"><span class="material-icons-outlined navspan">wallpaper</span>Wallpaper</a>
+            <a
+                id="navbar-fonts" href="fonts.html"><span class="material-icons-outlined navspan">format_size</span>Fonts</a>
+                <p class="navdesc">Extension</p><a id="navbar-github" href="https://github.com/davidTube7/BetterWRD" target="_blank"><span class="material-icons-outlined navspan">code</span>GitHub</a><a id="navbar-backup" href="backup.html"><span class="material-icons-outlined navspan">settings_backup_restore</span>Backup</a>
+                <p
+                    class="navdesc">Other</p><a id="navbar-upcoming" href="upcoming.html"><span class="material-icons-outlined navspan">science<br></span>Upcoming</a><a id="navbar-discord" href="https://discord.gg/ceU5SRTf4J" target="_blank"><span class="material-icons-outlined navspan">group<br></span>Discord</a>
+                    <a
+                        id="navbar-about" href="about.html"><span class="material-icons-outlined navspan">info</span>About</a>
+    </div>
+    <div id="toastdiv" class="toastdiv"><div id="toast"></span>Settings saved and applied.</div></div>
+    <div id="loading" style="background-color: rgb(30,30,30);position: fixed;width: 100%;height: 100%;top: 0px;left: 0px;transition: all .3s;z-index: 10000;display: none;">
+        <h1 class="text-center" style="position: absolute;text-align: center;top: 50%;width: 100%;font-size: 38px;/*color: rgb(220,220,220);*/animation: outin 1.3s;font-weight: 600;background: linear-gradient(to right, rgb(83 172 255 / 68%) 30%, rgba(255,29,205,0.88) 100%;-webkit-background-clip: text;-webkit-text-fill-color: transparent;">BetterWRD</h1>
+        <h1 class="text-center" id="funfuntext" style="position: absolute;bottom: 3px;width: 100%;font-size: 17px;color: rgb(159,159,159);margin-top: 10px;"><br></h1>
+    </div>
+    <div id="changelogdiv" class="backdropdiv" style="position: fixed;bottom: 0;left: 0;right: 0;top: 0;z-index: 101;transition: .15s all;display: none;">
+        <div id="changelogoverlay">
+            <div id="clcontent" style="transition: .44s all cubic-bezier(1,0,.28,.97);height: 100%;overflow: auto;scrollbar-width: thin;/*transform: translateX(-850px);*/">
+                <div class="cltop">
+                    <h1><strong>Changelogs</strong></h1>
+                    <p id="closechangelog" class="material-icons-outlined cltopbtn">close</p>
+                </div>
+                <div class="changelog-panel" tabindex="1">
+                    <h1 class="changelog-panel-title">Version 4.0 — 3/6/2022</h1>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Plugins! 😘😍🥰</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Plugin Store!</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Preview Threads!</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Backup Settings! Check it out&nbsp;<a href="backup.html" target="_blank">here</a><span>.</span></p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Search Bar in Emotes Menu.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>6 More Wallpapers to Bloom Theme.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Classic Bright Theme. View it <a href="viewtheme.html?theme=classicBrightTheme" target="_blank">here</a>.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>"BWRD Plugins" to Better Dropmenus.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>Multi Mention Button now shows on all replies.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>WRD's changelog pastebin <a href="https://pastebin.com/raw/TGz5N9Xa" target="_blank">page</a>&nbsp;now has dark mode &amp; uses your selected Font.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>Emotes Menu will now move to the right on smaller displays.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>Bloom Theme is now more mobile-friendly.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>Made Better Dropmenus smaller.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>.webp Discord Emotes will now automatically convert to .png when adding emotes.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Old Forum home page layout sometimes showing "- No posts yet -".</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Quick Thread Preview showing up when hovering over a Next Page button.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Sign out Button not working on Better Dropmenus.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Theme &amp; Font links not showing up in footer after the removal of Bright Theme.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Removed</span>Dark Code Blocks Setting.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Reduced</span>Bloom Theme background blur sometimes flickering.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Reduced</span>Load time by 175 ms.</p>
+                </div>
+                <div class="changelog-panel" tabindex="1">
+                    <h1 class="changelog-panel-title">Version 3.7 — 1/23/2022</h1>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Twitch Emotes!</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>You can now Edit &amp; Delete Emotes!</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>You can now also Favorite Emotes!</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>Emotes now have categories.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>A button that lets you toggle the Emotes Menu on post create page.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Changeable wallpaper for Bloom Theme. <a href="https://wearedevs.net/manager/settings" target="_blank">Go here</a>&nbsp;to change it.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>Like buttons now have a different background when the post is liked.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>BetterWRD Threads Custom Prefixes now have a gradient and are bigger.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>Forum Editor &amp; Download Pages now match with Premade Themes.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>Code is now more efficient and faster.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>An Error on Rate User page.</p>
+                </div>
+                <div class="changelog-panel" tabindex="1">
+                    <h1 class="changelog-panel-title">Version 3.6 — 1/17/2022</h1>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Live Editing Themes.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Emotes menu on Post Create pages.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>A New Theme: "Bloom".</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>New Design for Themes page.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>Quick Thread Viewer now shows an error if it can't get the thread's info.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>Fullscreen Monaco now has an animation.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Theme Mode Indicator on View Theme pages showing a dark indicator instead of light.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Videos on Quick Thread Viewer being too big.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Searching Themes not working when in List View.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>BetterWRD User badge sometimes not showing.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Text Editor Spellcheck sometimes not working.</p>
+                </div>
+                <div class="changelog-panel" tabindex="1">
+                    <h1 class="changelog-panel-title">Version 3.5 — 1/5/2022</h1>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Font link in footer glitching &amp; making theme switcher unusable.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Your Drafts button not showing up.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Main Forum Page Appeal &amp; Mod Trello buttons not showing when using Old Layout.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Like, Edit &amp; Delete thread/reply button bugs.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>Darkened Better Dropmenus background color&nbsp;to fit with WeAreDevs colors.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>Darkened Custom Prefix background color.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>Like, Edit &amp; Delete post buttons now look better on Bright Theme.</p>
+                </div>
+                <div class="changelog-panel" tabindex="1">
+                    <h1 class="changelog-panel-title">Version 3.4 — 12/29/2021</h1>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Your Messages button on Better Profile Dropmenu.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Errors on the new Settings section.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Current Theme link replacing the wrong switcher.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Big Avatars on Messages page.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Better Profile Dropmenu Name &amp; Reputation glitching on Messages page.</p>
+                </div>
+                <div class="changelog-panel" tabindex="1">
+                    <h1 class="changelog-panel-title">Version 3.3 — 12/28/2021</h1>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>More bugs.</p>
+                </div>
+                <div class="changelog-panel" tabindex="1">
+                    <h1 class="changelog-panel-title">Version 3.2 — 12/28/2021</h1>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Message link in Quick Profile Viewer.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>All the bugs caused by the WeAreDevs DMs Update.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>Quick Profile Viewer Green Reputation color now matches the color from the profile page.</p>
+                </div>
+                <div class="changelog-panel" tabindex="1">
+                    <h1 class="changelog-panel-title">Version 3.1 — 12/26/2021</h1>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Quick Profile Viewer.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Quick Thread Viewer.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Fonts.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Multi-Mention people on posts feature.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>Better Profile Dropmenu now shows your Avatar and Reputation.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Change</span>Edit &amp; Delete Post buttons are now bigger and look like other buttons.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Threads becoming unclickable on some thread lists due to Custom Prefixes.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Default Themes not applying to Custom Prefixes.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Removed</span>Dark Mode Text Editor.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Removed</span>Gray out clicked Threads.</p>
+                </div>
+                <div class="changelog-panel">
+                    <h1 class="changelog-panel-title">Version 3.0 — 12/21/2021</h1>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>WeAreFemboys Theme.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Pages for every Theme.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Side Navigation Bar.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>New Theme Editor.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Exporting and Importing Themes.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Upload wallpaper image to Imgur.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Discord Themes.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Better Dropmenus setting.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>BetterWRD User badge on posts.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Move online users to bottom setting.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Upcoming features/changes page.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Changelogs menu.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Theme Search bar.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Theme List View.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>Choose WRD Logo for the navbar.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Added</span>About BetterWRD Page</p>
+                    <p class="changelog-panel-text">And More. <a href="https://betterwrd.vercel.app/versions/v3/changelog.html">See the full changelog here</a>.</p>
+                </div>
+                <div class="changelog-panel">
+                    <h1 class="changelog-panel-title">Version 2.5 — 12/6/2021</h1>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Old Forum home page layout.</p>
+                </div>
+                <div class="changelog-panel">
+                    <h1 class="changelog-panel-title">Version 2.4 — 11/18/2021</h1>
+                    <p class="changelog-panel-text"><span class="changelog-prefix cladded">Added</span>The option to use the old Forum home page layout.</p>
+                </div>
+                <div class="changelog-panel">
+                    <h1 class="changelog-panel-title">Version 2.3 — 11/6/2021</h1>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Incorrect placement of thread top buttons after the removal of ads on the Forum.&nbsp;</p>
+                </div>
+                <div class="changelog-panel">
+                    <h1 class="changelog-panel-title">Version 2.2 — 10/7/2021</h1>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Some small bugs.</p>
+                </div>
+                <div class="changelog-panel">
+                    <h1 class="changelog-panel-title">Version 2.1 — 8/25/2021</h1>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Incorrect placement of thread top buttons.</p>
+                </div>
+                <div class="changelog-panel">
+                    <h1 class="changelog-panel-title">Version 2.0 — 5/30/2021</h1>
+                    <p class="changelog-panel-text"><span class="changelog-prefix cladded">Added</span>Themes.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix cladded">Added</span>Custom themes.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clchange">Change</span>All your BWRD Settings will save when reinstalling.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix cladded">Added</span>Sticky Navigation Bar setting.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix cladded">Added</span>Refresh WRD when you change a setting.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix cladded">Added</span>Embed strawpoll links in posts setting.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix cladded">Added</span>3 more settings in the manage wallpaper page.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix cladded">Added</span>A quick loading screen for the Settings page.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clchange">Change</span>Better Custom Prefixes.</p>
+                    <p class="changelog-panel-text"><span class="changelog-prefix clfix">Fixed</span>Bugs.</p>
+                </div>
+                <div class="changelog-panel">
+                    <h1 class="changelog-panel-title">Version 1.5 — 5/4/2021</h1>
+                    <p class="changelog-panel-text"><span class="changelog-prefix cladded">Added</span>Gray out threads that you already read.</p>
+                </div>
+                <div class="changelog-panel">
+                    <h1 class="changelog-panel-title">Version 1.0 — 5/3/2021</h1>
+                    <p class="changelog-panel-text">BetterWRD released.</p>
+                </div>
+            </div>
+            <div id="clcurrent" style="position: absolute;top: 0;width: 100%;transition: .44s all cubic-bezier(1,0,.28,.97);height: 100%;overflow: auto;scrollbar-width: thin;transform: translateX(850px);">
+                <div class="cltop">
+                    <h1 style="display: flex;flex-direction: column;align-items: flex-start;"><strong>What's New</strong><span style="display: none;font-family: 'Roboto';font-weight: normal;font-size: 17px;color: #c1c1c1;">Released on 10/25/2021</span></h1>
+                    <p id="clprevious" class="material-icons-outlined cltopbtn">arrow_back</p>
+                </div>
+                <div style="width: 93%;margin: auto;">
+                    <h1 class="section clcursection" style="margin-top: 0;">Added<br></h1>
+                    <div class="detailedcldiv">
+                        <h1>Side Navigation Bar</h1>
+                    </div>
+                    <h1 class="section clcursection">Changes<br></h1>
+                    <div class="detailedcldiv">
+                        <h1>Monaco Editor Fullscreen now fills out the page, not your entire screen, allowing you to switch tabs.</h1>
+                    </div>
+                    <h1 class="section clcursection">Fixes<br></h1>
+                    <div class="detailedcldiv">
+                        <h1>Fixed flashing of unstyled content (FOUC)</h1>
+                        <p style="margin-bottom: 0;">There used to be a .5 second flash on page load when BetterWRD loaded a bit later than WRD, most noticeable when using themes. Fixed by giving BWRD 0.2 seconds to fully load while the page is hidden and then show the updated page.
+                            This sadly doesn't work on Firefox for now.</p>
+                    </div>
+                    <h1 class="section clcursection">Removed<br></h1>
+                    <div class="detailedcldiv">
+                        <h1>Deep Night Theme.</h1>
+                    </div>
+                    <h1 class="section clcursection">Known Issues<br></h1>
+                    <div class="detailedcldiv">
+                        <h1>Some features or code might not always load correctly if the tab is not active. Refresh for quick fix &amp; make sure the tab is focused.</h1>
+                    </div>
+                    <h1 class="section clcursection">News/Other<br></h1>
+                    <div class="detailedcldiv" style="margin-bottom: 0;">
+                        <h1>BetterWRD now has a New Discord Server! Join now to stay up to date with news, updates &amp; more!</h1><a href="https://discord.gg/ceU5SRTf4J" style="display: inline-block;margin-top: 5px;" target="_blank">https://discord.gg/ceU5SRTf4J</a></div>
+                </div><button class="btn btn-primary" id="clcbackbtn" type="button" style="margin-top: 62px;"><span class="material-icons-outlined" style="margin-right: 5px;font-size: 20px;color: rgb(224,224,224);vertical-align: text-bottom;">arrow_back</span>Go back</button>
+                <div
+                    id="clcbottomdiv" style="position: sticky;width: 100%;background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.27) 100%);display: flex;bottom: 0;padding: 10px;pointer-events: none;transition: .15s all;opacity: 0;"><button class="btn btn-primary material-icons-outlined" id="scrolltotop" type="button">expand_less</button></div>
+        </div>
+    </div>
+    </div>
+    <div id="updatediv" class="backdropdiv" style="position: fixed;bottom: 0;left: 0;right: 0;top: 0;z-index: 100;transition: .15s all;display: none;">
+        <div id="updatebwrddiv">
+            <div class="center">
+                <h1 class="text-center material-icons-outlined" style="font-size: 100px;color: rgb(255,255,255);">update<br></h1>
+                <h1 class="text-center" style="font-size: 21px;color: rgb(224,224,224);"><em>there's a new version available</em><br><em>please download it asap</em><br></h1>
+            </div>
+            <div style="display: flex;flex-direction: row-reverse;position: absolute;bottom: 0;right: 0;width: 100%;padding: 15px;/*background: rgb(30,30,30);*//*border-top: 1px solid rgb(54,54,54);*/"><button class="btn btn-primary" id="downloadbtn" style="border-style: none;outline: none;border: none;margin-left: 17px;margin-bottom: 0;" type="button">Download<span class="material-icons-outlined settingtextspan" style="margin-left: 2px;vertical-align: text-top;font-size: 20px;">file_download<br></span></button>
+                <p
+                    id="hidebtn">Not now</p>
+            </div>
+        </div>
+    </div>
+    <div id="topbuttons" style="display: flex;position: fixed;justify-content: flex-end;position: absolute;top: 0;right: 0;width: 25%;"><button class="btn btn-primary topbutton material-icons-outlined" id="changelogbtn" type="button" title="Changelogs">article</button></div>
+    <h1 class="text-center" style="font-size: 30px;color: rgb(220,220,220);font-weight: 400;margin-top: 25px;" href="/index.html"><strong><em>BetterWRD Settings</em></strong></h1>
+    <h1 class="text-center" style="font-size: 20px;color: rgb(150,150,150);margin-top: -7px;"><em>here, you can tweak BetterWRD's settings to your liking.</em></h1>
+    <div id="settingsdiv" style="position: relative;width: 670px;margin: auto;">
+        <div id="updatebanner" style="position: relative;height: 100px;width: 100%;background: #2d2d2d;margin-top: 45px;border-radius: 8px;border: 1px solid #404040;display: none;"><img style="position: absolute;left: 0;width: 100px;height: 100%;margin-left: 15px;" src="assets/img/bwrdlogo-text.png" draggable="false">
+            <div style="margin-left: 130px;height: 100%;padding: 10px;padding-left: 15px;background: rgb(40,40,40);border-radius: 0 8px 8px 0;">
+                <p style="font-size: 20px;color: rgb(207,207,207);display: table;margin-bottom: 10px;">A new BetterWRD version is Out! Check what's new.<br></p><a class="btn btn-primary" role="button" id="carddl" style="display: table;border-style: none;box-shadow: none;transition: .3s all;" href="https://github.com/davve77/BetterWRD/releases/latest"
+                    target="_blank">Download now<span class="material-icons-outlined settingtextspan" style="margin-left: 2px;vertical-align: text-top;font-size: 20px;">file_download<br></span></a>
+                <p style="font-size: 19px;color: rgba(207,207,207,0.6);display: none;">BetterWRD V4.0 is out! Go check it out.<br></p>
+            </div>
+        </div>
+        <h1 class="section" style="position: relative;margin-top: 45px;"><span class="material-icons-outlined sectionicon" style="margin-right: 7px;">auto_awesome</span>Appearance<br></h1>
+        <div class="settingsdiv">
+            <div class="form-check ttelm"><input class="form-check-input" type="checkbox" id="replaceText"><label class="form-check-label text-left" for="replaceText" style="color: white!important;">Replace WeAreDevs text with WRD logo in the navigation bar<span class="settingtextspan material-icons-outlined" style="margin-left: 3px;vertical-align: middle;">navigate_next</span><span class="selectLogoContainer"><span id="selectLogo"><img src="https://i.imgur.com/60mVQky.png"><img style="margin-left: 10px;" src="https://i.imgur.com/frqpbRZ.png"></span></span></label></div>
+            <div
+                class="form-check"><input class="form-check-input" type="checkbox" id="oldUI"><label class="form-check-label text-left" for="oldUI">Use old Forum Home page layout<br></label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="betterDropmenus"><label class="form-check-label text-left" for="betterDropmenus">Better Profile &amp; Notifications dropmenus</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="onlineUsersBottom"><label class="form-check-label text-left" for="onlineUsersBottom">Move Online Users to bottom</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="stickyNavbar"><label class="form-check-label text-left" for="stickyNavbar">Stick navigation bar to the top of the page</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="removeCaps"><label class="form-check-label text-left" for="removeCaps">Remove all caps usernames for users with Premium<br></label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="transparentPfp"><label class="form-check-label text-left" for="transparentPfp">Transparent Profile picture backgrounds on posts</label></div>
+    </div>
+    <div id="buttonsdiv" style="display: inline-flex;flex-direction: row;flex-wrap: wrap;margin-top: 15px;/*max-width: 500px;*/gap: 7px;"><a class="btn btn-primary" role="button" id="changethemebtn" href="themes.html"><span class="material-icons-outlined settingtextspan" style="margin-left: 0px;margin-right: 5px;vertical-align: text-top;">palette<br></span>Manage Themes</a><a class="btn btn-primary tooltipelm"
+            role="button" href="wallpaper.html" tooltip=""><span class="material-icons-outlined settingtextspan" style="margin-left: 0px;margin-right: 5px;vertical-align: text-top;">wallpaper<br></span>Manage Wallpaper</a><a class="btn btn-primary" role="button"
+            id="changefontsbtn" href="fonts.html"><span class="material-icons-outlined settingtextspan" style="margin-left: 0px;margin-right: 5px;vertical-align: text-top;">format_size<br></span>Manage Fonts</a></div>
+    <h1 class="section" title="Quality of Life"><span class="material-icons-outlined sectionicon" style="margin-right: 7px;">mood</span>QOL<br></h1>
+    <div class="settingsdiv">
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="quickProfile"><label class="form-check-label text-left" for="quickProfile">Quick Profile View when hovering over a user's name<span class="newtag">NEW</span></label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="quickThread"><label class="form-check-label text-left" for="quickThread">Quick Thread View when hovering over a Thread<span class="newtag">NEW</span></label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="nextonTop"><label class="form-check-label text-left" for="nextonTop">Put 'Next' &amp; 'Prev' buttons on top of threads</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="lastPageOnTop"><label class="form-check-label text-left" for="lastPageOnTop">Put skip to end button on top of threads</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="pageInput"><label class="form-check-label text-left" for="pageInput">Add a number textbox on threads to navigate to specific pages</label></div>
+    </div>
+    <h1 class="section"><span class="material-icons-outlined sectionicon" style="margin-right: 7px;">more_horiz</span>ETC<br></h1>
+    <div class="settingsdiv">
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="spellcheckTextEd"><label class="form-check-label text-left" for="spellcheckTextEd">Enable Spellcheck for the Text editor</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="embedStrawpoll"><label class="form-check-label text-left" for="embedStrawpoll">Embed Strawpoll links in posts</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="threadPrefixes"><label class="form-check-label text-left" for="threadPrefixes">Add custom prefixes such as REL, REQ, Script, etc to threads</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="autoRefreshWRD"><label class="form-check-label text-left" for="autoRefreshWRD">Automatically refresh WRD when you change a setting</label></div>
+    </div>
+    </div>
+    <div class="hide"></div><button class="btn btn-primary" id="applybtn" style="margin-top: 75px;border-style: none;box-shadow: none;" type="button">Save &amp; Apply Settings</button>
+    <h1 class="text-center" style="font-size: 17px;color: rgb(150,150,150);padding-bottom: 10px;padding-top: 10px;"><em>refresh pages for your changes to take effect</em><br></h1><script src="javascript/settingsManager.js"></script>
+<script src="javascript/changelog.js"></script>
+<script src="javascript/updateCheck.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
