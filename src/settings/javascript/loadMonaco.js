@@ -5,16 +5,16 @@ var jseditor
 var csseditor
 var monacoeditor = document.getElementById('monacoeditor')
 
-require.config({ paths: { 'vs': 'monaco/vs' }})
-require(["vs/editor/editor.main"], ()=> {
-    jseditor = monaco.editor.create(document.getElementById('jsmonaco'), {
+require.config({paths: {vs: '/settings/monaco/vs'}})
+require(["vs/editor/editor.main"], () => {
+    jseditor = monaco.editor.create(document.querySelector('#jsmonaco'), {
         language: 'javascript',
         theme: 'vs-dark',
         automaticLayout: true,
         minimap:{enabled:false}
     })
     
-    csseditor = monaco.editor.create(document.getElementById('cssmonaco'), {
+    csseditor = monaco.editor.create(document.querySelector('#cssmonaco'), {
         language: 'css',
         theme: 'vs-dark',
         automaticLayout: true,
@@ -26,6 +26,7 @@ require(["vs/editor/editor.main"], ()=> {
 jstab = document.getElementById('jstab')
 csstab = document.getElementById('csstab')
 jsmonaco = document.getElementById('jsmonaco')
+cssmonaco = document.getElementById('cssmonaco')
 
 jstab.addEventListener('click', ()=> {
     jstab.className = 'activetabeditor'
@@ -69,6 +70,10 @@ document.getElementById('monacofullscreen').addEventListener('click', ()=> {
         monacoeditor.classList.add('monacofullscreen')
         document.body.style.overflow = 'hidden'
         document.getElementById('monacotitle').textContent = 'Monaco — press fullscreen again to exit'
+
+        // Bug fix
+        jsmonaco.style.height = getComputedStyle(monacoeditor).height
+        cssmonaco.style.height = getComputedStyle(monacoeditor).height
     }
 
     function leavefs(){

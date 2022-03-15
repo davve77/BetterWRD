@@ -4,13 +4,13 @@ const lib = {
 
     checkForUpdates: async (allPlugins) => {
         var needsUpdate = false
-        var isPaused = (localStorage['bwrd_pluginpausecheck'] == 'paused') ? true : false
+        var isPaused = localStorage['bwrd_pluginpausecheck'] == 'paused'
         var updateQueue = []
         const updateNotifier = document.createElement('div')
         const uSeconds = Math.floor(Date.now() / 1000)
         const threeHours = 10800
-        // TODO: Changeable update check interval
 
+        // TODO: Changeable update check interval
         // Check every 3 hours
         !(localStorage['bwrd_pluginupdate']) && (localStorage['bwrd_pluginupdate'] = uSeconds + threeHours)
         !(localStorage['bwrd_pluginpausecheck']) && (localStorage['bwrd_pluginpausecheck'] = 'false')
@@ -24,8 +24,8 @@ const lib = {
         // Main
         for await (plg of allPlugins){
             let getPluginSource = await fetch(plg.source).then(e => e.text()).catch()
-            let getPluginVer = getPluginSource.match(/(?<=@version )(.*)/gm)[0]
             let pluginData = lib.getPluginData(getPluginSource)
+            let getPluginVer = pluginData.version
 
             if(getPluginSource && pluginData && getPluginVer
             && plg.name == pluginData.name && lib.errorCheck(pluginData)){
@@ -121,7 +121,7 @@ const lib = {
         document.head.appendChild(document.createElement('script')).textContent = `
             window.addEventListener('error', (e)=> {
                 let pluginScript = document.currentScript
-                if(!pluginScript.getAttribute('source')) return
+                if(!pluginScript || !pluginScript.getAttribute('source')) return
                 e.preventDefault()
                 bwrd.alert(pluginScript.getAttribute('name') + ' has errored', e.error)
             })

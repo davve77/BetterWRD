@@ -1,5 +1,5 @@
 input[type=checkbox], input[type=radio] {
-  --active: #3c82ff;
+  --active: #4cc2ff;
   --active-inner: black;
   --focus: 2px rgba(39, 94, 254, .3);
   --border: #838383;
@@ -541,7 +541,7 @@ a:hover {
   font-size: 18px;
   display: flex;
   align-items: center;
-  transition: .13s all;
+  transition: .067s cubic-bezier(0,0,0,1);
   cursor: pointer;
   width: 94%;
   margin: auto;
@@ -1135,7 +1135,7 @@ img {
   border-radius: 5px;
   color: rgb(211,211,211)!important;
   cursor: default;
-  transition: .15s all;
+  transition: .089s ease;
 }
 
 #backtothemes:hover {
@@ -1796,5 +1796,17 @@ p {
 .sidenav a:active .navspan {
   /*transform: translateY(-5px);*/
   /*color: white;*/
+}
+
+.pluginNew {
+  font-size: 15px;
+  font-weight: 600;
+  background: #a3c2ff;
+  color: black;
+  padding: 1px 14px;
+  border-radius: 7px;
+  position: absolute;
+  top: -6px;
+  right: -6px;
 }
 

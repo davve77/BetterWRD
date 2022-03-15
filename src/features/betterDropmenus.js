@@ -4,6 +4,7 @@ chrome.storage.local.get(null, saved => {
     if(!saved.betterDropmenus || !document.getElementsByClassName('menu')[0]) return
     
     var profilename = document.getElementsByClassName('dropmenu-title')[1].textContent
+    const menu = document.querySelectorAll('.menu')[1]
 
     // CSS
     document.head.appendChild(document.createElement('style')).textContent = `.navbtn:active, .notification:active{opacity: .5;} .navHeader_dropmenu{transform: scale(1)!important;}`

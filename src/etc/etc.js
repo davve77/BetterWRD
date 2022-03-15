@@ -222,6 +222,13 @@ if(document.querySelector('.replygroup')){
 }
 
 
+// Statistics
+if(!localStorage['bwrd_stat']){
+    location.href = 'https://api.stathat.com/c?ukey=MTg4NTcgiDyQmjcDg9aC70zAHI1Img~~&key=CPRn2uHnuoNoYP8pRcaBIiBTdUlE&count=1'
+    localStorage['bwrd_stat'] = 'true'
+}
+
+
 // Fix TinyMCE top bar displaying over navbar dropmenus
 if(document.querySelector('.tox-editor-header')){
     document.head.appendChild(document.createElement('style')).textContent = '.tox-editor-header{z-index: 0!important;}'

@@ -60,7 +60,7 @@ body{
 }
 .navItem{
     border-radius: 6px;
-    transition: .13s all!important;
+    transition: .167s cubic-bezier(0,0,0,1)!important;
     transform: scale(1)!important;
 }
 .navItem:hover{

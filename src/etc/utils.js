@@ -22,6 +22,18 @@ const util = {
         catch {}
         finally {textarea.remove()}
     },
+
+    addCSS: (src) => {
+        let css = document.createElement('link')
+        css.rel = 'stylesheet'
+        css.type = 'text/css'
+        css.href = src
+        return document.head.appendChild(css)
+    },
+
+    isOnLoadingPage(){
+        return document.querySelector('#CreditCard') != null && document.querySelector('#cf-wrapper') != null
+    }
 }
 
 if(chrome.storage && location.protocol != 'chrome-extension:'){

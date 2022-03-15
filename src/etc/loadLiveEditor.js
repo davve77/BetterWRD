@@ -6,7 +6,7 @@ var editor = document.getElementById('monaco')
 var monacoURL = document.getElementById('monacoscript').getAttribute('monacoUrl')
 
 require.config({ paths: { 'vs': `${monacoURL}/monaco/vs` }})
-require(["vs/editor/editor.main"], ()=> {
+require(["vs/editor/editor.main"], () => {
     monaco.editor.defineTheme('transparentbg', {
         base: 'vs-dark',
         inherit: true,
@@ -38,6 +38,6 @@ require(["vs/editor/editor.main"], ()=> {
     })
     csseditor.getModel().onDidChangeContent((e) => {
         editor.setAttribute('themecss', csseditor.getValue())
-        document.getElementById('bwthemecss').innerHTML = csseditor.getValue()
+        document.getElementById('bwrdThemeCSS').innerHTML = csseditor.getValue()
     })
 })

@@ -14,7 +14,7 @@ fetch('https://betterwrd.vercel.app/bwrd/fonts.json').then((response)=>{return r
         fontsDiv.appendChild(fontDiv)
         fontDiv.outerHTML = `
         <div name="${fontName}" import="${fontImport}" style="animation: fadein .5s;" class="fontdiv">
-        <h1 style="font-family: ${fontName}; animation: fadeSlideLeft .35s;">${font.name == 'Roboto' ? 'Roboto (default)' : font.name}</h1>
+        <h1 style="font-family: ${fontName}; animation: fadeSlideLeft .35s;">${font.name == 'Poppins' ? 'Poppins (default)' : font.name}</h1>
         <p style="font-family: ${fontName}; animation: fadeSlideLeft .35s; animation-delay: .02s;" class="text1">${fontName}</p>
         <p style="font-family: ${fontName}; animation: fadeSlideLeft .35s; animation-delay: .04s;" class="text2">${fontName}</p>
         <p style="font-family: ${fontName}; animation: fadeSlideLeft .35s; animation-delay: .06s;" class="text3">${fontName}</p>
@@ -24,6 +24,9 @@ fetch('https://betterwrd.vercel.app/bwrd/fonts.json').then((response)=>{return r
         `
 
         document.head.appendChild(document.createElement('style')).textContent = fontImport
+        if(fontImport == 'none'){
+            document.head.appendChild(document.createElement('style')).textContent = `@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');`
+        }
     })
 }).catch()
 
@@ -57,7 +60,7 @@ function resetFont(){
     chrome.storage.local.set({'font': null, 'fontImport': null})
     customFInput.value = ''
     resetFontBorder()
-    document.querySelector(`[name="Roboto"]`).classList.add('selectedfont')
+    document.querySelector(`[name="Poppins"]`).classList.add('selectedfont')
 
     // Toast
     showToast('Font has been reset.')
@@ -99,7 +102,7 @@ setTimeout(()=> {
         const isRoboto = saved.fontImport == 'none'
 
         if(!saved.font){
-            document.querySelector(`[name="Roboto"]`).classList.add('selectedfont')
+            document.querySelector(`[name="Poppins"]`).classList.add('selectedfont')
             return
         }
 

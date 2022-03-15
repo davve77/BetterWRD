@@ -1,6 +1,7 @@
 // Theme Name: Classic Bright Theme
 // Theme Mode: Bright
 
+
 document.head.appendChild(document.createElement('style')).textContent = `
 body{
     background-color:#f3f2f2;

@@ -1,22 +1,23 @@
 {
     "name": "BetterWRD",
     "short_name": "BWRD",
-    "description": "Adds tons of new features to WRD! by david77.",
+    "description": "Adds tons of new features to WRD.",
     "author": "dave77 (davidTube)",
-    "version": "4.0",
+    "version": "4.1",
     "manifest_version":2,
     "web_accessible_resources": ["*"],
     "content_scripts": [
         {
             "js": [
+                "etc/libs/purify.min.js",
                 "etc/utils.js",
+                "features/themeLoader.js",
+                "features/fontLoader.js",
 
                 "index.js",
                 "plugins/pluginLib.js",
                 "plugins/pluginLoader.js",
 
-                "features/setTheme.js",
-                "features/setFont.js",
                 "features/replaceToLogo.js",
                 "features/setWallpaper.js",
                 "features/betterDropmenus.js",
@@ -35,12 +36,12 @@
         },
         {
             "css": ["etc/css/autodark.css"],
-            "js": ["features/setFont.js"],
+            "js": ["features/fontLoader.js"],
             "matches":["*://pastebin.com/raw/TGz5N9Xa"]
         }
     ],
     "icons": {"16":"etc/img/current/bwrdlogo.png", "48":"etc/img/current/bwrdlogo.png", "128":"etc/img/current/bwrdlogo-text.png"},
     "options_ui":{"page":"settings/index.html", "open_in_tab":true},
-    "permissions":["storage","tabs","*://wearedevs.net/*","*://flameplus.vercel.app/*", "https://pastebin.com/"],
+    "permissions":["storage","*://wearedevs.net/*","*://flameplus.vercel.app/*","https://pastebin.com/", "https://www.stathat.com/*"],
     "browser_action":{"default_popup":"settings/opensettings.html"}
 }

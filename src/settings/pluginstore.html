@@ -17,6 +17,7 @@
 <script src="javascript/settingsPages.js"></script>
 <script src="javascript/toast.js"></script>
 <script src="assets/js/jquery.min.js"></script>
+<script src="../etc/libs/purify.min.js"></script>
 <style>
 @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)){
 .backdropdiv{background: rgba(6, 6, 6, 0.97)!important}
@@ -69,7 +70,7 @@
                 <h1 class="material-icons-outlined rotate" style="text-align: center;font-size: 50px;margin-top: 20px;opacity: 0.80;width: 100%;transition: .25s opacity;grid-row-start: 1;grid-column-start: 1;">refresh</h1>
                 <p style="font-size: 16px;opacity: 0.70;margin-top: -15px;">Fetching plugins...</p>
             </div>
-            <div id="pluginsDiv" style="display: flex;flex-direction: row;flex-wrap: wrap;padding-bottom: 50px;gap: 15px;grid-row-start: 1;grid-column-start: 1;"><div class="plgCard" style="height: 170.5px;transition: .15s cubic-bezier(0.3, 0, 0.5, 1);width: 400px;border: 1px solid rgba(255,255,255,0.04);box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;display: flex;flex-direction: column;align-items: center;justify-content: center;border-radius: 8px;overflow: hidden;text-align: left!important;background: linear-gradient(-45deg, rgb(255 255 255 / 4%), rgb(255 255 255 / 3%), rgb(255 255 255 / 5%), rgb(255 255 255 / 0%));border: 1px solid transparent;background-size: 400% 400%;animation: gradientanim 4s cubic-bezier(0.3, 0, 0.5, 1) infinite;"><h1 style="
+            <div id="pluginsDiv" style="display: flex;flex-direction: row;flex-wrap: wrap;padding-bottom: 50px;gap: 15px;grid-row-start: 1;grid-column-start: 1;"><div class="plgCard" style="position: relative; height: 170.5px;transition: .15s cubic-bezier(0.3, 0, 0.5, 1);width: 400px;border: 1px solid rgba(255,255,255,0.04);box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;display: flex;flex-direction: column;align-items: center;justify-content: center;border-radius: 8px; text-align: left!important;background: linear-gradient(-45deg, rgb(255 255 255 / 4%), rgb(255 255 255 / 3%), rgb(255 255 255 / 5%), rgb(255 255 255 / 0%));border: 1px solid transparent;background-size: 400% 400%;animation: gradientanim 4s cubic-bezier(0.3, 0, 0.5, 1) infinite;"><h1 style="
     font-size: 20px;
 ">Your plugin can be on this list!</h1>
 <a href="https://github.com/davve77/BetterWRD-Plugins/blob/main/README.md" target="_blank">Learn more</a></div>

@@ -106,8 +106,12 @@ chrome.storage.local.get(['plugins'], (saved)=>{
     }
 
     async function updatePlugin(plugin, allplugins){
-        let plugins = JSON.parse(allplugins)
+
         let getPlgSrc = await fetch(plugin.source).then(e => e.text())
+
+        if(!lib.getPluginData(getPlgSrc)) {showToast('Failed to update this plugin.'); return}
+
+        let plugins = JSON.parse(allplugins)
         let getPlgVer = getPlgSrc.match(/(?<=@version )(.*)/gm)[0]
         let pluginToUpdate = [lib.getPluginData(getPlgSrc)]
 
