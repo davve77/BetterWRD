@@ -57,6 +57,7 @@ If you remove the extension from your browser, the next time you install it all 
 &nbsp;
 
 ## ✨ Contributors
+- **LegitH3x0R** - Plugin Developer
 - **Shade_0122** - WeAreFemboys Theme Dev
 - **Moon** - Server Admin & Custom Domain Holder
 
