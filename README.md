@@ -50,4 +50,4 @@ If you remove the extension from your browser, the next time you install it all 
 - **Seizure Salad** - Plugin Developer
 - **LegitH3x0R** - Plugin Developer
 - **Moon** - Server Admin & Custom Domain Holder
-- - **Shade_0122** - Theme Developer
+- **Shade_0122** - Theme Developer
