@@ -22,7 +22,7 @@ Join the BetterWRD discord server to keep up with updates, news & more!\
 - ### Chrome, Brave, MS Edge, Opera & other Chromium browsers:
   1️⃣ First of all, go ahead and download BetterWRD.zip from [github.com/davve77/BetterWRD/releases/latest](https://github.com/davve77/BetterWRD/releases/latest).\
   2️⃣ Extract BetterWRD.zip to a folder.\
-  3️⃣ Go to chrome://extensions & enable Developer mode. For most browsers the switch is located in a corner of the page.\
+  3️⃣ Go to chrome://extensions & enable Developer mode. Typically the switch is located in a corner of the page.\
   4️⃣ Drag & drop the folder to chrome://extensions. Nice, you've installed BetterWRD! 🎉
 
 - ### Firefox:
