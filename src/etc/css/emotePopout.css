@@ -1,0 +1,21 @@
+[target*="BetterWRD Emote"] img{
+    cursor: pointer;
+}
+.emote-hidden{
+    transform: translateX(-30px);
+    opacity: 0;
+}
+.bwrd-emote-popout{
+	position: absolute;
+	max-width: 350px;
+	border-radius: 14px;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	gap: 13px;
+	padding: 13px;
+	overflow: hidden;
+	box-shadow: rgb(0 0 0 / 10%) 0px 10px 50px;
+	background: rgb(49, 49, 49)!important;
+	transition: cubic-Bezier(0.85, 0, 0, 1) 167ms;
+}
