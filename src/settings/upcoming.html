@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html style="color-scheme: dark;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>BetterWRD Upcoming</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo:400,600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:400,500,700,900">
+    <link rel="stylesheet" href="assets/css/scrollbar.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/switch.css">
+    <link rel="stylesheet" href="assets/css/toast.css">
+    <link rel="stylesheet" href="assets/css/tooltips.css">
+<link rel="icon" type="image/png" href="../etc/img/current/bwrd-settings.png"/>
+<script src="javascript/settingsPages.js"></script>
+<script src="javascript/toast.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="../etc/libs/purify.min.js"></script>
+<script src="../etc/utils.js"></script>
+<style>
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)){
+.backdropdiv{background: rgba(6, 6, 6, 0.97)!important}
+#topbarthemes{background: rgb(45, 45, 45)!important}
+}
+</style><style>
+#navbar-upcoming {
+  background: #2c2c2c;
+}
+#navbar-upcoming > .navspan {
+  background: linear-gradient(to right, rgb(83 172 255 / 68%) 30%, rgba(255,29,205,0.88) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
+</head>
+
+<body class="unselectable">
+    <div id="sidenav" class="sidenav"><a id="sidenavtop" style="display: flex;align-items: center;justify-content: center;background: #2c2c2c;height: 90px;width: 100%;border-radius: 0;cursor: pointer;padding: 0;margin: 0;border: 0;" href="index.html"><img id="sidenavtopimg" draggable="false" src="assets/img/bwrdlogo-text.png" width="100"></a>
+        <p
+            class="navdesc" style="margin-top: 15px;">BetterWRD</p><a id="navbar-settings" href="index.html"><span class="material-icons-outlined navspan">tune</span>Settings</a><a id="navbar-themes" href="themes.html"><span class="material-icons-outlined navspan">palette<br></span>Themes</a><a id="navbar-plugins"
+                href="plugins.html"><span class="material-icons-outlined navspan">extension<br></span><p style="position: relative;">Plugins</p></a><a id="navbar-wallpaper" href="wallpaper.html"><span class="material-icons-outlined navspan">photo</span>Wallpaper</a>
+            <a
+                id="navbar-fonts" href="fonts.html"><span class="material-icons-outlined navspan">format_size</span>Fonts</a>
+                <p class="navdesc">Extension</p><a id="navbar-backup" href="backup.html"><span class="material-icons-outlined navspan">settings_backup_restore</span>Backup</a><a id="navbar-upcoming" href="upcoming.html"><span class="material-icons-outlined navspan">science<br></span>Upcoming</a>
+                <p
+                    class="navdesc">Other</p><a id="navbar-discord" href="https://betterwrd.tech/support.html" target="_blank"><span class="material-icons-outlined navspan">favorite_border<br></span>Support</a><a id="navbar-discord-1" href="https://discord.gg/ceU5SRTf4J"
+                        target="_blank"><span class="material-icons-outlined navspan">group<br></span>Discord</a><a id="navbar-about" href="about.html"><span class="material-icons-outlined navspan">info</span>About</a></div>
+    <div id="toastdiv" class="toastdiv"><div id="toast"></span>Settings saved and applied.</div></div>
+    <h1 class="text-center" style="font-size: 30px;color: rgb(220,220,220);margin-top: 25px;"><strong><em>BetterWRD Upcoming</em></strong></h1>
+    <h1 class="text-center" style="font-size: 20px;color: rgb(150,150,150);margin-top: -7px;">a place for all upcoming &amp; unfinished stuff. things in here might get <strong>scrapped</strong>!</h1>
+    <div style="width: 850px;margin: auto;margin-top: 80px;display: flex;flex-direction: column;">
+        <div>
+            <p class="pl-store-section"><span class="material-icons-outlined" style="font-size: 25px;margin-right: 5px;background: linear-gradient(to right, rgb(83 172 255 / 68%) 30%, rgba(255,29,205,0.88) 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">science</span>Beta
+                Testing</p>
+            <div class="setting-outer" style="background: rgb(40,40,40)!important;">
+                <div class="setting-text">
+                    <p class="setting-title">Become a beta tester</p>
+                    <p class="setting-desc">Try out new BetterWRD features before they're out to the public.</p>
+                </div>
+                <div style="display: flex;align-items: center;"><label class="switch"> <input setting id="betaTesting" type="checkbox" autocomplete="off"> <span class="slider round"></span> </label></div>
+            </div>
+        </div>
+        <div style="padding-top: 15px;">
+            <p class="pl-store-section"><span class="material-icons-outlined" style="font-size: 25px;margin-right: 5px;background: linear-gradient(to right, rgb(83 172 255 / 68%) 30%, rgba(255,29,205,0.88) 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">chat_bubble_outline</span>Feedback</p>
+            <a
+                class="upcomingcard" href="https://discord.gg/ceU5SRTf4J" style="margin-bottom: 10px;" target="_blank">
+                <h1 class="text-center" style="margin: 0;line-height: 2;">Send feedback</h1><span class="material-icons-outlined">chevron_right</span></a>
+                <p class="pl-store-section"><span class="material-icons-outlined" style="font-size: 25px;margin-right: 5px;background: linear-gradient(to right, rgb(83 172 255 / 68%) 30%, rgba(255,29,205,0.88) 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">description</span>Experimental
+                    Pages</p>
+                <a class="upcomingcard" href="themesnew.html">
+                    <h1 class="text-center">Themes page</h1>
+                    <p style="font-size: 13px;width: 600px;color: rgba(255,255,255,0.56);text-align: left!important;margin-top: -7px;margin-bottom: 0;">A cleaner design for the themes page.</p><span class="material-icons-outlined">chevron_right</span></a>
+                <a class="upcomingcard" href="layouts.html">
+                    <h1 class="text-center">Layouts page<br></h1>
+                    <p style="font-size: 13px;width: 600px;color: rgba(255,255,255,0.56);text-align: left!important;margin-top: -7px;margin-bottom: 0;">Lets you choose between the old and new layout.</p><span class="material-icons-outlined">chevron_right</span></a>
+        </div>
+    </div><script src="javascript/upcomingPage.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
