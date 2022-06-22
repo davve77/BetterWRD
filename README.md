@@ -46,6 +46,12 @@ If you remove the extension from your browser, the next time you install it all 
 
 &nbsp;
 
+## ❤️ Support
+You'll be able to get the BetterWRD Supporter badge for supporting BetterWRD.  
+[https://betterwrd.tech/support](https://betterwrd.tech/support.html)
+
+&nbsp;
+
 ## ✨ Contributors
 - **Seizure Salad** - Plugin Developer
 - **LegitH3x0R** - Plugin Developer
