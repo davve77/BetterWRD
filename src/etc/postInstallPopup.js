@@ -1,5 +1,5 @@
-// Name: After install overlay div
-// Desc: Main purpose of this is to show the changelog after updating
+// Name: Post-install/update popup div
+// Desc: Main purpose of this is to show the changelog after updating (yes i know chrome.tabs.create() exists)
 
 
 // Vars
