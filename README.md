@@ -33,7 +33,8 @@ Join the BetterWRD discord server to keep up with updates, news & more!\
 
 ## 🔌 Plugins
 Plugins are mostly community-made scripts that change or improve functionality of WRD.\
-To learn how to create, share or use plugins, a guide for that has been made [here](https://github.com/davve77/BetterWRD-Plugins/blob/main/README.md).
+To learn how to create, share or use plugins, a guide for that has been made here:  
+https://github.com/davve77/BetterWRD-Plugins/blob/main/README.md
 
 &nbsp;
 
