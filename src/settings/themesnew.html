@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html style="color-scheme: dark;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>BetterWRD Themes</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo:400,600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:400,500,700,900">
+    <link rel="stylesheet" href="assets/css/scrollbar.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/switch.css">
+    <link rel="stylesheet" href="assets/css/toast.css">
+    <link rel="stylesheet" href="assets/css/tooltips.css">
+<link rel="icon" type="image/png" href="../etc/img/current/bwrd-settings.png"/>
+<script src="javascript/settingsPages.js"></script>
+<script src="javascript/toast.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="../etc/libs/purify.min.js"></script>
+<script src="../etc/utils.js"></script>
+<style>
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)){
+.backdropdiv{background: rgba(6, 6, 6, 0.97)!important}
+#topbarthemes{background: rgb(45, 45, 45)!important}
+}
+</style><style>
+#navbar-themes {
+  background: #2c2c2c;
+}
+#navbar-themes > .navspan {
+  background: linear-gradient(to right, rgb(83 172 255 / 68%) 30%, rgba(255,29,205,0.88) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.themecard{opacity: 0; transform: translateX(-10px);}
+</style>
+</head>
+
+<body class="unselectable">
+    <div id="sidenav" class="sidenav"><a id="sidenavtop" style="display: flex;align-items: center;justify-content: center;background: #2c2c2c;height: 90px;width: 100%;border-radius: 0;cursor: pointer;padding: 0;margin: 0;border: 0;" href="index.html"><img id="sidenavtopimg" draggable="false" src="assets/img/bwrdlogo-text.png" width="100"></a>
+        <p
+            class="navdesc" style="margin-top: 15px;">BetterWRD</p><a id="navbar-settings" href="index.html"><span class="material-icons-outlined navspan">tune</span>Settings</a><a id="navbar-themes" href="themes.html"><span class="material-icons-outlined navspan">palette<br></span>Themes</a><a id="navbar-plugins"
+                href="plugins.html"><span class="material-icons-outlined navspan">extension<br></span><p style="position: relative;">Plugins</p></a><a id="navbar-wallpaper" href="wallpaper.html"><span class="material-icons-outlined navspan">photo</span>Wallpaper</a>
+            <a
+                id="navbar-fonts" href="fonts.html"><span class="material-icons-outlined navspan">format_size</span>Fonts</a>
+                <p class="navdesc">Extension</p><a id="navbar-backup" href="backup.html"><span class="material-icons-outlined navspan">settings_backup_restore</span>Backup</a><a id="navbar-upcoming" href="upcoming.html"><span class="material-icons-outlined navspan">science<br></span>Upcoming</a>
+                <p
+                    class="navdesc">Other</p><a id="navbar-discord" href="https://betterwrd.tech/support.html" target="_blank"><span class="material-icons-outlined navspan">favorite_border<br></span>Support</a><a id="navbar-discord-1" href="https://discord.gg/ceU5SRTf4J"
+                        target="_blank"><span class="material-icons-outlined navspan">group<br></span>Discord</a><a id="navbar-about" href="about.html"><span class="material-icons-outlined navspan">info</span>About</a></div>
+    <div id="toastdiv" class="toastdiv"><div id="toast"></span>Settings saved and applied.</div></div>
+    <div id="topbarthemes" style="position: sticky;display: inline-flex;justify-content: center;align-items: center;top: 0;width: 100%;height: 60px;background: rgba(52,52,52,0.61);z-index: 10;backdrop-filter: blur(40px);">
+        <div class="currentthemediv" style="position: absolute;left: 0;margin-left: 5px;padding: 4px 8px;border-radius: 6.5px;min-height: 47px;border: 1px solid transparent;max-width: 400px;overflow: hidden;transition: .11s all;">
+            <h1 class="text-center" style="font-size: 17px;color: rgb(177,177,177);text-align: left!important;margin-bottom: 0;">Current Theme</h1>
+            <h1 class="text-center" id="currenttheme" style="font-size: 19px;color: rgb(190,190,190);text-align: left!important;margin-bottom: 0;font-weight: 600;">None</h1>
+        </div>
+        <div id="searchdiv" style="width: 460px;height: 40px;background: rgba(71,71,71,0.48);box-shadow: none!important;margin-right: 5px;"><input type="text" id="searchinput" placeholder="Search among 0 themes" style="font-size: 17px;width: 100%;background: 0;border: 0;outline: none;padding-left: 10px;">
+            <div style="display: flex;padding-right: 5px;">
+                <p class="material-icons-outlined" style="position: relative;transform: rotate(90deg) scale(.75);color: rgb(232,232,232);">search</p>
+            </div>
+        </div><button class="btn btn-primary material-icons-outlined" id="listviewbtn" style="position: relative;border: none;color: rgb(207,207,207);background: rgba(71,71,71,0.48);margin-right: 5px;width: 50.7812px;height: 40px;" type="button">format_list_bulleted</button>
+        <button
+            class="btn btn-primary material-icons-outlined" id="gridviewbtn" style="position: relative;color: rgb(207,207,207);background: rgba(71,71,71,0.48);width: 50.7812px;height: 40px;" type="button">grid_view</button><button class="btn btn-primary" id="resettheme" style="position: absolute;right: 10px;min-height: 40px;background: rgba(71,71,71,0.48);" type="button">Reset Theme<span class="material-icons-outlined settingtextspan" style="margin-left: 5px;margin-right: -8px;vertical-align: middle;">chevron_right<br></span></button></div>
+    <h1
+        class="text-center" style="font-size: 30px;color: rgb(220,220,220);margin-top: 25px;"><strong><em>BetterWRD Settings</em></strong></h1>
+        <h1 class="text-center" style="font-size: 20px;color: rgb(150,150,150);margin-top: -7px;">pick, edit or create a theme<br></h1>
+        <div id="topmenu" style="position: relative;display: flex;justify-content: space-between;width: 670px;margin: auto;margin-top: 40px;margin-bottom: 20px;"></div>
+        <div id="maindiv" style="width: 1000px;margin: auto;margin-bottom: 20px;">
+            <div id="customthemesdiv" class="themesdiv">
+                <div class="themesection" style="background: rgb(52,48,101);">
+                    <h1 class="material-icons-outlined" style="position: relative;margin: 0;margin-right: auto;font-size: 200px;color: rgb(117,115,177);">palette</h1>
+                    <p style="color: rgb(245,245,245);">Custom Themes</p>
+                </div>
+                <a class="themecard customthmcard" style="background: none;justify-content: start;border-color: rgb(55,55,55);transition: .25s none cubic-bezier(.3,0,.5,1);transition-property: border, background, transform;" href="createtheme.html">
+                    <p style="position: relative;text-align: center;font-size: 19px;width: 80%;margin: 0 auto!important;top: 50%!important;transform: translateY(-50%);">Create your own Theme<br></p>
+                </a>
+            </div>
+            <div id="darkthemes" class="themesdiv">
+                <div class="themesection" style="background: rgb(46,42,55);">
+                    <h1 class="material-icons-outlined" style="position: relative;margin: 0;margin-right: auto;font-size: 200px;color: rgb(108,71,170);">dark_mode</h1>
+                    <p style="color: rgb(245,245,245);">Dark Themes</p>
+                </div>
+                <a class="themecard searchablethm" href="viewtheme.html?theme=githubDark">
+                    <p class="theme-title"><em>GitHub: Smooth Dark</em></p>
+                    <p class="theme-desc" style="width: 90%;">a github-like nice, dark comfy theme</p>
+                </a>
+                <a class="themecard searchablethm" href="viewtheme.html?theme=discordDark">
+                    <p class="theme-title"><em>Discord Dark</em><br></p>
+                    <p class="theme-desc">a dark discord theme</p><span class="newtheme">NEW</span></a>
+                <a class="themecard searchablethm" href="viewtheme.html?theme=midnightGray">
+                    <p class="theme-title"><em>Midnight Gray</em></p>
+                    <p class="theme-desc">use this if you like gray</p>
+                </a>
+                <a class="themecard searchablethm" href="viewtheme.html?theme=githubDarkGreen">
+                    <p class="theme-title"><em>GitHub: Dark &amp; Green</em><br></p>
+                    <p class="theme-desc">the same as the one before me + some green borders</p>
+                </a>
+                <a class="themecard searchablethm" href="viewtheme.html?theme=darkMintGreen">
+                    <p class="theme-title"><em>Dark Mint Green</em><br></p>
+                    <p class="theme-desc">green and dark combined, looks pretty good I think</p>
+                </a>
+            </div>
+            <div id="lightthemes" class="themesdiv">
+                <div class="themesection" style="background: rgb(196,202,232);">
+                    <h1 class="material-icons-outlined" style="position: relative;margin: 0;margin-right: auto;font-size: 200px;color: rgb(154,156,47);">light_mode</h1>
+                    <p style="color: rgb(42,42,42);">Light Themes</p>
+                </div>
+                <a class="themecard searchablethm" href="viewtheme.html?theme=WeAreFemboys">
+                    <p class="theme-title"><em>WeAreFemboys</em></p>
+                    <p class="theme-desc">BEST WRD THEME<br></p><span class="newtheme" style="background: linear-gradient(-45deg, rgb(179,72,197), rgb(204,45,231), rgb(156,83,167), rgb(179,72,197));border: 1px solid transparent;background-size: 400% 400%;animation: gradientanim 4s ease infinite;">HOT</span></a>
+                <a
+                    class="themecard searchablethm" href="viewtheme.html?theme=discordLight">
+                    <p class="theme-title"><em>Discord Light</em></p>
+                    <p class="theme-desc">a light discord theme<br></p><span class="newtheme">NEW</span></a>
+                    <a class="themecard searchablethm" href="viewtheme.html?theme=githubLight">
+                        <p class="theme-title"><em>GitHub: Light Mode</em></p>
+                        <p class="theme-desc">dark navbar and white everywhere else</p>
+                    </a>
+            </div>
+        </div><script src="javascript/themeManager.js"></script>
+
+<style>
+#navbar-themes {
+  background: #323232;
+}
+#navbar-themes > .navspan {
+  background: linear-gradient(to right, rgb(83 172 255 / 68%) 30%, rgba(255,29,205,0.88) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
