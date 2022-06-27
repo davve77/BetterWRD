@@ -1,0 +1,40 @@
+/* Thread view badge */
+#bwrduser{
+	display: inline-flex;
+	align-items: center;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: 400;
+	user-select: none;
+	margin-top: 5px;
+}
+
+#bwrdusertext{
+	font-size: 20px;
+	font-family: system-ui !important;
+	background: linear-gradient(to right, #448fff, #ff41d5);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: 700;
+}
+
+/* Profile view badge */
+#bwrdbadge{
+	display: flex;
+	user-select: none;
+	position: absolute;
+	bottom: 12px;
+	right: 12px;
+}
+
+#bwrdbadge>h2{
+	font-size: 20px;
+	font-style: italic;
+	font-family: system-ui !important;
+	background: linear-gradient(to right, #448fff, #ff41d5);
+	-webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: 700;
+}

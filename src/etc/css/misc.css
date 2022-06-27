@@ -1,0 +1,27 @@
+/* BetterWRD Miscellaneous CSS */
+
+
+/* Don't turn input color all white on autofill */
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active{
+    transition: background-color 999999999s ease-in-out 0s;
+}
+input, select{
+    outline: none;
+}
+
+
+/* Fix TinyMCE top bar displaying over navbar dropmenus */
+.tox-editor-header{
+    z-index: 0!important;
+}
+
+
+/* Equal gap between top buttons on thread view */
+div[style="text-align: right"]{
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+div[style="text-align: right"] > *{
+    margin: 0!important;
+}
