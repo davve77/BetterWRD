@@ -5,8 +5,8 @@ This extension adds tons of new features to WeAreDevs.net & improves the user ex
 
 Here's a brief summary of what features BetterWRD offers you: `Community Plugins`, `Themes`, `Emotes`, `Post Previewing`, `Old Forum Layout`, `Live CSS Editor` & many more features that not only help improve your experience on WRD, but also improve the design of the website.
 
-Latest Version: **5.0**\
-Latest Release date: **6/22/2022**
+Latest Version: **5.1**\
+Latest Release date: **6/27/2022**
 
 Made by `david77#3909`
 
