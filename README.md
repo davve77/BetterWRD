@@ -54,6 +54,7 @@ You'll be able to get the BetterWRD Supporter badge for supporting BetterWRD.
 &nbsp;
 
 ## ✨ Contributors
+- **Delta** - Plugin Developer
 - **Seizure Salad** - Plugin Developer
 - **LegitH3x0R** - Plugin Developer
 - **Moon** - Server Admin & Custom Domain Holder
