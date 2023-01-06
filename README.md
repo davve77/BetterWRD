@@ -1,12 +1,12 @@
-🏞 BetterWRD - Featureful browser extension for WRD!
+🏞 BetterWRD - A featureful browser extension for WRD.
 ===
 
-This extension adds tons of new features to WeAreDevs.net & improves the user experience by a long shot.
+BetterWRD adds tons of new features to WeAreDevs.net & improves the user experience by a long shot.
 
-Here's a brief summary of what features BetterWRD offers you: `Community Plugins`, `Themes`, `Emotes`, `Post Previewing`, `Old Forum Layout`, `Live CSS Editor` & many more features that not only help improve your experience on WRD, but also improve the design of the website.
+Here's a brief summary of what features BetterWRD offers you: `Community Plugins`, `Community Themes`, `Emotes`, `Post Previewing`, `Anti-bot`, `Live CSS Editor` & many more features that improve the overall functionality and design of WeAreDevs.net.
 
-Latest Version: **5.1**\
-Latest Release date: **6/27/2022**
+Latest Version: **5.2**\
+Latest Release date: **12/21/2022**
 
 Made by `david77#3909`
 
@@ -20,9 +20,9 @@ Join the BetterWRD discord server to keep up with updates, news & more!\
 
 ## 📥 How to Download
 - ### Chrome, Brave, MS Edge, Opera & other Chromium browsers:
-  1️⃣ First of all, go ahead and download BetterWRD.zip from [github.com/davve77/BetterWRD/releases/latest](https://github.com/davve77/BetterWRD/releases/latest).\
+  1️⃣ First of all, download BetterWRD.zip from [github.com/davve77/BetterWRD/releases/latest](https://github.com/davve77/BetterWRD/releases/latest).\
   2️⃣ Extract BetterWRD.zip to a folder.\
-  3️⃣ Go to chrome://extensions & enable Developer mode. Typically the switch is located in a corner of the page.\
+  3️⃣ Go to chrome://extensions & enable Developer mode. Typically, the switch is located in a corner of the page.\
   4️⃣ Drag & drop the folder to chrome://extensions. Nice, you've installed BetterWRD! 🎉
 
 - ### Firefox:
@@ -48,7 +48,7 @@ If you remove the extension from your browser, the next time you install it all 
 &nbsp;
 
 ## ❤️ Support
-You'll be able to get the BetterWRD Supporter badge for supporting BetterWRD.  
+You'll get the BetterWRD Supporter badge after you donate any amount.  
 [https://betterwrd.tech/support](https://betterwrd.tech/support.html)
 
 &nbsp;
