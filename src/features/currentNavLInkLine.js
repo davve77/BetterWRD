@@ -1,10 +1,9 @@
 // Name: Line below current nav bar link
 // Desc: Adds a small line below the current active nav bar link
 
-
 if(document.querySelector('.navItems')){
 
-    let navItems = document.querySelectorAll('.navItem')
+    const navItems = document.querySelectorAll('.navItem')
 
     // CSS
     bwrd.injectStyle(`
@@ -25,8 +24,8 @@ if(document.querySelector('.navItems')){
 
     // Set class
     switch(true){
-        case (/forum|profile/).test(location.pathname):
-            navItems[2].classList.add('currentNavItem')
+        case location.host.split('.')[0] == 'forum':
+            navItems[0].classList.add('currentNavItem')
             break
 
         case (/scripts/).test(location.pathname):

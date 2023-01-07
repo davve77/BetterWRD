@@ -99,7 +99,7 @@ document.body.addEventListener('mousemove', (e)=> {
             <p style=" opacity: .6; font-size: 14px; margin-bottom: 15px; ">${P_ALIAS}</p>
             <p style=" font-size: 15px; margin-bottom: 15px; ">${P_BIO}</p>
             <div style=" padding-bottom: 15px; display: inline-flex; gap: 5px; overflow: hidden;">${P_BADGES}</div>
-            <div style=" color: #3498DB; display: flex; flex-direction: row; gap: 15px; row-gap: 10px;; flex-wrap: wrap;"><a blacklistViewer href="${profileLink}">View Profile</a>  <a href="https://wearedevs.net/profile/threads?uid=${P_ID}">Threads</a>  <a href="https://wearedevs.net/profile/alts?uid=${P_ID}">Possible Alts</a><a href="https://wearedevs.net/profile/reputation?uid=${P_ID}">Reputation</a><a href="https://wearedevs.net/messages/${P_ID}">Message</a>
+            <div style=" color: #3498DB; display: flex; flex-direction: row; gap: 15px; row-gap: 10px;; flex-wrap: wrap;"><a blacklistViewer href="${profileLink}">View Profile</a>  <a href="https://forum.wearedevs.net/profile/threads?uid=${P_ID}">Threads</a>  <a href="https://forum.wearedevs.net/profile/alts?uid=${P_ID}">Possible Alts</a><a href="https://forum.wearedevs.net/profile/reputation?uid=${P_ID}">Reputation</a><a href="https://forum.wearedevs.net/messages/${P_ID}">Message</a>
             </div>
             </div>
             `

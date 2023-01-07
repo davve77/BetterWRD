@@ -1,25 +1,26 @@
 // Name: Centered Navigation Bar
 // Desc: Centers the nav bar links
 
-
 if(document.querySelector('.navItems')){
 
     // Remove hidden blog link
-    let blogAd = document.querySelector('.adTip')
+    const blogAd = document.querySelector('.adTip')
     if(blogAd) blogAd.remove()
 
     // Consts
-    let navItemsDiv = document.querySelector('.navItems')
-    let navItems = navItemsDiv.children
-    let centerDiv = document.createElement('div')
-    let deleteLinks = []
+    const isForumSubdomain = location.host.split('.')[0] == 'forum'
+    const navItemsDiv = document.querySelector('.navItems')
+    const navItems = navItemsDiv.children
+    const centerDiv = document.createElement('div')
+    const deleteLinks = []
     
     // Insert div
     navItemsDiv.insertBefore(centerDiv, navItems[0])
 
     // Place links inside div
+    const _items = (isForumSubdomain) ? 5 : 4
     document.querySelectorAll('.navItem').forEach(e => {
-        if(e != centerDiv && Array.from(e.parentNode.children).indexOf(e) < 4){
+        if(e != centerDiv && Array.from(e.parentNode.children).indexOf(e) < _items){
             let cloneLink = e.cloneNode(true)
             centerDiv.appendChild(cloneLink)
             deleteLinks.push(e)

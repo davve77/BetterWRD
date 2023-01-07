@@ -219,7 +219,7 @@ if(document.querySelector('#editor')){
     */
 
     async function setProfileInfo(){
-        const profileDoc = new DOMParser().parseFromString(await fetch('https://wearedevs.net/profile').then(e => e.text()), 'text/html')
+        const profileDoc = new DOMParser().parseFromString(await fetch('https://forum.wearedevs.net/profile').then(e => e.text()), 'text/html')
 
         const P_AVATAR = profileDoc.querySelector('#profile_mainprofilepicture').src
         const P_NAME = profileDoc.querySelector('.username').textContent
