@@ -1,12 +1,12 @@
-🏞 BetterWRD - A featureful browser extension for WRD.
+🏞 BetterWRD - Featureful browser extension for WRD.
 ===
 
 BetterWRD adds tons of new features to WeAreDevs.net & improves the user experience by a long shot.
 
-Here's a brief summary of what features BetterWRD offers you: `Community Plugins`, `Community Themes`, `Emotes`, `Post Previewing`, `Anti-bot`, `Live CSS Editor` & many more features that improve the overall functionality and design of WeAreDevs.net.
+Here's a brief summary of what features BetterWRD offers you: `Community Plugins`, `Community Themes`, `Emotes`, `Quick Reply`, `Post Previewing`, `Anti-bot`, `Live CSS Editor` & many more features that improve the overall functionality and design of WeAreDevs.net.
 
-Latest Version: **5.2**\
-Latest Release date: **12/21/2022**
+Latest Version: **5.3**\
+Latest Release date: **1/7/2022**
 
 Made by `david77#3909`
 
