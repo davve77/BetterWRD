@@ -6,7 +6,7 @@ BetterWRD adds tons of new features to WeAreDevs.net & improves the user experie
 Here's a brief summary of what features BetterWRD offers you: `Community Plugins`, `Community Themes`, `Emotes`, `Quick Reply`, `Post Previewing`, `Anti-bot`, `Live CSS Editor` & many more features that improve the overall functionality and design of WeAreDevs.net.
 
 Latest Version: **5.3**\
-Latest Release date: **1/7/2022**
+Latest Release date: **1/7/2023**
 
 Made by `david77#3909`
 
@@ -54,8 +54,9 @@ You'll get the BetterWRD Supporter badge after you donate any amount.
 &nbsp;
 
 ## ✨ Contributors
+- **atari** - Plugin Developer
 - **Delta** - Plugin Developer
 - **Seizure Salad** - Plugin Developer
-- **LegitH3x0R** - Plugin Developer
-- **Moon** - Server Admin & Custom Domain Holder
-- **Shade_0122** - Theme Developer
+- **RealNickk** - Plugin Developer
+- **Moon** - Server Admin & Custom domain holder
+- **eb_** - Theme Developer
