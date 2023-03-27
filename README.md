@@ -49,7 +49,7 @@ If you remove the extension from your browser, the next time you install it all 
 
 ## ❤️ Support
 You'll get the BetterWRD Supporter badge after you donate any amount.  
-[https://betterwrd.tech/support](https://betterwrd.tech/support.html)
+[https://betterwrd.vercel.app/support](https://betterwrd.vercel.app/support.html)
 
 &nbsp;
 
